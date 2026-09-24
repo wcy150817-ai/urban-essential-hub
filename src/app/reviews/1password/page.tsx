@@ -158,83 +158,107 @@ export default function OnePasswordReviewPage() {
           </div>
         </div>
 
-        {/* Content Sections */}
-        <div className="prose prose-slate max-w-none prose-headings:font-black prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-slate-900 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-slate-700 prose-p:leading-relaxed prose-p:mb-6 prose-li:text-slate-700 prose-a:text-indigo-600 prose-a:font-semibold hover:prose-a:text-indigo-700">
-          <h2>Why We Migrated to 1Password (The LastPass Breach Catalyst)</h2>
-          <p>
+        {/* ===== SECTION: Why We Migrated to 1Password ===== */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
+          <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
+            <ShieldCheck className="w-5 h-5 text-indigo-600" /> Why We Migrated to 1Password (The LastPass Breach Catalyst)
+          </h2>
+          <p className="text-sm text-slate-600 leading-relaxed">
             Trust is difficult to build and incredibly easy to destroy. When LastPass disclosed their massive security incident—where attackers stole encrypted password vaults alongside unencrypted customer data—our team knew it was time for a change. We had 200+ distinct credentials, API keys, and sensitive financial data stored in a system that suddenly felt compromised. We evaluated several alternatives, but 1Password stood out. We migrated our entire infrastructure over to test it under real-world conditions for 6 months.
           </p>
-          <p>
+          <p className="text-sm text-slate-600 leading-relaxed">
             Digital security is no longer an afterthought. With automated credential stuffing attacks becoming cheaper and more prevalent, relying on a spreadsheet, browser autofill, or an unvetted free application is a disaster waiting to happen. Our migration to 1Password was driven by a need for verifiable, structural security that doesn't sacrifice daily usability.
           </p>
 
-          <h3>The Threat Landscape in 2026</h3>
-          <p>
-            Attack vectors have evolved significantly. Hackers no longer just guess passwords; they steal session tokens, intercept SMS two-factor authentication, and target password managers themselves. A password manager acts as the master key to your entire digital identity. If that single point of failure is breached, the fallout is catastrophic. That is exactly why the architecture of the tool you choose matters far more than its superficial features or marketing claims.
-          </p>
+          <div className="space-y-3 pt-2">
+            <h3 className="text-base font-black text-slate-800">The Threat Landscape in 2026</h3>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Attack vectors have evolved significantly. Hackers no longer just guess passwords; they steal session tokens, intercept SMS two-factor authentication, and target password managers themselves. A password manager acts as the master key to your entire digital identity. If that single point of failure is breached, the fallout is catastrophic. That is exactly why the architecture of the tool you choose matters far more than its superficial features or marketing claims.
+            </p>
+          </div>
 
-          <h3>What Makes 1Password Different? (The Secret Key)</h3>
-          <p>
-            Most competitors encrypt your vault using only your master password. If an attacker breaches the company's servers and downloads your encrypted vault, they can run automated scripts to guess your master password offline. If your password is "Hunter2" or something equally weak, they will crack it in seconds.
-          </p>
-          <p>
-            1Password fundamentally solves this problem with the <strong>Secret Key</strong>. When you create an account, 1Password generates a 34-character, locally created encryption key (the 128-bit Secret Key) that never leaves your device and is never sent to their servers. Your vault is encrypted using a combination of your master password AND this Secret Key. Even if 1Password's servers were completely compromised and hackers stole your encrypted vault, they still cannot brute-force it. Without the Secret Key, guessing the master password is mathematically useless. We found this structural advantage to be the single most compelling reason to switch.
-          </p>
+          <div className="space-y-3 pt-2">
+            <h3 className="text-base font-black text-slate-800">What Makes 1Password Different? (The Secret Key)</h3>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Most competitors encrypt your vault using only your master password. If an attacker breaches the company's servers and downloads your encrypted vault, they can run automated scripts to guess your master password offline. If your password is "Hunter2" or something equally weak, they will crack it in seconds.
+            </p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              1Password fundamentally solves this problem with the <strong>Secret Key</strong>. When you create an account, 1Password generates a 34-character, locally created encryption key (the 128-bit Secret Key) that never leaves your device and is never sent to their servers. Your vault is encrypted using a combination of your master password AND this Secret Key. Even if 1Password's servers were completely compromised and hackers stole your encrypted vault, they still cannot brute-force it. Without the Secret Key, guessing the master password is mathematically useless. We found this structural advantage to be the single most compelling reason to switch.
+            </p>
+          </div>
+        </section>
 
-          <h2>Core Features Put to the Test</h2>
-          <p>
+        {/* ===== SECTION: Core Features ===== */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
+          <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
+            <KeyRound className="w-5 h-5 text-indigo-600" /> Core Features Put to the Test
+          </h2>
+          <p className="text-sm text-slate-600 leading-relaxed">
             A security tool is only effective if people actually use it. If a password manager is clunky, slow, or frustrating, users will bypass it. Over our 6-month testing period, we heavily utilized the features 1Password claims make daily operations easier.
           </p>
 
-          <h3>Watchtower: Our Security Audit Results</h3>
-          <p>
-            The Watchtower feature acts as a continuous, automated security auditor. Immediately after importing our 200+ passwords, Watchtower flagged 14 reused passwords, 3 compromised credentials from known data breaches, and 12 sites where we hadn't enabled two-factor authentication. 
-          </p>
-          <p>
-            What impressed us most was the actionable nature of the alerts. Watchtower doesn't just give you a static warning; it provides direct links to the exact login pages where you need to change your password. We successfully remediated all flagged vulnerabilities within two hours. It integrates with HaveIBeenPwned databases locally on your device, ensuring your credentials are never sent out for verification.
-          </p>
+          <div className="space-y-3 pt-2">
+            <h3 className="text-base font-black text-slate-800">Watchtower: Our Security Audit Results</h3>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              The Watchtower feature acts as a continuous, automated security auditor. Immediately after importing our 200+ passwords, Watchtower flagged 14 reused passwords, 3 compromised credentials from known data breaches, and 12 sites where we hadn't enabled two-factor authentication. 
+            </p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              What impressed us most was the actionable nature of the alerts. Watchtower doesn't just give you a static warning; it provides direct links to the exact login pages where you need to change your password. We successfully remediated all flagged vulnerabilities within two hours. It integrates with HaveIBeenPwned databases locally on your device, ensuring your credentials are never sent out for verification.
+            </p>
+          </div>
 
-          <h3>Passkeys and Passwordless Authentication</h3>
-          <p>
-            The tech industry is aggressively pushing toward passwordless authentication via passkeys, and 1Password is leading the charge in third-party support. Passkeys replace traditional passwords with cryptographic key pairs, making phishing attacks functionally impossible. We tested 1Password's passkey management across Google, Amazon, and GitHub.
-          </p>
-          <p>
-            The process is impressively smooth. When a site prompted us to create a passkey, 1Password intercepted the request and stored the private key securely in our vault. Logging in subsequently required only a biometric check (Touch ID on our Macs, Face ID on our iPhones). It completely bypasses the need to memorize or generate complex text strings.
-          </p>
+          <div className="space-y-3 pt-2">
+            <h3 className="text-base font-black text-slate-800">Passkeys and Passwordless Authentication</h3>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              The tech industry is aggressively pushing toward passwordless authentication via passkeys, and 1Password is leading the charge in third-party support. Passkeys replace traditional passwords with cryptographic key pairs, making phishing attacks functionally impossible. We tested 1Password's passkey management across Google, Amazon, and GitHub.
+            </p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              The process is impressively smooth. When a site prompted us to create a passkey, 1Password intercepted the request and stored the private key securely in our vault. Logging in subsequently required only a biometric check (Touch ID on our Macs, Face ID on our iPhones). It completely bypasses the need to memorize or generate complex text strings.
+            </p>
+          </div>
 
-          <h3>Cross-Platform Performance & Autofill</h3>
-          <p>
-            We tested the native applications across macOS, Windows 11, iOS, and Android. The experience is incredibly consistent. 1Password 8 (the current version suite) uses a modern backend that feels snappy, even on older hardware. 
-          </p>
-          <p>
-            Autofill reliability is the true test of a password manager. 1Password's browser extensions for Chrome, Firefox, Safari, and Edge reliably detected login fields 95% of the time during our testing. On mobile, integration with the native iOS AutoFill and Android's Autofill framework meant we rarely had to open the main app manually. It just worked.
-          </p>
+          <div className="space-y-3 pt-2">
+            <h3 className="text-base font-black text-slate-800">Cross-Platform Performance & Autofill</h3>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              We tested the native applications across macOS, Windows 11, iOS, and Android. The experience is incredibly consistent. 1Password 8 (the current version suite) uses a modern backend that feels snappy, even on older hardware. 
+            </p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Autofill reliability is the true test of a password manager. 1Password's browser extensions for Chrome, Firefox, Safari, and Edge reliably detected login fields 95% of the time during our testing. On mobile, integration with the native iOS AutoFill and Android's Autofill framework meant we rarely had to open the main app manually. It just worked.
+            </p>
+          </div>
 
-          <h3>Travel Mode (A Frequent Flyer's Best Friend)</h3>
-          <p>
-            For journalists, executives, and remote workers traveling internationally, border security checks pose a significant risk. Customs officials can compel you to unlock your devices. 1Password's Travel Mode is a unique solution to this problem.
-          </p>
-          <p>
-            When you toggle Travel Mode on via the web interface, it physically removes designated vaults from your local devices. If border control searches your phone, those sensitive vaults simply do not exist on the hardware. Once you cross the border, you toggle it off, and your full access is instantly restored. We tested this by creating a mock "secure" vault, enabling Travel Mode, and verifying that the vault was completely inaccessible and untraceable on our iPhone without an internet connection.
-          </p>
+          <div className="space-y-3 pt-2">
+            <h3 className="text-base font-black text-slate-800">Travel Mode (A Frequent Flyer's Best Friend)</h3>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              For journalists, executives, and remote workers traveling internationally, border security checks pose a significant risk. Customs officials can compel you to unlock your devices. 1Password's Travel Mode is a unique solution to this problem.
+            </p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              When you toggle Travel Mode on via the web interface, it physically removes designated vaults from your local devices. If border control searches your phone, those sensitive vaults simply do not exist on the hardware. Once you cross the border, you toggle it off, and your full access is instantly restored. We tested this by creating a mock "secure" vault, enabling Travel Mode, and verifying that the vault was completely inaccessible and untraceable on our iPhone without an internet connection.
+            </p>
+          </div>
+        </section>
 
-          <h2>1Password Pricing vs. Value</h2>
-          <p>
+        {/* ===== SECTION: Pricing ===== */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
+          <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
+            <DollarSign className="w-5 h-5 text-indigo-600" /> 1Password Pricing vs. Value
+          </h2>
+          <p className="text-sm text-slate-600 leading-relaxed">
             Let's talk numbers. Security requires investment, but it shouldn't drain your budget. 1Password intentionally skips the "freemium" model that many competitors use to drive growth. You are paying for a premium, highly maintained software product. We believe the transparency of this model is better—if you aren't paying for the product, you are often the product.
           </p>
 
-          <div className="my-10 border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
+          <div className="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm mt-4">
             <div className="bg-slate-50 border-b border-slate-200 px-6 py-4">
-              <h3 className="text-lg font-bold text-slate-900 m-0">1Password Plan Data Comparison</h3>
+              <h3 className="text-sm font-bold text-slate-900 m-0">1Password Plan Data Comparison</h3>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm text-left">
                 <thead className="bg-slate-100/50 text-slate-600 border-b border-slate-200">
                   <tr>
-                    <th className="px-6 py-4 font-semibold">Plan Tier</th>
-                    <th className="px-6 py-4 font-semibold">Price (Billed Annually)</th>
-                    <th className="px-6 py-4 font-semibold">Target User</th>
-                    <th className="px-6 py-4 font-semibold">Key Feature Focus</th>
+                    <th className="px-6 py-4 font-semibold text-xs uppercase tracking-wider">Plan Tier</th>
+                    <th className="px-6 py-4 font-semibold text-xs uppercase tracking-wider">Price (Billed Annually)</th>
+                    <th className="px-6 py-4 font-semibold text-xs uppercase tracking-wider">Target User</th>
+                    <th className="px-6 py-4 font-semibold text-xs uppercase tracking-wider">Key Feature Focus</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
@@ -246,9 +270,9 @@ export default function OnePasswordReviewPage() {
                   </tr>
                   <tr className="hover:bg-indigo-50/30 transition bg-indigo-50/10">
                     <td className="px-6 py-4 font-bold text-indigo-700">Families (Most Popular)</td>
-                    <td className="px-6 py-4 font-medium">$4.99 / month</td>
-                    <td className="px-6 py-4">Households, small groups</td>
-                    <td className="px-6 py-4">Up to 5 members, shared vaults, account recovery</td>
+                    <td className="px-6 py-4 font-medium text-indigo-700">$4.99 / month</td>
+                    <td className="px-6 py-4 text-indigo-700">Households, small groups</td>
+                    <td className="px-6 py-4 text-indigo-700">Up to 5 members, shared vaults, account recovery</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition">
                     <td className="px-6 py-4 font-medium text-slate-900">Teams Starter</td>
@@ -267,39 +291,44 @@ export default function OnePasswordReviewPage() {
             </div>
           </div>
 
-          <p>
+          <p className="text-sm text-slate-600 leading-relaxed">
             At $4.99/month for the Families plan, you are effectively paying $1 per person per month to secure five separate digital identities. We found the included feature—where a family organizer can recover a locked-out member's account without compromising the overall encryption—to be a lifesaver for less tech-savvy relatives.
           </p>
 
           <a href="https://pbee.me/D21ign86C" target="_blank" rel="noopener noreferrer nofollow" className="cta-glow inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-lg shadow-indigo-500/25 transition cursor-pointer hover:scale-105 w-full sm:w-auto">
             <Zap className="w-4 h-4" /> Try 1Password Free for 14 Days — No Credit Card Required
           </a>
+        </section>
 
-          <h2>1Password vs. Top Competitors</h2>
-          <p>
+        {/* ===== SECTION: Competitors ===== */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
+          <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
+            <AlertTriangle className="w-5 h-5 text-indigo-600" /> 1Password vs. Top Competitors
+          </h2>
+          <p className="text-sm text-slate-600 leading-relaxed">
             No review is complete without benchmarking against the broader market. We tested 1Password against four major alternatives to see where it excels and where it might fall short for specific use cases.
           </p>
 
-          <div className="my-10 border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm">
+          <div className="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-sm mt-4">
             <div className="bg-slate-50 border-b border-slate-200 px-6 py-4">
-              <h3 className="text-lg font-bold text-slate-900 m-0">Competitor Analysis Matrix</h3>
+              <h3 className="text-sm font-bold text-slate-900 m-0">Competitor Analysis Matrix</h3>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm text-left">
                 <thead className="bg-slate-100/50 text-slate-600 border-b border-slate-200">
                   <tr>
-                    <th className="px-6 py-4 font-semibold">Service</th>
-                    <th className="px-6 py-4 font-semibold">Security Architecture</th>
-                    <th className="px-6 py-4 font-semibold">UI & Usability</th>
-                    <th className="px-6 py-4 font-semibold">Best For</th>
+                    <th className="px-6 py-4 font-semibold text-xs uppercase tracking-wider">Service</th>
+                    <th className="px-6 py-4 font-semibold text-xs uppercase tracking-wider">Security Architecture</th>
+                    <th className="px-6 py-4 font-semibold text-xs uppercase tracking-wider">UI & Usability</th>
+                    <th className="px-6 py-4 font-semibold text-xs uppercase tracking-wider">Best For</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
                   <tr className="hover:bg-slate-50 transition bg-indigo-50/10">
                     <td className="px-6 py-4 font-bold text-indigo-700 flex items-center gap-2"><Lock className="w-4 h-4" /> 1Password</td>
-                    <td className="px-6 py-4">Master Password + Secret Key</td>
-                    <td className="px-6 py-4">Premium, polished native apps</td>
-                    <td className="px-6 py-4">Security-first users, remote teams, families</td>
+                    <td className="px-6 py-4 text-indigo-700">Master Password + Secret Key</td>
+                    <td className="px-6 py-4 text-indigo-700">Premium, polished native apps</td>
+                    <td className="px-6 py-4 text-indigo-700">Security-first users, remote teams, families</td>
                   </tr>
                   <tr className="hover:bg-slate-50 transition">
                     <td className="px-6 py-4 font-medium text-slate-900">Bitwarden</td>
@@ -330,7 +359,7 @@ export default function OnePasswordReviewPage() {
             </div>
           </div>
 
-          <p>
+          <p className="text-sm text-slate-600 leading-relaxed">
             Bitwarden is the strongest alternative. As an open-source tool, it offers a generous free tier. However, Bitwarden lacks the Secret Key architecture, its interface requires a steeper learning curve, and its autofill isn't quite as reliable on mobile. Dashlane is visually appealing and includes a VPN, but we found it significantly more expensive ($59.99/year minimum) without providing structural security advantages over 1Password.
           </p>
 
@@ -338,122 +367,153 @@ export default function OnePasswordReviewPage() {
             <div className="flex items-center gap-2 text-sm font-bold text-indigo-900"><Lock className="w-4 h-4 text-indigo-600" /> Made your choice? Start your free 14-day trial of 1Password →</div>
             <ArrowRight className="w-4 h-4 text-indigo-600 group-hover:translate-x-1 transition-transform" />
           </a>
+        </section>
 
-          <h2>How to Get Started with 1Password (Migration Guide)</h2>
-          <p>
+        {/* ===== SECTION: How to Get Started ===== */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
+          <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
+            <Zap className="w-5 h-5 text-indigo-600" /> How to Get Started with 1Password (Migration Guide)
+          </h2>
+          <p className="text-sm text-slate-600 leading-relaxed">
             Moving to a new password manager feels daunting, but the process takes less than 30 minutes. We documented our exact steps so you can replicate the process safely.
           </p>
 
-          <ol className="space-y-6 list-decimal pl-6 marker:text-indigo-600 marker:font-bold">
-            <li className="pl-2">
-              <strong>Create Your Account and Master Password</strong>
-              <p className="mt-2 text-sm text-slate-600">
-                Sign up for the 14-day free trial. Choose a master password that is long (12+ characters), memorable to you, and completely unique. Do not reuse a password you have used anywhere else.
-              </p>
-            </li>
-            <li className="pl-2">
-              <strong>Save Your Emergency Kit Immediately</strong>
-              <p className="mt-2 text-sm text-slate-600">
-                1Password will generate an Emergency Kit PDF containing your Secret Key. Print this out immediately. Store the physical copy in a secure location, like a fireproof safe or a bank deposit box. Never email this PDF to yourself.
-              </p>
-            </li>
-            <li className="pl-2">
-              <strong>Export from Your Old Manager</strong>
-              <p className="mt-2 text-sm text-slate-600">
-                Go to your previous password manager (Chrome, LastPass, Bitwarden) and look for the "Export to CSV" option. Save this file directly to your desktop.
-              </p>
-            </li>
-            <li className="pl-2">
-              <strong>Import and Clean Up</strong>
-              <p className="mt-2 text-sm text-slate-600">
-                Open 1Password, navigate to File &gt; Import, and upload your CSV. Once the import is complete, permanently delete the CSV file from your computer and empty the trash. Run the Watchtower scan immediately to identify your weakest links.
-              </p>
-            </li>
-          </ol>
+          <div className="space-y-6 mt-4">
+            <div className="flex gap-4 items-start">
+              <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 font-black flex items-center justify-center shrink-0 border border-indigo-200 mt-1">1</div>
+              <div>
+                <strong className="text-slate-900 text-base">Create Your Account and Master Password</strong>
+                <p className="mt-1 text-sm text-slate-600 leading-relaxed">
+                  Sign up for the 14-day free trial. Choose a master password that is long (12+ characters), memorable to you, and completely unique. Do not reuse a password you have used anywhere else.
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex gap-4 items-start">
+              <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 font-black flex items-center justify-center shrink-0 border border-indigo-200 mt-1">2</div>
+              <div>
+                <strong className="text-slate-900 text-base">Save Your Emergency Kit Immediately</strong>
+                <p className="mt-1 text-sm text-slate-600 leading-relaxed">
+                  1Password will generate an Emergency Kit PDF containing your Secret Key. Print this out immediately. Store the physical copy in a secure location, like a fireproof safe or a bank deposit box. Never email this PDF to yourself.
+                </p>
+              </div>
+            </div>
 
-          <h2>Real User Experiences from the Trenches</h2>
-          <p>
+            <div className="flex gap-4 items-start">
+              <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 font-black flex items-center justify-center shrink-0 border border-indigo-200 mt-1">3</div>
+              <div>
+                <strong className="text-slate-900 text-base">Export from Your Old Manager</strong>
+                <p className="mt-1 text-sm text-slate-600 leading-relaxed">
+                  Go to your previous password manager (Chrome, LastPass, Bitwarden) and look for the "Export to CSV" option. Save this file directly to your desktop.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4 items-start">
+              <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 font-black flex items-center justify-center shrink-0 border border-indigo-200 mt-1">4</div>
+              <div>
+                <strong className="text-slate-900 text-base">Import and Clean Up</strong>
+                <p className="mt-1 text-sm text-slate-600 leading-relaxed">
+                  Open 1Password, navigate to File &gt; Import, and upload your CSV. Once the import is complete, permanently delete the CSV file from your computer and empty the trash. Run the Watchtower scan immediately to identify your weakest links.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== SECTION: Real User Experiences ===== */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
+          <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
+            <ThumbsUp className="w-5 h-5 text-indigo-600" /> Real User Experiences from the Trenches
+          </h2>
+          <p className="text-sm text-slate-600 leading-relaxed">
             We don't just rely on our internal testing. We actively monitor community sentiment across forums and developer communities. The consensus heavily aligns with our findings: the migration away from legacy providers toward 1Password has been a massive trend.
           </p>
 
-          <blockquote className="bg-slate-50 border-l-4 border-indigo-500 p-6 rounded-r-xl my-8 italic text-slate-700 shadow-sm relative">
+          <blockquote className="bg-slate-50 border-l-4 border-indigo-500 p-6 rounded-r-xl mt-4 italic text-slate-700 shadow-sm relative">
             <Quote className="absolute top-4 right-4 w-8 h-8 text-indigo-100 rotate-180" />
-            <p className="relative z-10 m-0">
+            <p className="relative z-10 m-0 text-sm leading-relaxed">
               "Switched our agency of 45 people to 1Password Business after the recent industry breaches. The deployment took two days. The granular vault sharing meant our dev team could securely share SSH keys without giving the marketing team access. The CLI integration is brilliant. Worth every penny of the $7.99 per user."
             </p>
-            <footer className="mt-4 text-sm font-bold text-slate-900 flex items-center gap-2 not-italic">
-              <div className="w-6 h-6 bg-slate-200 rounded-full flex items-center justify-center text-xs text-slate-500">r/</div>
+            <footer className="mt-4 text-xs font-bold text-slate-900 flex items-center gap-2 not-italic">
+              <div className="w-6 h-6 bg-slate-200 rounded-full flex items-center justify-center text-[10px] text-slate-500">r/</div>
               SysAdmin Community Member (Reddit)
             </footer>
           </blockquote>
+        </section>
 
-          {/* Promo Banner inside content */}
-          <div className="my-12 p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-indigo-900 text-white shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500 opacity-20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-            <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-8">
-              <div className="space-y-4 max-w-lg">
-                <div className="flex items-center gap-2 text-indigo-300 font-bold tracking-wider text-sm uppercase">
-                  <Tag className="w-5 h-5" /> Special Offer
-                </div>
-                <h3 className="text-2xl font-black text-white m-0 leading-tight">Secure Your Digital Identity Today</h3>
-                <p className="text-indigo-100 text-sm m-0">
-                  Stop relying on vulnerable browser autofills. Start your 14-day trial and lock in a 25% discount on annual plans through our partner link.
-                </p>
+        {/* ===== PROMO BANNER ===== */}
+        <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-900 to-indigo-900 text-white shadow-xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500 opacity-20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+          <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-8">
+            <div className="space-y-4 max-w-lg">
+              <div className="flex items-center gap-2 text-indigo-300 font-bold tracking-wider text-xs uppercase">
+                <Tag className="w-4 h-4" /> Special Offer
               </div>
-              <a
-                href="https://pbee.me/D21ign86C"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="px-8 py-4 rounded-xl bg-white text-indigo-900 font-black text-sm hover:bg-indigo-50 transition shadow-lg shrink-0 w-full sm:w-auto text-center cta-glow"
-              >
-                Claim Discount
-              </a>
+              <h3 className="text-2xl font-black text-white m-0 leading-tight">Secure Your Digital Identity Today</h3>
+              <p className="text-indigo-100 text-sm m-0 leading-relaxed">
+                Stop relying on vulnerable browser autofills. Start your 14-day trial and lock in a 25% discount on annual plans through our partner link.
+              </p>
             </div>
+            <a
+              href="https://pbee.me/D21ign86C"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="px-8 py-4 rounded-xl bg-white text-indigo-900 font-black text-sm hover:bg-indigo-50 transition shadow-lg shrink-0 w-full sm:w-auto text-center cta-glow"
+            >
+              Claim Discount
+            </a>
           </div>
+        </div>
 
-          <h2>Frequently Asked Questions (FAQ)</h2>
-          <div className="space-y-4 not-prose mt-8">
-            <details className="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-              <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-bold text-slate-900 hover:bg-slate-50 transition">
+        {/* ===== SECTION: FAQ ===== */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
+          <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
+            <HelpCircle className="w-5 h-5 text-indigo-600" /> Frequently Asked Questions (FAQ)
+          </h2>
+          
+          <div className="space-y-4 mt-4">
+            <details className="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+              <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-bold text-slate-900 hover:bg-slate-100 transition text-sm">
                 What happens if I forget my 1Password Master Password?
                 <ChevronRight className="w-5 h-5 text-slate-400 group-open:rotate-90 transition-transform duration-200" />
               </summary>
-              <div className="px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+              <div className="px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
                 If you are on an Individual plan and forget your Master Password, 1Password cannot recover it for you. Their zero-knowledge architecture means they literally do not have your password. However, if you are on a Families or Teams plan, an administrator or family organizer can initiate an account recovery process to help you regain access.
               </div>
             </details>
 
-            <details className="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-              <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-bold text-slate-900 hover:bg-slate-50 transition">
+            <details className="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+              <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-bold text-slate-900 hover:bg-slate-100 transition text-sm">
                 Can I use 1Password offline without internet access?
                 <ChevronRight className="w-5 h-5 text-slate-400 group-open:rotate-90 transition-transform duration-200" />
               </summary>
-              <div className="px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+              <div className="px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
                 Yes. 1Password stores a secure, encrypted local cache of your vault on your devices. You can view, copy, and autofill your passwords while entirely offline (like on an airplane). Any changes or new passwords you add will sync automatically the next time your device connects to the internet.
               </div>
             </details>
 
-            <details className="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-              <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-bold text-slate-900 hover:bg-slate-50 transition">
+            <details className="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+              <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-bold text-slate-900 hover:bg-slate-100 transition text-sm">
                 Is 1Password safe from being hacked?
                 <ChevronRight className="w-5 h-5 text-slate-400 group-open:rotate-90 transition-transform duration-200" />
               </summary>
-              <div className="px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+              <div className="px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
                 No system is completely immune to cyberattacks, but 1Password’s architecture makes it extremely resilient. Because of the Secret Key requirement, even if hackers breached 1Password's servers and stole all encrypted user data, they could not unlock your specific vault without physically possessing the Secret Key stored locally on your devices.
               </div>
             </details>
 
-            <details className="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-              <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-bold text-slate-900 hover:bg-slate-50 transition">
+            <details className="group bg-slate-50 border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+              <summary className="flex items-center justify-between px-6 py-4 cursor-pointer font-bold text-slate-900 hover:bg-slate-100 transition text-sm">
                 Does 1Password support passkeys?
                 <ChevronRight className="w-5 h-5 text-slate-400 group-open:rotate-90 transition-transform duration-200" />
               </summary>
-              <div className="px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+              <div className="px-6 pb-4 text-sm text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
                 Absolutely. 1Password offers robust native support for passkeys on desktop and mobile. You can generate, store, and seamlessly autofill passkeys across websites and apps that support them, allowing you to go completely passwordless while maintaining top-tier security.
               </div>
             </details>
           </div>
-        </div>
+        </section>
       </main>
 
       {/* Internal Linking / Keep Reading */}

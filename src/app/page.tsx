@@ -428,9 +428,9 @@ export default function Home() {
                   {deal.reviewUrl && (
                     <Link
                       href={deal.reviewUrl}
-                      className="text-xs text-slate-500 hover:text-blue-600 font-semibold inline-flex items-center gap-1 transition group/link"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-slate-100 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 text-sm text-slate-700 hover:text-blue-700 font-bold transition group/link"
                     >
-                      <span>Read In-Depth Review</span>
+                      <span>📖 Read In-Depth Review</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" />
                     </Link>
                   )}
