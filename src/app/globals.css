@@ -12,15 +12,100 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Visual Upgrade: Custom Utilities ===== */
+
+/* Animated gradient shimmer for hero background */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 25%, #f0f9ff 50%, #faf5ff 75%, #f8fafc 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 12s ease infinite;
+}
+
+/* Subtle floating dots pattern overlay */
+.hero-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(99,102,241,0.07) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+/* Deal card left-border accent strip */
+.deal-card-hosting { border-left: 4px solid #3b82f6; }
+.deal-card-telecom { border-left: 4px solid #10b981; }
+.deal-card-security { border-left: 4px solid #6366f1; }
+.deal-card-ai { border-left: 4px solid #8b5cf6; }
+.deal-card-productivity { border-left: 4px solid #f59e0b; }
+
+/* Pulsing glow on primary CTA buttons */
+@keyframes cta-glow {
+  0%, 100% { box-shadow: 0 4px 14px rgba(59,130,246,0.25); }
+  50% { box-shadow: 0 4px 24px rgba(59,130,246,0.45); }
+}
+.cta-glow {
+  animation: cta-glow 2.5s ease-in-out infinite;
+}
+
+/* Badge shimmer effect */
+@keyframes badge-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.badge-shimmer {
+  background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 40%, #fde68a 50%, #f59e0b 60%, #fbbf24 100%);
+  background-size: 200% auto;
+  animation: badge-shimmer 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Savings ribbon on deal cards */
+.savings-ribbon {
+  position: absolute;
+  top: -1px;
+  right: 24px;
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 6px 12px 8px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 12px rgba(220,38,38,0.3);
+  letter-spacing: 0.02em;
+  z-index: 10;
+}
+
+/* Trust shield icon row hover */
+.trust-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.trust-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* Smooth entrance animation for deal cards */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out forwards;
+}
+
+/* Counter / stats numbers */
+.stat-number {
+  background: linear-gradient(135deg, #1e40af, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
