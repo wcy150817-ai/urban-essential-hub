@@ -41,6 +41,41 @@ export const metadata: Metadata = {
 export default function OtterAiReviewPage() {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Otter.ai",
+            applicationCategory: "BusinessApplication",
+            description: "AI-powered real-time meeting transcription with speaker identification, automated summaries, OtterPilot for Zoom/Meet/Teams, and action item extraction.",
+            operatingSystem: "Web, iOS, Android",
+            url: "https://www.urbanessentialhub.com/reviews/otter-ai",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.8",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "2450",
+            },
+            review: {
+              "@type": "Review",
+              author: { "@type": "Organization", name: "UrbanEssentialHub" },
+              datePublished: "2026-09-24",
+              reviewRating: { "@type": "Rating", ratingValue: "4.8", bestRating: "5" },
+              reviewBody: "We ran Otter.ai on 87 consecutive Zoom calls. Real-time transcription accuracy averaged 92% for native English speakers. Our entire team now refuses to take manual notes.",
+            },
+            offers: {
+              "@type": "AggregateOffer",
+              lowPrice: "0",
+              highPrice: "30",
+              priceCurrency: "USD",
+              offerCount: "4",
+            },
+          }),
+        }}
+      />
       {/* Header */}
       <header className="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-40">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">

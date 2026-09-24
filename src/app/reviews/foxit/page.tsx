@@ -41,6 +41,41 @@ export const metadata: Metadata = {
 export default function FoxitReviewPage() {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Foxit PDF Editor",
+            applicationCategory: "BusinessApplication",
+            description: "Full-featured PDF editing suite with OCR, legally binding e-Signatures, form creation, redaction tools, and AI-powered document summarization. 3x faster startup than Adobe Acrobat.",
+            operatingSystem: "Windows, macOS, iOS, Android, Linux",
+            url: "https://www.urbanessentialhub.com/reviews/foxit",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.8",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "1850",
+            },
+            review: {
+              "@type": "Review",
+              author: { "@type": "Organization", name: "UrbanEssentialHub" },
+              datePublished: "2026-09-24",
+              reviewRating: { "@type": "Rating", ratingValue: "4.8", bestRating: "5" },
+              reviewBody: "We cancelled our $276/year Adobe Acrobat subscription and switched to Foxit. After 4 months, Foxit handles 95% of what Acrobat does at a fraction of the cost. Startup is 1.4 seconds vs Acrobat's 4.2 seconds.",
+            },
+            offers: {
+              "@type": "AggregateOffer",
+              lowPrice: "6.99",
+              highPrice: "179.99",
+              priceCurrency: "USD",
+              offerCount: "4",
+            },
+          }),
+        }}
+      />
       {/* Header */}
       <header className="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-40">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">

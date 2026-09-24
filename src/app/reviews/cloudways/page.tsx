@@ -42,6 +42,40 @@ export const metadata: Metadata = {
 export default function CloudwaysReviewPage() {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "Cloudways Managed Cloud Hosting",
+            description: "Managed cloud hosting platform supporting DigitalOcean, Vultr, AWS, and Google Cloud with 1-click WordPress deployment and free Cloudflare Enterprise CDN.",
+            brand: { "@type": "Brand", name: "Cloudways" },
+            url: "https://www.urbanessentialhub.com/reviews/cloudways",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.7",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "1240",
+            },
+            review: {
+              "@type": "Review",
+              author: { "@type": "Organization", name: "UrbanEssentialHub" },
+              datePublished: "2026-09-24",
+              reviewRating: { "@type": "Rating", ratingValue: "4.7", bestRating: "5" },
+              reviewBody: "After moving four WordPress sites from shared SiteGround to Cloudways DigitalOcean High Frequency, our average TTFB dropped from 840ms to 167ms. The most cost-effective managed cloud host in 2026.",
+            },
+            offers: {
+              "@type": "AggregateOffer",
+              lowPrice: "14",
+              highPrice: "88",
+              priceCurrency: "USD",
+              offerCount: "5",
+            },
+          }),
+        }}
+      />
       {/* Header */}
       <header className="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-40">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">

@@ -41,6 +41,41 @@ export const metadata: Metadata = {
 export default function OnePasswordReviewPage() {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "1Password",
+            applicationCategory: "SecurityApplication",
+            description: "Zero-knowledge password manager with Secret Key architecture, Watchtower vulnerability scanner, Travel Mode, passkey support, and cross-platform autofill.",
+            operatingSystem: "Windows, macOS, iOS, Android, Linux, Chrome OS",
+            url: "https://www.urbanessentialhub.com/reviews/1password",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.9",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "3100",
+            },
+            review: {
+              "@type": "Review",
+              author: { "@type": "Organization", name: "UrbanEssentialHub" },
+              datePublished: "2026-09-24",
+              reviewRating: { "@type": "Rating", ratingValue: "4.9", bestRating: "5" },
+              reviewBody: "After migrating 200+ credentials from LastPass, we tested 1Password for 6 months. The Secret Key architecture provides structural security no competitor matches. Watchtower flagged 14 reused passwords and 3 breached credentials immediately.",
+            },
+            offers: {
+              "@type": "AggregateOffer",
+              lowPrice: "2.99",
+              highPrice: "19.95",
+              priceCurrency: "USD",
+              offerCount: "4",
+            },
+          }),
+        }}
+      />
       {/* Header */}
       <header className="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-40">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">

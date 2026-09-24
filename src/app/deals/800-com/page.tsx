@@ -38,6 +38,40 @@ export const metadata: Metadata = {
 export default function EightHundredReviewPage() {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "800.com Toll-Free Business Phone Number",
+            description: "US toll-free vanity number provider with smart call forwarding, two-way SMS, virtual receptionist, and voicemail-to-email transcription.",
+            brand: { "@type": "Brand", name: "800.com" },
+            url: "https://www.urbanessentialhub.com/deals/800-com",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.8",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "890",
+            },
+            review: {
+              "@type": "Review",
+              author: { "@type": "Organization", name: "UrbanEssentialHub" },
+              datePublished: "2026-09-24",
+              reviewRating: { "@type": "Rating", ratingValue: "4.8", bestRating: "5" },
+              reviewBody: "We got a 1-888 toll-free vanity number set up in under 5 minutes. Call forwarding to our mobile worked globally, and SMS verification passed on Stripe and PayPal without issues.",
+            },
+            offers: {
+              "@type": "AggregateOffer",
+              lowPrice: "23",
+              highPrice: "149",
+              priceCurrency: "USD",
+              offerCount: "4",
+            },
+          }),
+        }}
+      />
       {/* Header */}
       <header className="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-40">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
