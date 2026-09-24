@@ -20,7 +20,9 @@ import {
   XCircle,
   AlertTriangle,
   Info,
-  Quote
+  Quote,
+  Zap,
+  ArrowRight,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -269,6 +271,10 @@ export default function OnePasswordReviewPage() {
             At $4.99/month for the Families plan, you are effectively paying $1 per person per month to secure five separate digital identities. We found the included feature—where a family organizer can recover a locked-out member's account without compromising the overall encryption—to be a lifesaver for less tech-savvy relatives.
           </p>
 
+          <a href="https://pbee.me/D21ign86C" target="_blank" rel="noopener noreferrer nofollow" className="cta-glow inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-lg shadow-indigo-500/25 transition cursor-pointer hover:scale-105 w-full sm:w-auto">
+            <Zap className="w-4 h-4" /> Try 1Password Free for 14 Days — No Credit Card Required
+          </a>
+
           <h2>1Password vs. Top Competitors</h2>
           <p>
             No review is complete without benchmarking against the broader market. We tested 1Password against four major alternatives to see where it excels and where it might fall short for specific use cases.
@@ -327,6 +333,11 @@ export default function OnePasswordReviewPage() {
           <p>
             Bitwarden is the strongest alternative. As an open-source tool, it offers a generous free tier. However, Bitwarden lacks the Secret Key architecture, its interface requires a steeper learning curve, and its autofill isn't quite as reliable on mobile. Dashlane is visually appealing and includes a VPN, but we found it significantly more expensive ($59.99/year minimum) without providing structural security advantages over 1Password.
           </p>
+
+          <a href="https://pbee.me/D21ign86C" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center justify-between p-4 rounded-xl bg-indigo-50 border border-indigo-200 hover:bg-indigo-100 transition group">
+            <div className="flex items-center gap-2 text-sm font-bold text-indigo-900"><Lock className="w-4 h-4 text-indigo-600" /> Made your choice? Start your free 14-day trial of 1Password →</div>
+            <ArrowRight className="w-4 h-4 text-indigo-600 group-hover:translate-x-1 transition-transform" />
+          </a>
 
           <h2>How to Get Started with 1Password (Migration Guide)</h2>
           <p>

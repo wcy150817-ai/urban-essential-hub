@@ -17,7 +17,9 @@ import {
   Users,
   Building,
   Smartphone,
-  Quote
+  Quote,
+  Zap,
+  ArrowRight,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -214,6 +216,11 @@ export default function EightHundredReviewPage() {
             </div>
           </section>
 
+          <a href="https://pbee.me/E21fjvxT" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center justify-between p-4 rounded-xl bg-emerald-50 border border-emerald-200 hover:bg-emerald-100 transition group">
+            <div className="flex items-center gap-2 text-sm font-bold text-emerald-900"><Zap className="w-4 h-4 text-emerald-600" /> Get your toll-free number in under 5 minutes — 14-day free trial included.</div>
+            <ArrowRight className="w-4 h-4 text-emerald-600 group-hover:translate-x-1 transition-transform" />
+          </a>
+
           <section className="space-y-5">
             <h2 className="text-2xl font-bold text-slate-900 border-b border-slate-100 pb-3">
               800.com Pricing Analysis: Is It Worth the Cost?
@@ -269,6 +276,9 @@ export default function EightHundredReviewPage() {
                 For 90% of our readers, the <strong>Personal Plan billed annually at $23/month</strong> represents the best value. 1,000 minutes translates to over 16 hours of talk time per month. If you mainly use the number for verification, credibility on your site, and handling occasional customer inquiries, you will rarely hit this cap. If you manage a high-volume call center, the Unlimited tier becomes necessary.
               </p>
             </div>
+            <a href="https://pbee.me/E21fjvxT" target="_blank" rel="noopener noreferrer nofollow" className="cta-glow inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg shadow-emerald-500/25 transition cursor-pointer hover:scale-105 w-full sm:w-auto">
+              <Zap className="w-4 h-4" /> Claim Your 1-800 Number — Save 50% Annual
+            </a>
           </section>
 
           <section className="space-y-5">

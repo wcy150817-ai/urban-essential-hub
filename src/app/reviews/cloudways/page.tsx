@@ -204,6 +204,10 @@ export default function CloudwaysReviewPage() {
           <p className="text-xs text-slate-500">
             Benchmark methodology: Tests run using GTmetrix (Vancouver server), Pingdom (San Francisco), and WebPageTest (Virginia) across 30 consecutive days. All sites used GeneratePress theme, WP Rocket, and no CDN to isolate server response.
           </p>
+          <a href="https://pbee.me/M21iA7k3" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center justify-between p-4 rounded-xl bg-blue-50 border border-blue-200 hover:bg-blue-100 transition group">
+            <div className="flex items-center gap-2 text-sm font-bold text-blue-900"><Zap className="w-4 h-4 text-blue-600" /> Want these speeds? Try Cloudways free for 3 days — no credit card needed.</div>
+            <ArrowRight className="w-4 h-4 text-blue-600 group-hover:translate-x-1 transition-transform" />
+          </a>
         </section>
 
         {/* ===== SECTION: Pricing Deep Dive ===== */}
@@ -251,6 +255,9 @@ export default function CloudwaysReviewPage() {
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-900">
             <strong>💡 Pro tip:</strong> Start with the $14/mo plan. Cloudways lets you vertically scale (upgrade RAM/CPU) with zero downtime in one click. There&apos;s no reason to over-provision on day one.
           </div>
+          <a href="https://pbee.me/M21iA7k3" target="_blank" rel="noopener noreferrer nofollow" className="cta-glow inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-lg shadow-blue-500/25 transition cursor-pointer hover:scale-105 w-full sm:w-auto">
+            <Zap className="w-4 h-4" /> Start 3-Day Free Trial — Use Code URBAN30
+          </a>
         </section>
 
         {/* ===== SECTION: What We Like / Don't Like ===== */}
@@ -321,6 +328,10 @@ export default function CloudwaysReviewPage() {
           <p className="text-xs text-slate-500 leading-relaxed">
             <strong>Our take:</strong> SiteGround is great for beginners but painful at renewal. Kinsta is premium but expensive for multi-site use. Cloudways hits the sweet spot — cloud infrastructure pricing with managed convenience — especially if you run more than one site.
           </p>
+          <a href="https://pbee.me/M21iA7k3" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center justify-between p-4 rounded-xl bg-blue-50 border border-blue-200 hover:bg-blue-100 transition group">
+            <div className="flex items-center gap-2 text-sm font-bold text-blue-900"><Zap className="w-4 h-4 text-blue-600" /> Ready to switch? Get 30% off with code URBAN30 →</div>
+            <ArrowRight className="w-4 h-4 text-blue-600 group-hover:translate-x-1 transition-transform" />
+          </a>
         </section>
 
         {/* ===== SECTION: How to Get Started ===== */}
