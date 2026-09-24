@@ -156,6 +156,7 @@ const DEALS: DealItem[] = [
       "Integrates with Google Calendar, Zoom, and Slack",
     ],
     affiliateUrl: "https://go.ultrainfluence.com/u1-z139Cs7gZ",
+    reviewUrl: "/reviews/otter-ai",
   },
   {
     id: "foxit",
@@ -181,6 +182,7 @@ const DEALS: DealItem[] = [
       "Lightweight, 3x faster startup than Adobe Acrobat",
     ],
     affiliateUrl: "https://pbee.me/R21i8dEeC",
+    reviewUrl: "/reviews/foxit",
   },
 ];
 
