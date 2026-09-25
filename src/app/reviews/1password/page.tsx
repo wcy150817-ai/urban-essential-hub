@@ -331,7 +331,7 @@ export default function OnePasswordReviewPage() {
           </p>
 
           <a href="https://pbee.me/D21ign86C" target="_blank" rel="noopener noreferrer nofollow" className="cta-glow inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-lg shadow-indigo-500/25 transition cursor-pointer hover:scale-105 w-full sm:w-auto">
-            <Zap className="w-4 h-4" /> Try 1Password Free for 14 Days — No Credit Card Required
+            <Zap className="w-4 h-4" /> Try 1Password Free — Use Code HONEY23 for 50% Off First Year
           </a>
         </section>
 
@@ -399,7 +399,7 @@ export default function OnePasswordReviewPage() {
           </p>
 
           <a href="https://pbee.me/D21ign86C" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center justify-between p-4 rounded-xl bg-indigo-50 border border-indigo-200 hover:bg-indigo-100 transition group">
-            <div className="flex items-center gap-2 text-sm font-bold text-indigo-900"><Lock className="w-4 h-4 text-indigo-600" /> Made your choice? Start your free 14-day trial of 1Password →</div>
+            <div className="flex items-center gap-2 text-sm font-bold text-indigo-900"><Lock className="w-4 h-4 text-indigo-600" /> Made your choice? Use code SECURE for 25% off 1Password →</div>
             <ArrowRight className="w-4 h-4 text-indigo-600 group-hover:translate-x-1 transition-transform" />
           </a>
         </section>
@@ -487,7 +487,7 @@ export default function OnePasswordReviewPage() {
               </div>
               <h3 className="text-2xl font-black text-white m-0 leading-tight">Secure Your Digital Identity Today</h3>
               <p className="text-indigo-100 text-sm m-0 leading-relaxed">
-                Stop relying on vulnerable browser autofills. Start your 14-day trial and lock in a 25% discount on annual plans through our partner link.
+                Stop relying on vulnerable browser autofills. Start your 14-day trial and use code <strong>HONEY23</strong> for 50% off your first year, or code <strong>SECURE</strong> for 25% off.
               </p>
             </div>
             <a
@@ -496,7 +496,7 @@ export default function OnePasswordReviewPage() {
               rel="noopener noreferrer nofollow"
               className="px-8 py-4 rounded-xl bg-white text-indigo-900 font-black text-sm hover:bg-indigo-50 transition shadow-lg shrink-0 w-full sm:w-auto text-center cta-glow"
             >
-              Claim Discount
+                Claim 50% Off — Code HONEY23
             </a>
           </div>
         </div>

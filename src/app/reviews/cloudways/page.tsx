@@ -26,7 +26,7 @@ import {
 export const metadata: Metadata = {
   title: "Cloudways Review 2026: We Tested It for 6 Months — Here's the Truth",
   description:
-    "Honest Cloudways review after 6 months of real hosting: speed benchmarks (TTFB under 180ms), DigitalOcean vs Vultr comparison, pricing breakdown, and verified 30% off promo code URBAN30.",
+    "Honest Cloudways review after 6 months of real hosting: speed benchmarks (TTFB under 180ms), DigitalOcean vs Vultr comparison, pricing breakdown, and exclusive 30% off deal.",
   keywords: [
     "cloudways review 2026",
     "cloudways promo code",
@@ -290,7 +290,7 @@ export default function CloudwaysReviewPage() {
             <strong>💡 Pro tip:</strong> Start with the $14/mo plan. Cloudways lets you vertically scale (upgrade RAM/CPU) with zero downtime in one click. There&apos;s no reason to over-provision on day one.
           </div>
           <a href="https://pbee.me/M21iA7k3" target="_blank" rel="noopener noreferrer nofollow" className="cta-glow inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-lg shadow-blue-500/25 transition cursor-pointer hover:scale-105 w-full sm:w-auto">
-            <Zap className="w-4 h-4" /> Start 3-Day Free Trial — Use Code URBAN30
+            <Zap className="w-4 h-4" /> Start 3-Day Free Trial — 30% Off First 3 Months
           </a>
         </section>
 
@@ -363,7 +363,7 @@ export default function CloudwaysReviewPage() {
             <strong>Our take:</strong> SiteGround is great for beginners but painful at renewal. Kinsta is premium but expensive for multi-site use. Cloudways hits the sweet spot — cloud infrastructure pricing with managed convenience — especially if you run more than one site.
           </p>
           <a href="https://pbee.me/M21iA7k3" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center justify-between p-4 rounded-xl bg-blue-50 border border-blue-200 hover:bg-blue-100 transition group">
-            <div className="flex items-center gap-2 text-sm font-bold text-blue-900"><Zap className="w-4 h-4 text-blue-600" /> Ready to switch? Get 30% off with code URBAN30 →</div>
+            <div className="flex items-center gap-2 text-sm font-bold text-blue-900"><Zap className="w-4 h-4 text-blue-600" /> Ready to switch? Get 30% off your first 3 months →</div>
             <ArrowRight className="w-4 h-4 text-blue-600 group-hover:translate-x-1 transition-transform" />
           </a>
         </section>
@@ -376,7 +376,7 @@ export default function CloudwaysReviewPage() {
           <div className="space-y-4 text-sm text-slate-600 leading-relaxed">
             <div className="flex gap-3">
               <span className="w-7 h-7 rounded-lg bg-blue-600 text-white text-xs font-black flex items-center justify-center shrink-0">1</span>
-              <div><strong className="text-slate-900">Sign up with promo code URBAN30.</strong> Visit Cloudways through our link below. Enter code URBAN30 during registration to get 30% off your first 3 months. No credit card required for the 3-day trial.</div>
+              <div><strong className="text-slate-900">Sign up through our partner link.</strong> Visit Cloudways through our link below to automatically activate 30% off your first 3 months. No credit card required for the 3-day trial.</div>
             </div>
             <div className="flex gap-3">
               <span className="w-7 h-7 rounded-lg bg-blue-600 text-white text-xs font-black flex items-center justify-center shrink-0">2</span>
@@ -430,7 +430,7 @@ export default function CloudwaysReviewPage() {
               <span className="text-xs font-bold uppercase tracking-widest text-blue-200">Verified September 2026</span>
             </div>
             <div className="text-xl sm:text-2xl font-black">Get 30% Off for 3 Months + Free Migration</div>
-            <p className="text-xs text-blue-200">Use promo code <strong className="bg-white/20 px-2.5 py-1 rounded-md text-white font-mono text-sm">URBAN30</strong> at signup. No contract, cancel anytime.</p>
+            <p className="text-xs text-blue-200">Sign up through our <strong className="bg-white/20 px-2.5 py-1 rounded-md text-white font-mono text-sm">partner link</strong> to activate. No contract, cancel anytime.</p>
           </div>
           <a
             href="https://pbee.me/M21iA7k3"

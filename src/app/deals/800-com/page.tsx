@@ -133,10 +133,10 @@ export default function EightHundredReviewPage() {
                 rel="noopener noreferrer nofollow"
                 className="cta-glow inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg shadow-emerald-500/30 transition cursor-pointer"
               >
-                <span>Get 50% Off Annual Plans</span>
+                <span>Get 50% Off — Use Code JK50</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
-              <span className="text-[11px] text-center text-slate-400">Starting at $23/mo. Cancel anytime.</span>
+              <span className="text-[11px] text-center text-slate-400">Code <strong>JK50</strong> for 50% OFF · <strong>50OFFBR</strong> for $50 OFF · Starting at $23/mo</span>
             </div>
           </div>
 
@@ -311,7 +311,7 @@ export default function EightHundredReviewPage() {
               </p>
             </div>
             <a href="https://pbee.me/E21fjvxT" target="_blank" rel="noopener noreferrer nofollow" className="cta-glow inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg shadow-emerald-500/25 transition cursor-pointer hover:scale-105 w-full sm:w-auto">
-              <Zap className="w-4 h-4" /> Claim Your 1-800 Number — Save 50% Annual
+              <Zap className="w-4 h-4" /> Claim Your 1-800 Number — Use Code JK50 for 50% OFF
             </a>
           </section>
 
