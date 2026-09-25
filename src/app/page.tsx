@@ -69,7 +69,6 @@ const DEALS: DealItem[] = [
     tagline: "High-performance managed cloud hosting on DigitalOcean, Vultr, and AWS — no Linux CLI needed. Includes free migration, staging, and Cloudflare Enterprise CDN.",
     highlightDeal: "Exclusive: 30% Off for 3 Months + Free Site Migration",
     savingsLabel: "SAVE 30%",
-    couponCode: "URBAN30",
     pricing: "From $11/mo",
     features: [
       "1-Click WordPress & PHP staging environments",
@@ -94,8 +93,9 @@ const DEALS: DealItem[] = [
     reviewsCount: 890,
     badge: "Best for E-Commerce",
     tagline: "Get a dedicated 1-800, 888, or local US business phone number with smart call forwarding to any mobile worldwide, SMS, and virtual receptionist.",
-    highlightDeal: "Save Up to 50% on Annual Plans + 14-Day Free Trial",
+    highlightDeal: "Save Up to 50% on Annual Plans — Use Code JK50",
     savingsLabel: "SAVE 50%",
+    couponCode: "JK50",
     pricing: "From $23/mo",
     features: [
       "Instant 1-800 vanity number search & activation",
@@ -120,8 +120,9 @@ const DEALS: DealItem[] = [
     reviewsCount: 3100,
     badge: "Industry Standard",
     tagline: "Protect your team and personal digital identity with end-to-end encrypted password and passkey storage, Watchtower vulnerability scanning, and Travel Mode.",
-    highlightDeal: "14-Day Full Access Trial • Save 25% on Annual Plans",
-    savingsLabel: "SAVE 25%",
+    highlightDeal: "50% Off Individual Plan — Use Code HONEY23",
+    savingsLabel: "SAVE 50%",
+    couponCode: "HONEY23",
     pricing: "From $2.99/mo",
     features: [
       "Watchtower vulnerability scanner for compromised credentials",
