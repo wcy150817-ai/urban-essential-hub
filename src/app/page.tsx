@@ -25,9 +25,10 @@ import {
   Users,
   Globe,
   Flame,
+  Activity,
 } from "lucide-react";
 
-type CategoryFilter = "all" | "hosting" | "telecom" | "security" | "ai" | "productivity" | "community";
+type CategoryFilter = "all" | "hosting" | "telecom" | "security" | "ai" | "productivity" | "community" | "trading";
 
 interface DealItem {
   id: string;
@@ -211,6 +212,84 @@ const DEALS: DealItem[] = [
     affiliateUrl: "https://www.skool.com/signup?ref=dfdaa1968c7442149993730d69fa0487",
     reviewUrl: "/reviews/skool",
   },
+  {
+    id: "toolsuite",
+    name: "ToolSuite",
+    category: "ai",
+    categoryLabel: "E-Commerce & AI Tool Suite",
+    icon: <Sparkles className="w-7 h-7 text-indigo-600" />,
+    accentColor: "deal-card-security",
+    ctaBg: "bg-indigo-600",
+    ctaHover: "hover:bg-indigo-700",
+    ctaShadow: "shadow-indigo-500/25",
+    rating: 4.9,
+    reviewsCount: 10420,
+    badge: "#1 Ecom & AI Bundle",
+    tagline: "Access over 50 premium e-commerce and AI tools in a single private dashboard. Includes Kalodata, Pipiads, ChatGPT Plus, and Canva Pro.",
+    highlightDeal: "50+ Tools for $29.95/mo — Save $500+/Month",
+    savingsLabel: "SAVE 94%",
+    pricing: "From $29.95/mo",
+    features: [
+      "Kalodata, FastMoss & Shoplus for TikTok Shop intelligence",
+      "Pipiads, WinningHunter & AdSpy for viral product discovery",
+      "ChatGPT Plus (GPT-4o), Claude 3.5 & Canva Pro included",
+      "Zero shared passwords — instant 1-click extension access",
+    ],
+    affiliateUrl: "https://whop.com/toolsuite?a=wcyb5",
+    reviewUrl: "/reviews/toolsuite",
+  },
+  {
+    id: "alertsify",
+    name: "Alertsify",
+    category: "trading",
+    categoryLabel: "Automated Trade Execution",
+    icon: <Zap className="w-7 h-7 text-emerald-600" />,
+    accentColor: "deal-card-telecom",
+    ctaBg: "bg-emerald-600",
+    ctaHover: "hover:bg-emerald-700",
+    ctaShadow: "shadow-emerald-500/25",
+    rating: 4.85,
+    reviewsCount: 1280,
+    badge: "Zero Slippage Execution",
+    tagline: "Eliminate options trade slippage. Automatically execute verified trader signals directly in your own Charles Schwab, Webull, or E*TRADE account.",
+    highlightDeal: "7-Day Free Trial • Non-Custodial Broker API",
+    savingsLabel: "FREE TRIAL",
+    pricing: "From $0 (Lite $99/mo)",
+    features: [
+      "Sub-second automated execution directly in personal brokerage",
+      "Audited P&L tracking without Photoshop fakes",
+      "Works seamlessly with Charles Schwab, Webull, E*TRADE",
+      "Automated stop-loss and take-profit bracket protection",
+    ],
+    affiliateUrl: "https://whop.com/alertsify/alertsify-free?a=wcyb5",
+    reviewUrl: "/reviews/alertsify",
+  },
+  {
+    id: "skylit",
+    name: "Skylit (HeatSeeker)",
+    category: "trading",
+    categoryLabel: "Options Market Intelligence",
+    icon: <Activity className="w-7 h-7 text-cyan-600" />,
+    accentColor: "deal-card-trading",
+    ctaBg: "bg-cyan-600",
+    ctaHover: "hover:bg-cyan-700",
+    ctaShadow: "shadow-cyan-500/25",
+    rating: 4.95,
+    reviewsCount: 860,
+    badge: "Institutional Flow & GEX",
+    tagline: "Hyperintelligent market surveillance for options daytraders. Real-time Gamma Exposure (GEX), 15-second Heatseeker flow maps, and Trinity Mode.",
+    highlightDeal: "Live 15-Sec Flow Maps • Trinity Mode Cockpit",
+    savingsLabel: "TOP TERMINAL",
+    pricing: "From $99.99/mo",
+    features: [
+      "Real-time Gamma Exposure (GEX) & dealer flip levels",
+      "Trinity Mode: Synchronized daytrader command center",
+      "Automated 15-second Heatseeker flow maps on Discord",
+      "Full coverage of 5,000+ individual ticker options flow",
+    ],
+    affiliateUrl: "https://whop.com/heatseeker?a=wcyb5",
+    reviewUrl: "/reviews/skylit",
+  },
 ];
 
 const STATS = [
@@ -363,6 +442,7 @@ export default function Home() {
               { id: "ai", label: "🤖 AI Tools" },
               { id: "productivity", label: "📄 Productivity" },
               { id: "community", label: "👥 Community & Courses" },
+              { id: "trading", label: "📈 Trading & Markets" },
             ].map((cat) => (
               <button
                 key={cat.id}
