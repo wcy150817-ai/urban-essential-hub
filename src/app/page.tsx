@@ -27,7 +27,7 @@ import {
   Flame,
 } from "lucide-react";
 
-type CategoryFilter = "all" | "hosting" | "telecom" | "security" | "ai" | "productivity";
+type CategoryFilter = "all" | "hosting" | "telecom" | "security" | "ai" | "productivity" | "community";
 
 interface DealItem {
   id: string;
@@ -185,11 +185,37 @@ const DEALS: DealItem[] = [
     affiliateUrl: "https://pbee.me/R21i8dEeC",
     reviewUrl: "/reviews/foxit",
   },
+  {
+    id: "skool",
+    name: "Skool",
+    category: "community",
+    categoryLabel: "Community & Course Platform",
+    icon: <Users className="w-7 h-7 text-orange-600" />,
+    accentColor: "deal-card-community",
+    ctaBg: "bg-orange-600",
+    ctaHover: "hover:bg-orange-700",
+    ctaShadow: "shadow-orange-500/25",
+    rating: 4.9,
+    reviewsCount: 3840,
+    badge: "Creator Favorite",
+    tagline: "All-in-one community, classroom, and gamified course platform built by Sam Ovens & Alex Hormozi. Supercharge member engagement with built-in leaderboards and 1-click subscription billing.",
+    highlightDeal: "14-Day Free Trial • Unlimited Members & Courses for $99/mo",
+    savingsLabel: "14-DAY TRIAL",
+    pricing: "From $99/mo",
+    features: [
+      "Gamified Level 1-9 progression with unlockable course content",
+      "Unified community feed, classroom, and group call calendar",
+      "Native iOS and Android mobile app with instant push notifications",
+      "Zero tier penalties — unlimited members on a flat $99/mo fee",
+    ],
+    affiliateUrl: "https://www.skool.com/signup?ref=dfdaa1968c7442149993730d69fa0487",
+    reviewUrl: "/reviews/skool",
+  },
 ];
 
 const STATS = [
   { number: "12,400+", label: "Users Helped", icon: <Users className="w-5 h-5" /> },
-  { number: "5", label: "Tools Vetted", icon: <Award className="w-5 h-5" /> },
+  { number: "6", label: "Tools Vetted", icon: <Award className="w-5 h-5" /> },
   { number: "$2.4M+", label: "Reader Savings", icon: <TrendingUp className="w-5 h-5" /> },
   { number: "47", label: "Countries", icon: <Globe className="w-5 h-5" /> },
 ];
@@ -251,6 +277,7 @@ export default function Home() {
               { id: "security" as CategoryFilter, label: "Security" },
               { id: "ai" as CategoryFilter, label: "AI" },
               { id: "productivity" as CategoryFilter, label: "PDF" },
+              { id: "community" as CategoryFilter, label: "Community" },
             ].map((nav) => (
               <button
                 key={nav.id}
@@ -335,6 +362,7 @@ export default function Home() {
               { id: "security", label: "🔒 Security" },
               { id: "ai", label: "🤖 AI Tools" },
               { id: "productivity", label: "📄 Productivity" },
+              { id: "community", label: "👥 Community & Courses" },
             ].map((cat) => (
               <button
                 key={cat.id}

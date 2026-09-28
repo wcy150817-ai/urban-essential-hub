@@ -44,6 +44,7 @@ body {
 .deal-card-security { border-left: 4px solid #6366f1; }
 .deal-card-ai { border-left: 4px solid #8b5cf6; }
 .deal-card-productivity { border-left: 4px solid #f59e0b; }
+.deal-card-community { border-left: 4px solid #ea580c; }
 
 /* Pulsing glow on primary CTA buttons */
 @keyframes cta-glow {
