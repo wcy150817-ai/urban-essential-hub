@@ -1,14 +1,12 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   Users,
   CheckCircle2,
   ExternalLink,
   ShieldCheck,
   Star,
-  Tag,
   ChevronRight,
   ArrowLeft,
   Zap,
@@ -20,7 +18,6 @@ import {
   AlertTriangle,
   ArrowRight,
   Target,
-  FileText,
   Sparkles,
   Trophy,
   GraduationCap,
@@ -28,30 +25,32 @@ import {
   Layers,
   Quote,
   XCircle,
-  Smartphone,
-  Lock,
   Flame,
-  Check,
   TrendingUp,
-  Briefcase,
   Coins,
 } from "lucide-react";
+import StickySkoolBar from "@/components/StickySkoolBar";
+
+export const metadata: Metadata = {
+  title: "Skool Review 2026: How Course Creators & Coaches Make $10k/Mo (Monetization & Pricing Breakdown)",
+  description:
+    "Wondering how to make money on Skool? Honest Skool review for course creators, educators & coaches: 3 proven monetization blueprints ($49/mo to $299/mo), student retention data, 0% platform cuts, and Skool vs Kajabi/Circle.",
+  keywords: [
+    "how to make money on skool",
+    "skool monetization 2026",
+    "skool review for course creators",
+    "skool review for teachers",
+    "skool vs kajabi for selling courses",
+    "skool vs teachable",
+    "skool vs circle for coaches",
+    "how much does skool charge creators",
+    "skool transaction fees and stripe",
+    "is skool worth it for course creators",
+    "skool games alex hormozi review",
+  ],
+};
 
 export default function SkoolReviewPage() {
-  const [showStickyBar, setShowStickyBar] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 600) {
-        setShowStickyBar(true);
-      } else {
-        setShowStickyBar(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900 pb-16 sm:pb-0">
       <script
@@ -115,7 +114,7 @@ export default function SkoolReviewPage() {
           <ChevronRight className="w-3.5 h-3.5" />
           <Link href="/" className="hover:underline">Reviews</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-slate-800 font-medium">Skool Monetization Review 2026</span>
+          <span className="text-slate-800 font-medium">Skool Review 2026: Monetization for Course Creators</span>
         </div>
 
         {/* ===== HERO CARD (EDUCATOR & CREATOR FOCUS) ===== */}
@@ -127,7 +126,9 @@ export default function SkoolReviewPage() {
               </div>
               <div>
                 <div className="flex items-center gap-2 flex-wrap">
-                  <h1 className="text-2xl sm:text-3xl font-black text-slate-900">Skool Review for Course Creators (2026)</h1>
+                  <h1 className="text-2xl sm:text-3xl font-black text-slate-900">
+                    Skool Review for Course Creators &amp; Coaches (2026)
+                  </h1>
                   <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-800 flex items-center gap-1">
                     <Flame className="w-3 h-3 text-orange-600" /> #1 Creator Business Model
                   </span>
@@ -142,7 +143,7 @@ export default function SkoolReviewPage() {
                     ))}
                   </div>
                   <span className="text-xs font-black text-slate-700">4.9 / 5.0</span>
-                  <span className="text-xs text-slate-400">(3,840+ verified group owners)</span>
+                  <span className="text-xs text-slate-400">(3,840+ verified community owners)</span>
                   <span className="text-xs text-slate-400">•</span>
                   <span className="inline-flex items-center gap-1 text-xs text-emerald-700 font-semibold">
                     <Clock className="w-3 h-3" /> Updated Sep 2026
@@ -280,7 +281,7 @@ export default function SkoolReviewPage() {
         {/* ===== SECTION 1: THE EDUCATOR'S CASH FLOW DILEMMA ===== */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
           <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <TrendingUp className="w-5 h-5 text-orange-600" /> The Educator&apos;s Trap: One-Off Courses vs. Recurring Cash Flow
+            <TrendingUp className="w-5 h-5 text-orange-600" /> The Educator&apos;s Trap: Why Selling One-Off $297 Courses is Dead
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed">
             Let&apos;s talk about the uncomfortable reality of selling courses online in 2026. The traditional &quot;info-product&quot; model is fundamentally broken:
@@ -312,7 +313,7 @@ export default function SkoolReviewPage() {
         {/* ===== NEW SECTION: 3 PROVEN SKOOL MONETIZATION BLUEPRINTS ===== */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
           <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <Coins className="w-5 h-5 text-orange-600" /> 3 Proven Business Blueprints for Teachers on Skool
+            <Coins className="w-5 h-5 text-orange-600" /> How Do Creators Actually Make Money on Skool? (3 Proven Blueprints)
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed">
             You don&apos;t need 100,000 YouTube subscribers to make a full-time living on Skool. Here are the three exact monetization blueprints top educators use to generate $3,000 to $25,000+ per month:
@@ -323,7 +324,7 @@ export default function SkoolReviewPage() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                 <div className="font-black text-slate-900 text-sm flex items-center gap-2">
                   <span className="px-2 py-0.5 rounded-md bg-blue-100 text-blue-800 text-xs font-bold">Model 1</span>
-                  The $49/Month Micro-Membership (Best for Skill Teachers &amp; Creators)
+                  The $49/Month Micro-Membership (Best for Skill Teachers &amp; YouTubers)
                 </div>
                 <div className="text-xs font-black text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md self-start sm:self-auto">
                   Target: $4,900 / Month
@@ -394,7 +395,7 @@ export default function SkoolReviewPage() {
         {/* ===== SECTION 2: THE CHURN KILLER (GAMIFICATION) ===== */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
           <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <Trophy className="w-5 h-5 text-orange-600" /> The Churn Killer: How Gamification Keeps Students Paying Month After Month
+            <Trophy className="w-5 h-5 text-orange-600" /> The Churn Killer: How Gamified Course Locks Protect Creator Monthly Cash Flow
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed">
             In subscription business, <strong>retention is the only metric that truly matters</strong>. If your students cancel after 30 days, you are running an expensive charity for software companies.
@@ -494,13 +495,13 @@ export default function SkoolReviewPage() {
           </span>
         </div>
 
-        {/* ===== SECTION 4: THE $99 FLAT MATH FOR BUSINESS OWNERS ===== */}
+        {/* ===== SECTION 4: SKOOL PRICING & FEES FOR CREATORS ===== */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
           <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <DollarSign className="w-5 h-5 text-orange-600" /> The $99/Mo Flat Math: Why Skool is the Highest-ROI Tool in Your Business
+            <DollarSign className="w-5 h-5 text-orange-600" /> Skool Pricing &amp; Fees: Does Skool Take a Cut of Your Course Sales?
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed">
-            In business, software is either an <strong>overhead expense</strong> or a <strong>revenue-generating investment</strong>.
+            The short answer is <strong>NO</strong>. Unlike platforms like Whop, Gumroad, or Udemy that take 3% to 50% of your earnings, Skool charges <strong>0% platform transaction fees</strong>.
           </p>
           <p className="text-sm text-slate-600 leading-relaxed">
             Platforms like Circle and Kajabi penalize your success. The moment your student count crosses 500 or 1,000 members, they bump you into punitive $199, $399, or $599 monthly tiers. Skool does the exact opposite:
@@ -556,7 +557,7 @@ export default function SkoolReviewPage() {
         {/* ===== SECTION 5: COMPETITOR BENCHMARK FOR CREATORS ===== */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
           <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <BarChart3 className="w-5 h-5 text-orange-600" /> Skool vs. Circle vs. Kajabi: The Real Feature Matrix
+            <BarChart3 className="w-5 h-5 text-orange-600" /> Skool vs. Kajabi vs. Teachable vs. Circle: Platform Comparison for Educators
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed">
             Here is how the top creator platforms compare when your primary goal is maximizing student retention and net profit:
@@ -657,7 +658,7 @@ export default function SkoolReviewPage() {
         {/* ===== SECTION 6: STEP-BY-STEP LAUNCH FOR EDUCATORS ===== */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
           <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <CheckCircle2 className="w-5 h-5 text-orange-600" /> 5 Steps to Launch Your First Paid Skool Cohort
+            <CheckCircle2 className="w-5 h-5 text-orange-600" /> How to Launch Your First Course &amp; Start Charging on Skool in 5 Steps
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed">
             You don&apos;t need a web developer or tech team. You can launch your digital academy in an afternoon:
@@ -700,7 +701,7 @@ export default function SkoolReviewPage() {
         {/* ===== SECTION 7: REAL CREATOR CASE STUDIES ===== */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
           <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <Quote className="w-5 h-5 text-orange-600" /> Real Creator Results (From the Trenches)
+            <Quote className="w-5 h-5 text-orange-600" /> Real Creator Results: How Teachers Shifted from Launches to Recurring MRR
           </h2>
           <p className="text-sm text-slate-600 leading-relaxed">
             Real feedback from educators who moved away from static course platforms:
@@ -757,7 +758,7 @@ export default function SkoolReviewPage() {
         {/* ===== SECTION 8: FAQ FOR TEACHERS ===== */}
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
           <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <HelpCircle className="w-5 h-5 text-orange-600" /> Frequently Asked Questions from Course Creators
+            <HelpCircle className="w-5 h-5 text-orange-600" /> Frequently Asked Questions About Teaching &amp; Selling on Skool
           </h2>
 
           <div className="space-y-3">
@@ -872,41 +873,8 @@ export default function SkoolReviewPage() {
         </div>
       </footer>
 
-      {/* ===== STICKY FLOATING BOTTOM BAR ===== */}
-      <div
-        className={`fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-orange-200/80 px-4 py-3 shadow-2xl transition-all duration-300 transform ${
-          showStickyBar ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 pointer-events-none"
-        }`}
-      >
-        <div className="max-w-4xl mx-auto flex items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-orange-100 border border-orange-200 flex items-center justify-center shrink-0 text-orange-600 font-black">
-              S
-            </div>
-            <div>
-              <div className="text-xs sm:text-sm font-black text-slate-900 flex items-center gap-1.5">
-                <span>Skool for Course Creators</span>
-                <span className="hidden sm:inline-block px-2 py-0.5 rounded-full bg-orange-100 text-orange-800 text-[10px] font-bold">
-                  14-Day Free Trial
-                </span>
-              </div>
-              <div className="text-[11px] text-slate-500 hidden sm:block">
-                Build recurring MRR &bull; Unlimited members &bull; 0% platform cuts
-              </div>
-            </div>
-          </div>
-
-          <a
-            href="https://www.skool.com/signup?ref=dfdaa1968c7442149993730d69fa0487"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="cta-glow inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs sm:text-sm shadow-md shadow-orange-500/30 transition shrink-0 cursor-pointer hover:scale-105"
-          >
-            <span>Start Free Creator Trial</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </a>
-        </div>
-      </div>
+      {/* Sticky Floating Bottom Bar Component */}
+      <StickySkoolBar />
     </div>
   );
 }
