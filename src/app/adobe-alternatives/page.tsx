@@ -38,51 +38,51 @@ export default function AdobeAlternativesPage() {
       adobe: "Photoshop",
       icon: "🖼️",
       tools: [
-        { name: "Affinity Photo", price: "$69.99 (One-time)", type: "Premium", url: "#" },
-        { name: "Photopea", price: "Free", type: "Browser", url: "#" },
-        { name: "GIMP", price: "Free", type: "Open Source", url: "#" },
+        { name: "Affinity Photo", price: "$69.99 (One-time)", type: "Premium", url: "?ref=urbanessential" },
+        { name: "Photopea", price: "Free", type: "Browser", url: "?ref=urbanessential" },
+        { name: "GIMP", price: "Free", type: "Open Source", url: "?ref=urbanessential" },
       ]
     },
     {
       adobe: "Illustrator",
       icon: "✒️",
       tools: [
-        { name: "Affinity Designer", price: "$69.99 (One-time)", type: "Premium", url: "#" },
-        { name: "Inkscape", price: "Free", type: "Open Source", url: "#" },
+        { name: "Affinity Designer", price: "$69.99 (One-time)", type: "Premium", url: "?ref=urbanessential" },
+        { name: "Inkscape", price: "Free", type: "Open Source", url: "?ref=urbanessential" },
       ]
     },
     {
       adobe: "Premiere Pro",
       icon: "🎬",
       tools: [
-        { name: "DaVinci Resolve", price: "Free / $295", type: "Freemium", url: "#" },
-        { name: "Final Cut Pro", price: "$299.99 (Mac Only)", type: "Premium", url: "#" },
-        { name: "CapCut", price: "Free / Freemium", type: "Beginner", url: "#" },
+        { name: "DaVinci Resolve", price: "Free / $295", type: "Freemium", url: "?ref=urbanessential" },
+        { name: "Final Cut Pro", price: "$299.99 (Mac Only)", type: "Premium", url: "?ref=urbanessential" },
+        { name: "CapCut", price: "Free / Freemium", type: "Beginner", url: "?ref=urbanessential" },
       ]
     },
     {
       adobe: "Lightroom",
       icon: "📸",
       tools: [
-        { name: "Capture One", price: "Subscription / One-time", type: "Pro", url: "#" },
-        { name: "RawTherapee", price: "Free", type: "Open Source", url: "#" },
-        { name: "Darktable", price: "Free", type: "Open Source", url: "#" },
+        { name: "Capture One", price: "Subscription / One-time", type: "Pro", url: "?ref=urbanessential" },
+        { name: "RawTherapee", price: "Free", type: "Open Source", url: "?ref=urbanessential" },
+        { name: "Darktable", price: "Free", type: "Open Source", url: "?ref=urbanessential" },
       ]
     },
     {
       adobe: "After Effects",
       icon: "✨",
       tools: [
-        { name: "Cavalry", price: "Free / Subscription", type: "Freemium", url: "#" },
-        { name: "Blender", price: "Free", type: "Open Source", url: "#" },
+        { name: "Cavalry", price: "Free / Subscription", type: "Freemium", url: "?ref=urbanessential" },
+        { name: "Blender", price: "Free", type: "Open Source", url: "?ref=urbanessential" },
       ]
     },
     {
       adobe: "InDesign",
       icon: "📰",
       tools: [
-        { name: "Affinity Publisher", price: "$69.99 (One-time)", type: "Premium", url: "#" },
-        { name: "Scribus", price: "Free", type: "Open Source", url: "#" },
+        { name: "Affinity Publisher", price: "$69.99 (One-time)", type: "Premium", url: "?ref=urbanessential" },
+        { name: "Scribus", price: "Free", type: "Open Source", url: "?ref=urbanessential" },
       ]
     }
   ];
