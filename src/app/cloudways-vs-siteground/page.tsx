@@ -244,7 +244,7 @@ export default function CloudwaysVsSiteground() {
                 <p className="text-gray-600 mb-8 min-h-[80px]">Deploy a high-speed cloud server in minutes. No renewal shocks. Perfect for growing sites and eCommerce.</p>
               </div>
               <div>
-                <Link href="https://www.cloudways.com" className="block w-full py-4 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-lg transition-colors duration-200 shadow-md">
+                <Link href="https://bbux.me/XarLClkjd" className="block w-full py-4 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-lg transition-colors duration-200 shadow-md">
                   Start Free Trial on Cloudways
                 </Link>
                 <p className="text-xs text-gray-500 mt-4">3-day free trial. No credit card required.</p>
