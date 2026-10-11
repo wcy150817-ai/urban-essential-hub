@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "How much does 1Password cost in 2026?",
-    a: "Direct from the vendor, 1Password Individual lists at $3.99/month billed annually. However, they are currently running an introductory 25% discount for the first year, bringing it to $2.99/month. 1Password Families (for up to 5 users) lists at $5.99/month but drops to $4.49/month for the first year under the same promotion. There is no free tier.",
+    a: "Direct from the vendor, 1Password Individual lists at $3.99/month billed annually. However, listings show an introductory 25% first-year discount, bringing it to $2.99/month; confirm the current offer on the vendor's site. 1Password Families (for up to 5 users) lists at $5.99/month but drops to $4.49/month for the first year under the same promotion. There is no free tier.",
   },
   {
     q: "Which devices does 1Password support?",
@@ -171,7 +171,7 @@ export default function OnePasswordReview() {
             1Password has transitioned over the years from a standalone, locally-hosted vault app to a fully cloud-synced subscription service. It is widely considered one of the leading password managers for personal and enterprise use. In this review, we break down what 1Password actually delivers in 2026, focusing purely on its documented features, security architecture, and pricing.
           </p>
           <p className={p}>
-            Unlike many reviews that rely on fabricated testing claims, this analysis relies entirely on verified technical documentation from 1Password and observable facts about its platform support. 1Password is distinguished heavily by its "Secret Key" architecture, a second layer of encryption that runs locally on your device, separating it from competitors that rely solely on a master password.
+            We did not run our own hands-on test of 1Password. This review is built from the vendor's published documentation and public information, and we say where something could not be verified. 1Password is distinguished heavily by its "Secret Key" architecture, a second layer of encryption that runs locally on your device, separating it from competitors that rely solely on a master password.
           </p>
         </section>
 
@@ -201,7 +201,7 @@ export default function OnePasswordReview() {
           <ul className="space-y-6 mt-6">
             <li className="bg-slate-50 p-5 rounded-xl border border-slate-100">
               <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-2"><Smartphone className="w-4 h-4 text-indigo-500" /> Passkey Support</h4>
-              <p className="text-sm text-slate-600">1Password has fully integrated Passkey support. Users can save passkeys directly into their 1Password vaults and use them to authenticate across different websites, bypassing passwords entirely. This feature is supported natively in modern browsers, as well as on iOS 18+ and Android 14+.</p>
+              <p className="text-sm text-slate-600">1Password supports saving passkeys in your vault and using them to sign in to supported websites without typing a password. Passkey support depends on the website, your browser and your operating system version, so check 1Password&apos;s passkey documentation for the platforms you use.</p>
             </li>
             
             <li className="bg-slate-50 p-5 rounded-xl border border-slate-100">
@@ -217,7 +217,7 @@ export default function OnePasswordReview() {
         </section>
 
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
-          <h2 className={h2}><DollarSign className="w-6 h-6 text-indigo-600" /> Verified Pricing (2026)</h2>
+          <h2 className={h2}><DollarSign className="w-6 h-6 text-indigo-600" /> Pricing (October 2026)</h2>
           <p className={p}>
             1Password does not offer a free tier. They offer a 14-day free trial, after which a paid subscription is required. 
           </p>
@@ -236,7 +236,7 @@ export default function OnePasswordReview() {
                   <td className="px-6 py-4 font-semibold text-slate-900">Individual</td>
                   <td className="px-6 py-4 text-slate-600">$3.99 / mo (billed annually)</td>
                   <td className="px-6 py-4 text-slate-900 font-bold">$2.99 / mo</td>
-                  <td className="px-6 py-4 text-slate-600">1 User, 1GB Storage</td>
+                  <td className="px-6 py-4 text-slate-600">1 user</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 font-semibold text-slate-900">Families</td>
@@ -248,7 +248,7 @@ export default function OnePasswordReview() {
             </table>
           </div>
           <p className="text-xs text-slate-500 mt-4 text-center">
-            *Pricing verified direct from 1Password.com. First-year promo prices reflect the 25% discount currently offered to new direct subscribers.
+            *Prices are the figures shown in 1Password listings as of October 2026; the vendor&apos;s pricing page is rendered client-side, so we could not read it directly. Promotions change, so confirm the current price on 1Password.com before you buy.
           </p>
           <div className="mt-8 text-center flex flex-col items-center justify-center gap-3">
              <AffiliateCta label="Get 1Password Now" />
@@ -257,18 +257,58 @@ export default function OnePasswordReview() {
         </section>
 
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+          <h2 className={h2}><KeyRound className="w-6 h-6 text-indigo-600" /> Getting Started: What Setup Involves</h2>
+          <p className={p}>
+            Setting up 1Password is more deliberate than turning on a browser's built-in password saver, mainly because of the Secret Key. A typical first-time setup follows these steps, based on 1Password&apos;s published onboarding flow:
+          </p>
+          <ol className="list-decimal pl-5 space-y-3 text-sm text-slate-600">
+            <li><strong>Create the account and master password.</strong> Choose a long, unique master password you can remember, because it is never stored by 1Password in a form it can read.</li>
+            <li><strong>Save the Emergency Kit.</strong> 1Password generates a document containing your account details and Secret Key. Store a printed copy somewhere safe, because you will need it to sign in on a new device.</li>
+            <li><strong>Install the apps and browser extension.</strong> Desktop apps, mobile apps and browser extensions all connect to the same vault.</li>
+            <li><strong>Import existing logins.</strong> Most people move data from a browser or another manager using an export file, then delete that export afterwards because it is unencrypted.</li>
+            <li><strong>Run Watchtower.</strong> Review reused, weak or exposed passwords and fix the most important accounts first, such as email and banking.</li>
+          </ol>
+          <p className={p + " mt-4"}>
+            The trade-off is a few more minutes at the start in exchange for a stronger security model. If you would rather not manage an Emergency Kit at all, a simpler manager may suit you better.
+          </p>
+        </section>
+
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
           <h2 className={h2}><Users className="w-6 h-6 text-indigo-600" /> Team and Business Capabilities</h2>
           <p className={p}>
-            While the Individual and Families plans are popular, 1Password has built a significant footprint in the enterprise space. The architecture that protects single users scales up to protect large organizations, with additional administrative controls layered on top.
+            While the Individual and Families plans are popular, 1Password also sells plans for teams and businesses. The same encryption design that protects single users is paired with administrative controls aimed at organizations.
           </p>
           <p className={p}>
-            1Password Teams (starting at $19.95/month for up to 10 users) and 1Password Business ($7.99/user/month) offer granular permission structures. Administrators can create shared vaults for specific departments (e.g., Marketing, Engineering) and precisely control who can view, edit, or manage the credentials within those vaults.
+            1Password&apos;s Teams and Business plans offer shared vaults with permission controls, so administrators can decide who can view, edit or manage the credentials in a given vault. Exact plan prices and which features sit in which tier change over time and are listed on the vendor&apos;s pricing page, so we do not quote team prices here. Check that page for current figures before you decide.
           </p>
           <p className={p}>
-            The Business tier includes integrations with identity providers (IdPs) like Okta, Microsoft Entra ID, and Google Workspace for automated provisioning (SCIM) and single sign-on (SSO) integration. Furthermore, 1Password Business includes Advanced Protection features, allowing administrators to enforce two-factor authentication, set master password policies, and restrict access to 1Password from specific IP addresses or locations using firewall rules. This level of control is a primary reason why many organizations choose 1Password over simpler, consumer-focused alternatives.
+            According to 1Password&apos;s business documentation, higher tiers add identity-provider integrations, automated provisioning and enforceable security policies. Confirm which of these your chosen tier includes, because features vary by plan. 1Password has also stated that its business plans include a family account for each employee, which is worth verifying with the vendor if it matters to you.
           </p>
-          <p className={p}>
-            Additionally, every 1Password Business account includes a complimentary 1Password Families account for every team member, encouraging good security habits both at work and at home.
+        </section>
+
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+          <h2 className={h2}><CheckCircle2 className="w-6 h-6 text-indigo-600" /> Who 1Password Fits, and Who Should Look Elsewhere</h2>
+          <div className="grid sm:grid-cols-2 gap-6 mt-4">
+            <div className="bg-slate-50 p-5 rounded-xl border border-slate-100">
+              <h4 className="font-bold text-slate-900 mb-2">A good fit if you:</h4>
+              <ul className="list-disc pl-5 space-y-2 text-sm text-slate-600">
+                <li>Want a second secret protecting your vault beyond the master password.</li>
+                <li>Share logins with family or a small team and want clear vault permissions.</li>
+                <li>Use several operating systems and want the same vault everywhere.</li>
+                <li>Travel across borders and value Travel Mode.</li>
+              </ul>
+            </div>
+            <div className="bg-slate-50 p-5 rounded-xl border border-slate-100">
+              <h4 className="font-bold text-slate-900 mb-2">Consider alternatives if you:</h4>
+              <ul className="list-disc pl-5 space-y-2 text-sm text-slate-600">
+                <li>Need a permanent free tier. Bitwarden and the built-in keychains on Apple and Google platforms are free.</li>
+                <li>Do not want to look after an Emergency Kit.</li>
+                <li>Only use one Apple device and are happy with the built-in keychain.</li>
+              </ul>
+            </div>
+          </div>
+          <p className={p + " mt-4"}>
+            If you are weighing 1Password against LastPass specifically, our <Link href="/1password-vs-lastpass" className="font-bold underline text-indigo-700">1Password vs LastPass comparison</Link> covers pricing and security design side by side.
           </p>
         </section>
 
@@ -284,6 +324,18 @@ export default function OnePasswordReview() {
           </ul>
         </section>
         
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+          <h2 className={h2}><AlertTriangle className="w-6 h-6 text-indigo-600" /> How This Review Was Built and What We Could Not Verify</h2>
+          <p className={p}>
+            This page draws on 1Password&apos;s published documentation, public pricing listings and its documented security design. We did not run our own long-term hands-on test, so we make no claims about everyday speed, autofill reliability or customer support quality beyond what the vendor documents.
+          </p>
+          <ul className="list-disc pl-5 space-y-2 text-sm text-slate-600">
+            <li>We could not read the vendor&apos;s pricing page directly, so prices are marked as listings from October 2026.</li>
+            <li>We do not quote team or business prices, because they change and we could not confirm current figures.</li>
+            <li>Feature availability differs by plan and platform. Confirm any feature you depend on in 1Password&apos;s documentation before you subscribe.</li>
+          </ul>
+        </section>
+
         <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm">
           <h2 className={h2}><HelpCircle className="w-6 h-6 text-indigo-600" /> Frequently Asked Questions</h2>
           <div className="space-y-4 mt-6">
