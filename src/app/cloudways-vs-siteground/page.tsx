@@ -79,7 +79,7 @@ export default function CloudwaysVsSiteground() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
-      <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8 bg-white text-gray-900 font-sans">
+      <div className="w-full max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8 bg-white text-gray-900 font-sans overflow-x-hidden">
         <header className="mb-12 border-b pb-8">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
             Cloudways vs SiteGround (2026): Pricing, Renewal Costs and Architecture Compared
