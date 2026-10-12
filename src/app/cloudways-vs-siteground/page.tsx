@@ -67,7 +67,7 @@ export default function CloudwaysVsSiteground() {
   };
 
   const cwButton = (label: string) =>
-    `<a href="https://bbux.me/XarLClkjd" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#4f46e5;padding:14px 28px;border-radius:12px;font-weight:700;text-decoration:none;text-align:center">${label}</a>`;
+    `<a href="https://pbee.me/M21iA7k3" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#4f46e5;padding:14px 28px;border-radius:12px;font-weight:700;text-decoration:none;text-align:center">${label}</a>`;
 
   const th = 'px-6 py-4 font-semibold text-gray-900';
   const tdLabel = 'px-6 py-4 text-sm font-medium text-gray-700';
