@@ -88,7 +88,7 @@ export default function OnePasswordVsLastPass() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
-      <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8 bg-white text-gray-900 font-sans">
+      <div className="w-full max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8 bg-white text-gray-900 font-sans overflow-x-hidden">
         <header className="mb-12 border-b pb-8">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
             1Password vs LastPass (2026): Breach History, Encryption Architecture &amp; Pricing
@@ -419,7 +419,7 @@ export default function OnePasswordVsLastPass() {
                 <h3 className="text-2xl font-extrabold text-gray-900 mb-3">NordPass</h3>
                 <p className="text-gray-700 mb-4">A credible alternative if you prefer Argon2 and XChaCha20, which NordPass documents for its zero-knowledge design. We did not verify its current pricing, so check its plans page.</p>
               </div>
-              <div dangerouslySetInnerHTML={{ __html: '<a href="https://bbux.me/earMnghc" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#0f766e;padding:14px 28px;border-radius:12px;font-weight:700;text-decoration:none;text-align:center">See NordPass plans</a>' }} />
+              <div dangerouslySetInnerHTML={{ __html: '<a href="https://pbee.me/q21e82X5" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#0f766e;padding:14px 28px;border-radius:12px;font-weight:700;text-decoration:none;text-align:center">See NordPass plans</a>' }} />
             </div>
             <div className="rounded-2xl border-2 border-gray-300 p-6 shadow-md flex flex-col justify-between">
               <div>
