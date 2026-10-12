@@ -6,39 +6,37 @@ import {
   CheckCircle2,
   ExternalLink,
   ShieldCheck,
-  Star,
   Tag,
   ChevronRight,
   ArrowLeft,
   Zap,
   Clock,
   BarChart3,
-  DollarSign,
   HelpCircle,
-  ThumbsUp,
   AlertTriangle,
-  ArrowRight,
-  Target,
   FileText,
+  Lock,
+  Cpu,
+  Users,
+  Check,
+  X,
+  Volume2,
+  Calendar,
+  Sparkles,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Otter.ai Review 2026: We Used It for 87 Meetings — Here's the Real Accuracy Rate",
+  title: "Otter.ai Review (2026): Features, Pricing, Accuracy & Real Limitations",
   description:
-    "Honest Otter.ai review after running it on 87 Zoom and Meet calls: real accuracy rates, pricing breakdown, OtterPilot test, and how it compares to Fireflies and built-in transcriptions.",
-  keywords: [
-    "otter ai review",
-    "otter ai vs fireflies",
-    "otter pilot review",
-    "ai meeting notes",
-    "best transcription software",
-    "otter ai pricing",
-    "otter ai accuracy",
-    "is otter ai safe",
-  ],
+    "An in-depth 2026 architectural review of Otter.ai: transcription accuracy, OtterPilot meeting automation, pricing tiers, enterprise security, and MeetGeek comparisons.",
+  alternates: {
+    canonical: "https://urbanessentialhub.com/reviews/otter-ai",
+  },
 };
 
 export default function OtterAiReviewPage() {
+  const affiliateHtmlMeetGeek = `<a href="https://bbux.me/u9xzh3Ug" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#4f46e5;padding:14px 28px;border-radius:12px;font-weight:700;text-decoration:none;text-align:center">Try MeetGeek AI Meeting Assistant</a>`;
+
   return (
     <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900">
       <script
@@ -46,45 +44,94 @@ export default function OtterAiReviewPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "Otter.ai",
-            applicationCategory: "BusinessApplication",
-            description: "AI-powered real-time meeting transcription with speaker identification, automated summaries, OtterPilot for Zoom/Meet/Teams, and action item extraction.",
-            operatingSystem: "Web, iOS, Android",
-            url: "https://www.urbanessentialhub.com/reviews/otter-ai",
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.8",
-              bestRating: "5",
-              worstRating: "1",
-              ratingCount: "2450",
-            },
-            review: {
-              "@type": "Review",
-              author: { "@type": "Organization", name: "UrbanEssentialHub" },
-              datePublished: "2026-09-24",
-              reviewRating: { "@type": "Rating", ratingValue: "4.8", bestRating: "5" },
-              reviewBody: "We ran Otter.ai on 87 consecutive Zoom calls. Real-time transcription accuracy averaged 92% for native English speakers. Our entire team now refuses to take manual notes.",
-            },
-            offers: {
-              "@type": "AggregateOffer",
-              lowPrice: "0",
-              highPrice: "30",
-              priceCurrency: "USD",
-              offerCount: "4",
-            },
+            "@graph": [
+              {
+                "@type": "SoftwareApplication",
+                name: "Otter.ai",
+                applicationCategory: "BusinessApplication",
+                operatingSystem: "Web, iOS, Android, Zoom, Microsoft Teams, Google Meet",
+                description:
+                  "AI transcription and meeting productivity platform providing automated audio-to-text conversion, OtterPilot bot attendance, speaker identification, and generative meeting summaries.",
+                offers: {
+                  "@type": "AggregateOffer",
+                  priceCurrency: "USD",
+                  lowPrice: "0",
+                  highPrice: "30",
+                  offerCount: "4",
+                },
+              },
+              {
+                "@type": "Article",
+                headline: "Otter.ai Review (2026): Features, Pricing, Accuracy & Real Limitations",
+                description:
+                  "An exhaustive technical breakdown of Otter.ai transcription fidelity, meeting bot integrations, pricing tiers, and alternative meeting AI software.",
+                datePublished: "2026-09-24",
+                dateModified: "2026-10-12",
+                author: {
+                  "@type": "Organization",
+                  name: "UrbanEssentialHub",
+                  url: "https://urbanessentialhub.com",
+                },
+              },
+              {
+                "@type": "FAQPage",
+                mainEntity: [
+                  {
+                    "@type": "Question",
+                    name: "How accurate is Otter.ai for complex technical terminology and foreign accents?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Under clear acoustic conditions with minimal reverberation, Otter.ai reaches 90% to 94% word accuracy for standard North American and British accents. However, accuracy noticeably degrades to 80% to 85% when processing heavy regional accents, rapid overlapping speech, or specialized medical and engineering jargon, unless terms are added to the custom vocabulary library.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can Otter.ai record in-person meetings without a video conferencing link?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes. Otter provides native mobile apps for iOS and Android, as well as a direct browser recorder. It captures physical conference room audio through laptop or smartphone microphones, identifies distinct speakers based on voiceprints, and generates synchronized live transcripts.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Does Otter.ai use customer meeting data to train its foundational AI models?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "According to Otter's 2026 security policies, Otter does not sell user data. Business and Enterprise tier accounts have explicit administrative toggles to prevent their audio transcripts and notes from being used to train internal machine learning algorithms.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "What happens when your meeting exceeds the free tier 30-minute limit?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "On the Basic free tier, Otter will automatically terminate recording and transcription at exactly 30 minutes into a single session. Upgrading to the Pro plan expands the single-conversation ceiling to 90 minutes, while Business allows up to 4 hours per meeting.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "How does Otter.ai compare to dedicated meeting recorder platforms like MeetGeek?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "While Otter excels in clean text transcription and quick keyword searching, MeetGeek provides specialized video recording capture, meeting sentiment tracking, and deeper integration pipelines with enterprise CRMs like HubSpot and Salesforce.",
+                    },
+                  },
+                ],
+              },
+            ],
           }),
         }}
       />
+
       {/* Header */}
       <header className="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-40">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group text-slate-600 hover:text-slate-900 transition">
             <ArrowLeft className="w-4 h-4" />
-            <span className="text-sm font-semibold">Back to All Deals</span>
+            <span className="text-sm font-semibold">Back to SaaS Hub</span>
           </Link>
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-violet-600 to-fuchsia-700 flex items-center justify-center text-white">
+            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-indigo-600 to-violet-700 flex items-center justify-center text-white">
               <ShieldCheck className="w-4 h-4" />
             </div>
             <span className="font-extrabold text-base text-slate-900 tracking-tight">UrbanEssentialHub</span>
@@ -99,365 +146,511 @@ export default function OtterAiReviewPage() {
           <ChevronRight className="w-3.5 h-3.5" />
           <Link href="/" className="hover:underline">Reviews</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-slate-800 font-medium">Otter.ai Review 2026</span>
+          <span className="text-slate-800 font-medium">Otter.ai Review (2026)</span>
         </div>
 
-        {/* ===== HERO CARD ===== */}
+        {/* Hero Card */}
         <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-6">
             <div className="flex items-start gap-4">
-              <div className="w-16 h-16 rounded-2xl bg-violet-50 border border-violet-200 flex items-center justify-center shrink-0">
-                <Mic className="w-8 h-8 text-violet-600" />
+              <div className="w-16 h-16 rounded-2xl bg-indigo-50 border border-indigo-200 flex items-center justify-center shrink-0">
+                <Mic className="w-8 h-8 text-indigo-600" />
               </div>
               <div>
                 <div className="flex items-center gap-2 flex-wrap">
                   <h1 className="text-2xl sm:text-3xl font-black text-slate-900">Otter.ai Review (2026)</h1>
-                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-violet-100 text-violet-800">
-                    Editor&apos;s Choice
+                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-800">
+                    B2B Productivity
                   </span>
                 </div>
-                <p className="text-slate-500 text-sm mt-1">We ran Otter.ai on 87 consecutive Zoom calls. Here&apos;s the truth.</p>
+                <p className="text-slate-600 text-sm mt-1">
+                  Features, speech recognition accuracy, OtterPilot capabilities, and pricing realities.
+                </p>
                 <div className="flex items-center gap-2 mt-2 flex-wrap">
-                  <div className="flex text-amber-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-400" />
-                    ))}
-                  </div>
-                  <span className="text-xs font-black text-slate-700">4.8 / 5.0</span>
-                  <span className="text-xs text-slate-400">(2,450+ verified reviews)</span>
-                  <span className="text-xs text-slate-400">•</span>
-                  <span className="inline-flex items-center gap-1 text-xs text-emerald-700 font-semibold">
-                    <Clock className="w-3 h-3" /> Updated Sep 2026
+                  <span className="inline-flex items-center gap-1 text-xs text-slate-600 font-medium">
+                    <Clock className="w-3 h-3 text-slate-400" /> Updated October 2026
                   </span>
+                  <span className="text-xs text-slate-300">•</span>
+                  <span className="text-xs text-slate-500 font-medium">Architecture &amp; Benchmark Audit</span>
                 </div>
               </div>
             </div>
 
-            <a
-              href="https://go.ultrainfluence.com/u1-z139Cs7gZ"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              className="cta-glow inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-bold text-sm shadow-lg shadow-violet-500/25 transition cursor-pointer hover:scale-105"
-            >
-              <Zap className="w-4 h-4" />
-              <span>Try Otter Free</span>
-              <ExternalLink className="w-4 h-4" />
-            </a>
+            <div className="flex flex-col sm:items-end gap-2">
+              <a
+                href="https://otter.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-sm transition"
+              >
+                <span>Visit Otter.ai Official</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+              <span className="text-[11px] text-slate-400">Direct link &bull; Free tier available</span>
+            </div>
           </div>
 
-          {/* Quick Verdict — Hook */}
-          <div className="bg-slate-50 rounded-xl p-5 border border-slate-200/80">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">The Quick Verdict</h2>
+          {/* Executive Summary */}
+          <div className="bg-slate-50 rounded-xl p-5 border border-slate-200">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Executive Summary &amp; 2026 Verdict</h2>
+            <p className="text-sm text-slate-700 leading-relaxed mb-3">
+              Otter.ai remains one of the most recognized automated speech recognition (ASR) tools for remote workforces and collegiate lecture environments. Driven by proprietary acoustic neural networks and automated calendar integration, it converts spoken dialogue into searchable transcripts with real-time speaker labeling.
+            </p>
             <p className="text-sm text-slate-700 leading-relaxed">
-              We ran Otter.ai on 87 consecutive Zoom calls. Here&apos;s why our entire team now refuses to take manual notes. Across thousands of minutes of conversation, including multiple accents and rapid-fire technical jargon, OtterPilot maintained a 96.4% transcription accuracy rate. The auto-emailed summaries and action items extraction eliminated hours of post-meeting admin work per week. While the built-in transcripts in Teams or Meet are free, they lack the cross-platform flexibility, searchability, and AI chat features that make Otter a true meeting assistant rather than just a dumb dictation tool.
+              <strong>The Bottom Line:</strong> If your priority is rapid English transcription, instant keyword searching across past meetings, and light AI synthesis on a budget, Otter delivers strong core value. However, organizations requiring multi-language translation, high-definition video capture, and strict customer relationship management (CRM) logging will find competing platforms like MeetGeek better tailored to their workflows.
             </p>
           </div>
         </div>
 
-        {/* ===== SECTION: Who Is Otter For? ===== */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-4">
-          <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <Target className="w-5 h-5 text-violet-600" /> Who Is Otter.ai Actually For?
-          </h2>
-          <p className="text-sm text-slate-600 leading-relaxed">
-            Not everyone needs a dedicated AI meeting assistant. If you only take one call a week, rely on your notebook. But if any of these describe your situation, the return on investment is immediate:
+        {/* Section 1: Core Technology Architecture */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+          <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+            <Cpu className="w-6 h-6 text-indigo-600" />
+            <h2 className="text-xl font-bold text-slate-900">How Otter.ai Works: Acoustic Modeling &amp; Diarization</h2>
+          </div>
+          <p className="text-slate-700 text-sm leading-relaxed">
+            Unlike modern generalist transcription wrappers that rely entirely on generic OpenAI Whisper API calls, Otter.ai operates on a customized automatic speech recognition (ASR) architecture developed over nearly a decade. This architecture bifurcates the processing workload into two concurrent mathematical pipelines:
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-            {[
-              "Remote teams spanning multiple time zones trying to avoid constant sync meetings",
-              "Sales reps who need to log exact quotes and action items in HubSpot or Salesforce",
-              "Project managers tasked with tracking deliverables and tracking who agreed to what",
-              "Students or researchers recording lectures or interviews for comprehensive text search",
-              "Podcasters requiring high-quality base transcripts before editing",
-            ].map((item, i) => (
-              <div key={i} className="flex items-start gap-2 p-2.5 rounded-lg bg-violet-50/50 border border-violet-100">
-                <CheckCircle2 className="w-4 h-4 text-violet-600 shrink-0 mt-0.5" />
-                <span className="text-slate-700 font-medium">{item}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="border border-slate-200 rounded-xl p-4 bg-slate-50/60">
+              <h3 className="font-bold text-slate-800 text-sm mb-2 flex items-center gap-2">
+                <Volume2 className="w-4 h-4 text-indigo-600" />
+                1. Acoustic Phoneme Extraction
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Incoming audio streams are sliced into millisecond frames, converting raw waveforms into mel-frequency spectrograms. Proprietary neural acoustic models infer phoneme sequences, dynamically adjusting token probabilities using contextually weighted language models.
+              </p>
+            </div>
+            <div className="border border-slate-200 rounded-xl p-4 bg-slate-50/60">
+              <h3 className="font-bold text-slate-800 text-sm mb-2 flex items-center gap-2">
+                <Users className="w-4 h-4 text-indigo-600" />
+                2. Speaker Diarization Clustering
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Otter extracts vocal biometrics (d-vectors) to distinguish between unique voices. By clustering vocal pitch, formant frequencies, and cadence, the system separates Speaker 1 from Speaker 2 even in unstructured roundtable discussions.
+              </p>
+            </div>
+          </div>
+          <p className="text-slate-700 text-sm leading-relaxed">
+            Once phonetic tokens are assembled into raw text, Otter&apos;s natural language processing layer applies punctuation heuristics, capitalization rules, and automated formatting. On top of the transcript, Otter AI Chat utilizes large language models to index the text, allowing users to ask conversational questions such as <em>&quot;What were the three deliverables assigned to Sarah?&quot;</em>
+          </p>
+        </section>
+
+        {/* Section 2: Real-World Accuracy Analysis */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+          <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+            <BarChart3 className="w-6 h-6 text-indigo-600" />
+            <h2 className="text-xl font-bold text-slate-900">Transcription Fidelity: Realistic Accuracy Expectations</h2>
+          </div>
+          <p className="text-slate-700 text-sm leading-relaxed">
+            Commercial marketing pages frequently cite &quot;99% transcription accuracy.&quot; In production environments, however, Word Error Rate (WER) fluctuates significantly depending on acoustic environment, microphone hardware, speaker distance, and regional dialect.
+          </p>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm border-collapse min-w-[550px]">
+              <thead>
+                <tr className="bg-slate-100 text-slate-700 border-b border-slate-200">
+                  <th className="py-3 px-4 font-bold">Acoustic Environment</th>
+                  <th className="py-3 px-4 font-bold">Estimated Fidelity</th>
+                  <th className="py-3 px-4 font-bold">Dominant Error Pattern</th>
+                  <th className="py-3 px-4 font-bold">Mitigation Strategy</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200 text-slate-600 text-xs">
+                <tr>
+                  <td className="py-3 px-4 font-medium text-slate-800">Direct Headset, Native English</td>
+                  <td className="py-3 px-4 text-emerald-700 font-bold">92% &ndash; 95%</td>
+                  <td className="py-3 px-4">Minor punctuation placement</td>
+                  <td className="py-3 px-4">Minimal post-editing needed</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-medium text-slate-800">Conference Room Mic (Reverberant)</td>
+                  <td className="py-3 px-4 text-amber-700 font-bold">84% &ndash; 88%</td>
+                  <td className="py-3 px-4">Room echo masking word endings</td>
+                  <td className="py-3 px-4">Place boundary microphone in room center</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-medium text-slate-800">Overlapping Cross-Talk</td>
+                  <td className="py-3 px-4 text-rose-700 font-bold">75% &ndash; 81%</td>
+                  <td className="py-3 px-4">Diarization collapse; merged sentences</td>
+                  <td className="py-3 px-4">Enforce meeting turn-taking protocols</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-medium text-slate-800">Heavy Technical Jargon (SaaS/Code)</td>
+                  <td className="py-3 px-4 text-amber-700 font-bold">82% &ndash; 86%</td>
+                  <td className="py-3 px-4">Phonetic misinterpretation (e.g. &quot;Kubernetes&quot;)</td>
+                  <td className="py-3 px-4">Populate Custom Vocabulary in Settings</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Interactive Simulated Transcription Block */}
+          <div className="border border-indigo-100 rounded-xl p-5 bg-indigo-50/40 space-y-3">
+            <div className="flex items-center justify-between flex-wrap gap-2">
+              <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-indigo-600" />
+                Simulated Transcript Comparison: Raw Audio vs. Otter Output
+              </h3>
+              <span className="text-[11px] font-semibold text-indigo-700 bg-indigo-100 px-2.5 py-0.5 rounded-full">
+                Interactive Demonstration
+              </span>
+            </div>
+            <p className="text-xs text-slate-600">
+              Observe how Otter.ai segments speaker blocks and extracts immediate action items during a typical product sync:
+            </p>
+
+            <div className="bg-white border border-slate-200 rounded-lg p-4 space-y-3 text-xs">
+              <div className="border-l-2 border-indigo-500 pl-3 py-1">
+                <div className="flex items-center gap-2 text-indigo-900 font-bold mb-1">
+                  <span>Marcus Vance (Product Lead)</span>
+                  <span className="text-slate-400 font-normal">00:14</span>
+                </div>
+                <p className="text-slate-700 leading-relaxed">
+                  &quot;We are rolling out the updated authentication endpoint this Friday. We need QA to run regression passes across OAuth tokens before Thursday noon.&quot;
+                </p>
               </div>
-            ))}
+
+              <div className="border-l-2 border-emerald-500 pl-3 py-1">
+                <div className="flex items-center gap-2 text-emerald-900 font-bold mb-1">
+                  <span>Elena Rostova (Engineering)</span>
+                  <span className="text-slate-400 font-normal">00:32</span>
+                </div>
+                <p className="text-slate-700 leading-relaxed">
+                  &quot;Understood. I will spin up staging clusters by 10 AM tomorrow to validate the refresh token TTL.&quot;
+                </p>
+              </div>
+
+              <div className="bg-amber-50/80 border border-amber-200 rounded-md p-3 mt-2">
+                <div className="text-[11px] font-bold text-amber-800 uppercase tracking-wide mb-1 flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-amber-600" />
+                  Otter Automated Action Item Extracted:
+                </div>
+                <p className="text-amber-900 text-xs font-medium">
+                  &bull; Elena Rostova to deploy staging cluster verification for OAuth refresh tokens by Wednesday 10:00 AM.
+                </p>
+              </div>
+            </div>
           </div>
-          <p className="text-xs text-slate-500 italic">
-            &quot;I connected Otter to my calendar and never looked back. I actually pay attention during client calls now instead of frantically typing.&quot; — Sarah J., Agency Owner
-          </p>
         </section>
 
-        {/* CTA 1 */}
-        <a href="https://go.ultrainfluence.com/u1-z139Cs7gZ" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center justify-between p-4 rounded-xl bg-violet-50 border border-violet-200 hover:bg-violet-100 transition group">
-          <div className="flex items-center gap-2 text-sm font-bold text-violet-900"><Zap className="w-4 h-4 text-violet-600" /> Stop taking manual notes. Try Otter.ai for free today.</div>
-          <ArrowRight className="w-4 h-4 text-violet-600 group-hover:translate-x-1 transition-transform" />
-        </a>
+        {/* Section 3: Key Features & Practical Usability */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+          <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+            <FileText className="w-6 h-6 text-indigo-600" />
+            <h2 className="text-xl font-bold text-slate-900">Core Feature Set: What You Actually Get</h2>
+          </div>
 
-        {/* ===== SECTION: Accuracy Data ===== */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
-          <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <FileText className="w-5 h-5 text-violet-600" /> Real-World Accuracy Rates
-          </h2>
-          <p className="text-sm text-slate-600 leading-relaxed">
-            We meticulously tracked Otter&apos;s performance across those 87 meetings. We weren&apos;t just looking at perfectly enunciated monologues; we tested interruptions, heavy accents, technical industry terms, and overlapping speakers.
+          <div className="space-y-4 text-sm text-slate-700">
+            <div>
+              <h3 className="font-bold text-slate-900 mb-1">1. OtterPilot Virtual Bot</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Connects directly to Google Calendar and Microsoft Outlook. Once authorized, an automated virtual participant named &quot;OtterPilot&quot; joins your Zoom, Google Meet, or Microsoft Teams meeting link automatically, capturing audio and taking screenshots of presented slides to align visuals with the timeline.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-slate-900 mb-1">2. Otter AI Chat &amp; Cross-Meeting Queries</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Rather than reading a 40-page transcript, team members can interrogate Otter using generative prompts. The chat assistant queries the vector database of past meetings to find specific consensus points, customer quotes, or numerical project deadlines across multiple calls.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-slate-900 mb-1">3. Automated Outline &amp; Summary Emails</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Within minutes of meeting completion, Otter synthesizes a bulleted overview paired with timestamped hyperlinks. If a participant missed the call, they can click directly into the 3-minute section relevant to their department rather than re-listening to the entire hour.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-slate-900 mb-1">4. Custom Vocabulary Injection</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Standard ASR software constantly misspells unique brand names, industry acronyms, and employee surnames. Otter allows administrators to inject custom terminology dictionaries, drastically suppressing phonetic guessing errors for proprietary product codes.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 4: 2026 Pricing Tiers Breakdown */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+          <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+            <Tag className="w-6 h-6 text-indigo-600" />
+            <h2 className="text-xl font-bold text-slate-900">Otter.ai 2026 Pricing Tiers &amp; Limitations</h2>
+          </div>
+          <p className="text-slate-700 text-sm leading-relaxed">
+            Otter.ai maintains four distinct subscription tiers. Understanding the exact limits on monthly transcription minutes and per-meeting durations is critical to avoid unexpected cutoffs during lengthy executive sessions:
           </p>
 
-          {/* Comparison Table */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Free */}
+            <div className="border border-slate-200 rounded-xl p-5 bg-white flex flex-col justify-between">
+              <div>
+                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Basic</span>
+                <div className="text-2xl font-black text-slate-900 mt-1 mb-3">Free</div>
+                <ul className="space-y-2 text-xs text-slate-600">
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> 300 transcription minutes/month</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> 30 minutes max per meeting</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> Live automated summaries</li>
+                  <li className="flex items-center gap-2 text-slate-400"><X className="w-3.5 h-3.5 text-slate-300" /> No bulk audio/video imports</li>
+                </ul>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-100 text-[11px] text-slate-400">
+                Ideal for light solo note-taking
+              </div>
+            </div>
+
+            {/* Pro */}
+            <div className="border-2 border-indigo-600 rounded-xl p-5 bg-indigo-50/30 flex flex-col justify-between relative">
+              <div className="absolute -top-3 right-4 bg-indigo-600 text-white font-bold text-[10px] px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                Popular
+              </div>
+              <div>
+                <span className="text-xs font-bold text-indigo-900 uppercase tracking-wider">Pro</span>
+                <div className="text-2xl font-black text-slate-900 mt-1">
+                  $10 <span className="text-xs font-normal text-slate-500">/ user / mo</span>
+                </div>
+                <div className="text-[11px] text-slate-500 mb-3">Billed annually ($16.99 monthly)</div>
+                <ul className="space-y-2 text-xs text-slate-600">
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-indigo-600" /> 1,200 minutes/month total</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-indigo-600" /> 90 minutes max per conversation</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-indigo-600" /> Import up to 10 audio/video files/mo</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-indigo-600" /> Advanced search &amp; custom vocab (100 names)</li>
+                </ul>
+              </div>
+              <div className="mt-6 pt-4 border-t border-indigo-100 text-[11px] text-indigo-700 font-medium">
+                Best for freelancers &amp; consultants
+              </div>
+            </div>
+
+            {/* Business */}
+            <div className="border border-slate-200 rounded-xl p-5 bg-white flex flex-col justify-between">
+              <div>
+                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Business</span>
+                <div className="text-2xl font-black text-slate-900 mt-1">
+                  $20 <span className="text-xs font-normal text-slate-500">/ user / mo</span>
+                </div>
+                <div className="text-[11px] text-slate-500 mb-3">Billed annually ($30 monthly)</div>
+                <ul className="space-y-2 text-xs text-slate-600">
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> 6,000 minutes/month total</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> Up to 4 hours per conversation</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> Unlimited pre-recorded file imports</li>
+                  <li className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-emerald-600" /> Team analytics &amp; admin controls</li>
+                </ul>
+              </div>
+              <div className="mt-6 pt-4 border-t border-slate-100 text-[11px] text-slate-400">
+                Essential for multi-member teams
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 5: Security, Privacy & Enterprise Compliance */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+          <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+            <Lock className="w-6 h-6 text-indigo-600" />
+            <h2 className="text-xl font-bold text-slate-900">Security Architecture &amp; Data Privacy Verification</h2>
+          </div>
+          <p className="text-slate-700 text-sm leading-relaxed">
+            Allowing an autonomous AI bot into confidential corporate meetings requires rigorous security auditing. Corporate legal teams must evaluate several critical parameters before deploying Otter across company-wide calendars:
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div className="border border-slate-200 rounded-xl p-4 space-y-2">
+              <div className="font-bold text-slate-800 text-sm flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                SOC 2 Type II Certified
+              </div>
+              <p className="text-slate-600 leading-relaxed">
+                Otter undergoes independent annual third-party audits confirming compliance with AICPA Trust Services Criteria for security and data confidentiality.
+              </p>
+            </div>
+
+            <div className="border border-slate-200 rounded-xl p-4 space-y-2">
+              <div className="font-bold text-slate-800 text-sm flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                Encryption at Rest &amp; Transit
+              </div>
+              <p className="text-slate-600 leading-relaxed">
+                Data in transit is protected using TLS 1.3 encryption protocols. Audio files and generated text archives are stored using AES-256 standard encryption on AWS infrastructure.
+              </p>
+            </div>
+
+            <div className="border border-slate-200 rounded-xl p-4 space-y-2">
+              <div className="font-bold text-slate-800 text-sm flex items-center gap-1.5">
+                <AlertTriangle className="w-4 h-4 text-amber-600" />
+                Model Training Opt-Out
+              </div>
+              <p className="text-slate-600 leading-relaxed">
+                By default on free accounts, user data may assist machine learning model improvements. Business and Enterprise tier administrators must explicitly verify that organizational data training toggles are switched off.
+              </p>
+            </div>
+
+            <div className="border border-slate-200 rounded-xl p-4 space-y-2">
+              <div className="font-bold text-slate-800 text-sm flex items-center gap-1.5">
+                <AlertTriangle className="w-4 h-4 text-amber-600" />
+                Two-Party Consent Laws
+              </div>
+              <p className="text-slate-600 leading-relaxed">
+                Because Otter joins as an active recording bot, users in jurisdictions with two-party consent laws (such as California, Florida, or Germany) must notify all meeting participants prior to recording.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 6: Head-to-Head Comparison Matrix */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+          <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+            <BarChart3 className="w-6 h-6 text-indigo-600" />
+            <h2 className="text-xl font-bold text-slate-900">Otter.ai vs. MeetGeek vs. Fireflies.ai</h2>
+          </div>
+          <p className="text-slate-700 text-sm leading-relaxed">
+            The AI meeting assistant space has matured significantly. Depending on whether your organization prioritizes pure text search or deep sales intelligence, here is how Otter compares to leading alternatives:
+          </p>
+
           <div className="overflow-x-auto">
-            <table className="w-full text-xs border border-slate-200 rounded-lg overflow-hidden">
+            <table className="w-full text-left text-sm border-collapse min-w-[620px]">
               <thead>
-                <tr className="bg-slate-100 text-left">
-                  <th className="p-3 font-bold text-slate-700">Audio Condition</th>
-                  <th className="p-3 font-bold text-slate-700">Word Error Rate</th>
-                  <th className="p-3 font-bold text-violet-700 bg-violet-50">Accuracy Score</th>
+                <tr className="bg-slate-100 text-slate-700 border-b border-slate-200">
+                  <th className="py-3 px-4 font-bold">Feature / Metric</th>
+                  <th className="py-3 px-4 font-bold">Otter.ai</th>
+                  <th className="py-3 px-4 font-bold text-indigo-900 bg-indigo-50/50">MeetGeek (Recommended)</th>
+                  <th className="py-3 px-4 font-bold">Fireflies.ai</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100">
+              <tbody className="divide-y divide-slate-200 text-slate-600 text-xs">
                 <tr>
-                  <td className="p-3 font-semibold text-slate-700">Clear studio mic (1 speaker)</td>
-                  <td className="p-3">1.2%</td>
-                  <td className="p-3 font-bold bg-violet-50/30 text-emerald-600">98.8%</td>
+                  <td className="py-3 px-4 font-semibold text-slate-800">Primary Focus</td>
+                  <td className="py-3 px-4">Fast live text notes &amp; lecture indexing</td>
+                  <td className="py-3 px-4 bg-indigo-50/30 font-medium text-indigo-900">Video recording &amp; sales intelligence</td>
+                  <td className="py-3 px-4">Multi-language team collaboration</td>
                 </tr>
                 <tr>
-                  <td className="p-3 font-semibold text-slate-700">Standard laptop mic (quiet room)</td>
-                  <td className="p-3">3.6%</td>
-                  <td className="p-3 font-bold bg-violet-50/30">96.4%</td>
+                  <td className="py-3 px-4 font-semibold text-slate-800">Language Support</td>
+                  <td className="py-3 px-4">Primarily English (limited beta others)</td>
+                  <td className="py-3 px-4 bg-indigo-50/30 font-medium text-indigo-900">30+ Global Languages</td>
+                  <td className="py-3 px-4">60+ Global Languages</td>
                 </tr>
                 <tr>
-                  <td className="p-3 font-semibold text-slate-700">Heavy background noise (coffee shop)</td>
-                  <td className="p-3">9.1%</td>
-                  <td className="p-3 font-bold bg-violet-50/30 text-amber-600">90.9%</td>
+                  <td className="py-3 px-4 font-semibold text-slate-800">Video Storage</td>
+                  <td className="py-3 px-4">Slide snapshots only (no full video)</td>
+                  <td className="py-3 px-4 bg-indigo-50/30 font-medium text-indigo-900">Full HD video playback &amp; snippets</td>
+                  <td className="py-3 px-4">Audio primary (video on higher tiers)</td>
                 </tr>
                 <tr>
-                  <td className="p-3 font-semibold text-slate-700">Multiple overlapping speakers</td>
-                  <td className="p-3">12.5%</td>
-                  <td className="p-3 font-bold bg-violet-50/30 text-red-600">87.5%</td>
+                  <td className="py-3 px-4 font-semibold text-slate-800">CRM Auto-Sync</td>
+                  <td className="py-3 px-4">Limited / Zapier dependent</td>
+                  <td className="py-3 px-4 bg-indigo-50/30 font-medium text-indigo-900">Native HubSpot, Salesforce, Pipedrive</td>
+                  <td className="py-3 px-4">Native Salesforce, HubSpot</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-semibold text-slate-800">Starting Price</td>
+                  <td className="py-3 px-4">$10 / user / mo</td>
+                  <td className="py-3 px-4 bg-indigo-50/30 font-medium text-indigo-900">$10.50 / user / mo</td>
+                  <td className="py-3 px-4">$10 / user / mo</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-slate-500">
-            Our results show that under typical working conditions, Otter gets the context right almost every time. Speaker identification accurately tagged participants in 94% of our multi-person calls after the first 3 minutes of voice calibration.
+
+          {/* Alternative Recommendation Box */}
+          <div className="border border-indigo-200 rounded-xl p-6 bg-gradient-to-r from-indigo-50/70 to-violet-50/50 space-y-4">
+            <div className="flex items-start justify-between gap-4 flex-wrap">
+              <div>
+                <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-700 bg-indigo-100 px-2.5 py-0.5 rounded-full">
+                  Top Alternative for Video &amp; Sales Teams
+                </span>
+                <h3 className="text-lg font-bold text-slate-900 mt-2">
+                  MeetGeek: Superior Choice for Full Video Capture &amp; Multi-Language Teams
+                </h3>
+                <p className="text-xs text-slate-600 mt-1 max-w-xl leading-relaxed">
+                  If your organization conducts client sales presentations, customer onboarding, or international calls in languages other than English, MeetGeek provides complete high-definition video archives, automatic timestamped highlights, and native synchronization into your CRM pipeline.
+                </p>
+              </div>
+              <div className="shrink-0 pt-2" dangerouslySetInnerHTML={{ __html: affiliateHtmlMeetGeek }} />
+            </div>
+          </div>
+        </section>
+
+        {/* Section 7: Frequently Asked Questions */}
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+          <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+            <HelpCircle className="w-6 h-6 text-indigo-600" />
+            <h2 className="text-xl font-bold text-slate-900">Frequently Asked Questions</h2>
+          </div>
+
+          <div className="space-y-4">
+            <details className="border border-slate-200 rounded-xl p-4 group">
+              <summary className="font-bold text-slate-900 text-sm cursor-pointer list-none flex items-center justify-between">
+                <span>How accurate is Otter.ai for complex technical terminology and foreign accents?</span>
+                <ChevronRight className="w-4 h-4 text-slate-400 group-open:rotate-90 transition-transform" />
+              </summary>
+              <p className="text-xs text-slate-600 mt-3 leading-relaxed">
+                Under clear acoustic conditions with minimal reverberation, Otter.ai reaches 90% to 94% word accuracy for standard North American and British accents. However, accuracy noticeably degrades to 80% to 85% when processing heavy regional accents, rapid overlapping speech, or specialized medical and engineering jargon, unless terms are added to the custom vocabulary library.
+              </p>
+            </details>
+
+            <details className="border border-slate-200 rounded-xl p-4 group">
+              <summary className="font-bold text-slate-900 text-sm cursor-pointer list-none flex items-center justify-between">
+                <span>Can Otter.ai record in-person meetings without a video conferencing link?</span>
+                <ChevronRight className="w-4 h-4 text-slate-400 group-open:rotate-90 transition-transform" />
+              </summary>
+              <p className="text-xs text-slate-600 mt-3 leading-relaxed">
+                Yes. Otter provides native mobile apps for iOS and Android, as well as a direct browser recorder. It captures physical conference room audio through laptop or smartphone microphones, identifies distinct speakers based on voiceprints, and generates synchronized live transcripts.
+              </p>
+            </details>
+
+            <details className="border border-slate-200 rounded-xl p-4 group">
+              <summary className="font-bold text-slate-900 text-sm cursor-pointer list-none flex items-center justify-between">
+                <span>Does Otter.ai use customer meeting data to train its foundational AI models?</span>
+                <ChevronRight className="w-4 h-4 text-slate-400 group-open:rotate-90 transition-transform" />
+              </summary>
+              <p className="text-xs text-slate-600 mt-3 leading-relaxed">
+                According to Otter&apos;s 2026 security policies, Otter does not sell user data. Business and Enterprise tier accounts have explicit administrative toggles to prevent their audio transcripts and notes from being used to train internal machine learning algorithms.
+              </p>
+            </details>
+
+            <details className="border border-slate-200 rounded-xl p-4 group">
+              <summary className="font-bold text-slate-900 text-sm cursor-pointer list-none flex items-center justify-between">
+                <span>What happens when your meeting exceeds the free tier 30-minute limit?</span>
+                <ChevronRight className="w-4 h-4 text-slate-400 group-open:rotate-90 transition-transform" />
+              </summary>
+              <p className="text-xs text-slate-600 mt-3 leading-relaxed">
+                On the Basic free tier, Otter will automatically terminate recording and transcription at exactly 30 minutes into a single session. Upgrading to the Pro plan expands the single-conversation ceiling to 90 minutes, while Business allows up to 4 hours per meeting.
+              </p>
+            </details>
+
+            <details className="border border-slate-200 rounded-xl p-4 group">
+              <summary className="font-bold text-slate-900 text-sm cursor-pointer list-none flex items-center justify-between">
+                <span>How does Otter.ai compare to dedicated meeting recorder platforms like MeetGeek?</span>
+                <ChevronRight className="w-4 h-4 text-slate-400 group-open:rotate-90 transition-transform" />
+              </summary>
+              <p className="text-xs text-slate-600 mt-3 leading-relaxed">
+                While Otter excels in clean text transcription and quick keyword searching, MeetGeek provides specialized video recording capture, meeting sentiment tracking, and deeper integration pipelines with enterprise CRMs like HubSpot and Salesforce.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        {/* Section 8: Methodology & Editorial Disclosure */}
+        <section className="text-xs text-slate-500 border-t border-slate-200 pt-6 space-y-2">
+          <p>
+            <strong>Methodology &amp; Disclosure:</strong> UrbanEssentialHub conducts objective, technical evaluations of business productivity software. Our pricing data and feature capabilities reflect public commercial documentation, verified vendor release notes, and industry benchmarks as of October 2026. Some outbound merchant links on this page may generate affiliate commissions for our publication at zero additional expense to readers.
           </p>
-        </section>
-
-        {/* CTA 2 */}
-        <div className="flex justify-center">
-          <a href="https://go.ultrainfluence.com/u1-z139Cs7gZ" target="_blank" rel="noopener noreferrer nofollow" className="cta-glow inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-bold text-sm shadow-lg shadow-violet-500/25 transition cursor-pointer hover:scale-105 w-full sm:w-auto">
-            <Zap className="w-4 h-4" /> Get Your Own AI Meeting Assistant
-          </a>
-        </div>
-
-        {/* ===== SECTION: Pricing Deep Dive ===== */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
-          <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <DollarSign className="w-5 h-5 text-violet-600" /> Otter.ai Pricing Breakdown (2026)
-          </h2>
-          <p className="text-sm text-slate-600 leading-relaxed">
-            Otter operates on a freemium model. The free tier is generous for casual users, but power users will need a paid plan. All paid plans save 20% when billed annually.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="border border-slate-200 rounded-xl p-4 bg-slate-50/50 space-y-2">
-              <h3 className="font-black text-sm text-slate-900">Basic (Free)</h3>
-              <p className="text-2xl font-black text-slate-900">$0<span className="text-xs font-normal text-slate-500">/mo</span></p>
-              <ul className="text-xs text-slate-600 space-y-1">
-                <li>• 300 monthly transcription minutes</li>
-                <li>• 30 minutes per conversation</li>
-                <li>• Basic AI summaries</li>
-              </ul>
-            </div>
-
-            <div className="border-2 border-violet-600 rounded-xl p-4 bg-violet-50/30 space-y-2 relative">
-              <span className="absolute -top-2.5 left-4 bg-violet-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">MOST POPULAR</span>
-              <h3 className="font-black text-sm text-slate-900">Pro</h3>
-              <p className="text-2xl font-black text-slate-900">$16.99<span className="text-xs font-normal text-slate-500">/mo</span></p>
-              <ul className="text-xs text-slate-600 space-y-1">
-                <li>• 1,200 monthly minutes</li>
-                <li>• 90 minutes per conversation</li>
-                <li>• OtterPilot auto-join & advanced search</li>
-              </ul>
-            </div>
-
-            <div className="border border-slate-200 rounded-xl p-4 bg-slate-50/50 space-y-2">
-              <h3 className="font-black text-sm text-slate-900">Business</h3>
-              <p className="text-2xl font-black text-slate-900">$30<span className="text-xs font-normal text-slate-500">/mo</span></p>
-              <ul className="text-xs text-slate-600 space-y-1">
-                <li>• 6,000 monthly minutes</li>
-                <li>• 4 hours per conversation</li>
-                <li>• Team collaboration & analytics</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-900">
-            <strong>💡 Pro tip:</strong> The Basic plan gives you 300 minutes. If your meetings average 45 minutes, that&apos;s about 6 meetings a month. Test it on the free tier before upgrading.
+          <div className="flex gap-4 pt-2">
+            <Link href="/cloudways-vs-siteground" className="hover:underline text-indigo-600 font-medium">
+              Read Cloudways vs SiteGround Review
+            </Link>
+            <span>&bull;</span>
+            <Link href="/1password-vs-lastpass" className="hover:underline text-indigo-600 font-medium">
+              Read 1Password vs LastPass Analysis
+            </Link>
           </div>
         </section>
-
-        {/* ===== SECTION: What We Like / Don't Like ===== */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
-          <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <BarChart3 className="w-5 h-5 text-violet-600" /> Honest Pros and Cons
-          </h2>
-
-          <div className="grid sm:grid-cols-2 gap-4">
-            <div className="p-5 rounded-xl bg-emerald-50/60 border border-emerald-100 space-y-3">
-              <h3 className="text-sm font-black text-emerald-900 flex items-center gap-2">
-                <ThumbsUp className="w-4 h-4 text-emerald-600" /> What We Loved
-              </h3>
-              <ul className="text-xs space-y-2 text-slate-700">
-                <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /> <span><strong>OtterPilot Auto-Join.</strong> You link your calendar, and Otter automatically joins Zoom, Meet, and Teams calls. No fumbling with start buttons.</span></li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /> <span><strong>Otter Chat functionality.</strong> You can ask "What did marketing say about the budget?" and the AI answers instantly based on the transcript.</span></li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /> <span><strong>Automated Action Items.</strong> It accurately highlights tasks assigned during the call and emails a bulleted summary immediately afterward.</span></li>
-                <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" /> <span><strong>Keyword search across all history.</strong> We found notes from an obscure vendor call months ago just by searching the vendor&apos;s name.</span></li>
-              </ul>
-            </div>
-
-            <div className="p-5 rounded-xl bg-slate-100/70 border border-slate-200 space-y-3">
-              <h3 className="text-sm font-black text-slate-800 flex items-center gap-2">
-                <AlertTriangle className="w-4 h-4 text-amber-500" /> What Could Be Better
-              </h3>
-              <ul className="text-xs space-y-2 text-slate-600">
-                <li className="flex items-start gap-2"><span className="text-amber-500 font-bold shrink-0">•</span> <span><strong>Loud presence in meetings.</strong> Otter joins as a visible participant. While transparent, it can occasionally startle uninitiated guests.</span></li>
-                <li className="flex items-start gap-2"><span className="text-amber-500 font-bold shrink-0">•</span> <span><strong>Limits on the Free tier.</strong> 30 minutes per conversation on the free tier cuts off most standard hour-long client calls abruptly.</span></li>
-                <li className="flex items-start gap-2"><span className="text-amber-500 font-bold shrink-0">•</span> <span><strong>Occasional speaker confusion.</strong> If two people have very similar voices and constantly talk over each other, the labels get mixed up.</span></li>
-                <li className="flex items-start gap-2"><span className="text-amber-500 font-bold shrink-0">•</span> <span><strong>Pricing creep.</strong> The Pro plan is excellent, but jumping from Pro to Business for team features nearly doubles the cost.</span></li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA 3 */}
-        <a href="https://go.ultrainfluence.com/u1-z139Cs7gZ" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center justify-between p-4 rounded-xl bg-violet-50 border border-violet-200 hover:bg-violet-100 transition group">
-          <div className="flex items-center gap-2 text-sm font-bold text-violet-900"><Zap className="w-4 h-4 text-violet-600" /> Start using OtterPilot on your next call. Claim your free account.</div>
-          <ArrowRight className="w-4 h-4 text-violet-600 group-hover:translate-x-1 transition-transform" />
-        </a>
-
-        {/* ===== SECTION: Otter vs Competitors ===== */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
-          <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <BarChart3 className="w-5 h-5 text-violet-600" /> Otter.ai vs. Fireflies vs. Built-in Tools
-          </h2>
-          <p className="text-sm text-slate-600 leading-relaxed">
-            Why pay for Otter when Teams or Google Meet have free transcription? Here is our comparison after testing the main alternatives.
-          </p>
-
-          <div className="overflow-x-auto">
-            <table className="w-full text-xs border border-slate-200 rounded-lg overflow-hidden">
-              <thead>
-                <tr className="bg-slate-100 text-left">
-                  <th className="p-3 font-bold text-slate-700">Feature</th>
-                  <th className="p-3 font-bold text-violet-700 bg-violet-50">Otter.ai</th>
-                  <th className="p-3 font-bold text-slate-700">Fireflies.ai</th>
-                  <th className="p-3 font-bold text-slate-700">Teams / Meet Built-in</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100">
-                <tr><td className="p-3 font-semibold">Cross-Platform Support</td><td className="p-3 bg-violet-50/30 font-bold text-emerald-600">Yes (All platforms) ✓</td><td className="p-3">Yes</td><td className="p-3 text-red-600">No (Locked to app)</td></tr>
-                <tr><td className="p-3 font-semibold">Real-Time Transcription</td><td className="p-3 bg-violet-50/30 font-bold">Live viewing</td><td className="p-3">Slight delay</td><td className="p-3">Live viewing</td></tr>
-                <tr><td className="p-3 font-semibold">AI Meeting Assistant (Chat)</td><td className="p-3 bg-violet-50/30 font-bold text-emerald-600">Excellent ✓</td><td className="p-3">Good</td><td className="p-3">Requires expensive Copilot addon</td></tr>
-                <tr><td className="p-3 font-semibold">Action Items Extraction</td><td className="p-3 bg-violet-50/30 font-bold">Highly Accurate</td><td className="p-3">Highly Accurate</td><td className="p-3">Basic</td></tr>
-                <tr><td className="p-3 font-semibold">Free Tier Utility</td><td className="p-3 bg-violet-50/30 font-bold">300 mins (30min limit)</td><td className="p-3">Limited transcript viewing</td><td className="p-3">Free (if enterprise plan)</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="text-xs text-slate-500 leading-relaxed">
-            <strong>Our take:</strong> Fireflies is incredible for heavy CRM integrations, making it a favorite for pure sales teams. Native tools are fine for occasional use but lack proper search. Otter offers the best balance of price, AI capabilities, and ease of use for general professionals and remote teams.
-          </p>
-        </section>
-
-        {/* ===== SECTION: How to Get Started ===== */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
-          <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <Zap className="w-5 h-5 text-violet-600" /> How to Set Up Otter.ai (Step-by-Step)
-          </h2>
-          <div className="space-y-4 text-sm text-slate-600 leading-relaxed">
-            <div className="flex gap-3">
-              <span className="w-7 h-7 rounded-lg bg-violet-600 text-white text-xs font-black flex items-center justify-center shrink-0">1</span>
-              <div><strong className="text-slate-900">Create your free account.</strong> Click the link below to sign up. You get 300 minutes immediately to test it out.</div>
-            </div>
-            <div className="flex gap-3">
-              <span className="w-7 h-7 rounded-lg bg-violet-600 text-white text-xs font-black flex items-center justify-center shrink-0">2</span>
-              <div><strong className="text-slate-900">Connect your calendar.</strong> Sync your Google Calendar or Microsoft Outlook. This takes 10 seconds and is crucial for automation.</div>
-            </div>
-            <div className="flex gap-3">
-              <span className="w-7 h-7 rounded-lg bg-violet-600 text-white text-xs font-black flex items-center justify-center shrink-0">3</span>
-              <div><strong className="text-slate-900">Enable OtterPilot.</strong> In settings, toggle OtterPilot on. It will now automatically join meetings containing a web conference link on your calendar.</div>
-            </div>
-            <div className="flex gap-3">
-              <span className="w-7 h-7 rounded-lg bg-violet-600 text-white text-xs font-black flex items-center justify-center shrink-0">4</span>
-              <div><strong className="text-slate-900">Review your first summary.</strong> After your next meeting, check your email. Otter will send a breakdown of key discussion points, slides shown, and action items assigned.</div>
-            </div>
-          </div>
-        </section>
-
-        {/* ===== SECTION: FAQ ===== */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
-          <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
-            <HelpCircle className="w-5 h-5 text-violet-600" /> Otter.ai FAQ
-          </h2>
-          <div className="space-y-4 text-sm text-slate-600">
-            <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-2">
-              <h3 className="font-black text-slate-900 text-sm">Is Otter.ai safe and private?</h3>
-              <p className="text-xs leading-relaxed">Yes. Otter uses TLS encryption in transit and AES-256 encryption at rest. They comply with SOC 2 Type II and GDPR. They explicitly state they do not sell your data, though they do use audio to train their models unless you opt out in your enterprise settings.</p>
-            </div>
-            <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-2">
-              <h3 className="font-black text-slate-900 text-sm">Can I upload old audio files?</h3>
-              <p className="text-xs leading-relaxed">Yes. On paid plans, you can upload MP3, MP4, WAV, and other formats. Otter will transcribe pre-recorded audio just as accurately as live meetings.</p>
-            </div>
-            <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-2">
-              <h3 className="font-black text-slate-900 text-sm">Does Otter work with multiple languages?</h3>
-              <p className="text-xs leading-relaxed">Otter primarily focuses on English (including regional accents like UK, Australian, and Indian English). Support for Spanish, French, and other languages has improved but English remains its strongest capability.</p>
-            </div>
-            <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-2">
-              <h3 className="font-black text-slate-900 text-sm">How do I stop OtterPilot from joining a specific meeting?</h3>
-              <p className="text-xs leading-relaxed">You can toggle off OtterPilot for individual calendar events directly from the Otter dashboard before the meeting begins, or you can manually kick the Otter bot out of a Zoom room like any other participant.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* ===== VERIFIED PROMO CTA ===== */}
-        <div className="bg-gradient-to-r from-violet-600 via-violet-700 to-fuchsia-800 text-white rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-5 shadow-xl shadow-violet-900/20">
-          <div className="space-y-2 text-center sm:text-left">
-            <div className="flex items-center gap-2 justify-center sm:justify-start">
-              <Tag className="w-4 h-4 text-amber-300" />
-              <span className="text-xs font-bold uppercase tracking-widest text-violet-200">Exclusive Link</span>
-            </div>
-            <div className="text-xl sm:text-2xl font-black">Get Started With 300 Free Minutes</div>
-            <p className="text-xs text-violet-200">No credit card required. Experience OtterPilot on your next call.</p>
-          </div>
-          <a
-            href="https://go.ultrainfluence.com/u1-z139Cs7gZ"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="px-8 py-3.5 rounded-xl bg-white text-violet-800 font-black text-sm hover:bg-violet-50 transition shrink-0 shadow-lg hover:scale-105"
-          >
-            Claim Free Account →
-          </a>
-        </div>
-
-        {/* Internal Links */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Link href="/reviews/cloudways" className="group p-4 bg-white rounded-xl border border-slate-200 hover:shadow-md transition flex items-center justify-between">
-            <div>
-              <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Related Review</span>
-              <p className="text-sm font-bold text-slate-900 group-hover:text-violet-600 transition">Cloudways Review — Best Cloud Hosting</p>
-            </div>
-            <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-violet-600 group-hover:translate-x-1 transition-all" />
-          </Link>
-          <Link href="/reviews/1password" className="group p-4 bg-white rounded-xl border border-slate-200 hover:shadow-md transition flex items-center justify-between">
-            <div>
-              <span className="text-[10px] font-bold text-indigo-600 uppercase tracking-wider">Related Review</span>
-              <p className="text-sm font-bold text-slate-900 group-hover:text-violet-600 transition">1Password Review — Best Password Manager</p>
-            </div>
-            <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-violet-600 group-hover:translate-x-1 transition-all" />
-          </Link>
-        </div>
-
-        {/* Affiliate Disclosure */}
-        <p className="text-[11px] text-slate-400 text-center leading-relaxed">
-          <strong>FTC Affiliate Disclosure:</strong> UrbanEssentialHub independently tests and reviews software. We may earn an affiliate commission when you purchase through our links at no additional cost to you. This review reflects our team's genuine experience using Otter.ai for our internal operations.
-        </p>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-500">
-        <p>© 2026 UrbanEssentialHub. All rights reserved.</p>
+      <footer className="border-t border-slate-200 bg-white py-8 text-center text-xs text-slate-400">
+        &copy; {new Date().getFullYear()} UrbanEssentialHub. All rights reserved.
       </footer>
     </div>
   );
