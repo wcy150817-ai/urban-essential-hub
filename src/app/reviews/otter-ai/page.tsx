@@ -35,10 +35,10 @@ export const metadata: Metadata = {
 };
 
 export default function OtterAiReviewPage() {
-  const affiliateHtmlMeetGeek = `<a href="https://bbux.me/u9xzh3Ug" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#4f46e5;padding:14px 28px;border-radius:12px;font-weight:700;text-decoration:none;text-align:center">Try MeetGeek AI Meeting Assistant</a>`;
+  const affiliateHtmlMeetGeek = `<a href="https://bbux.me/u9xzh3Ug" target="_blank" rel="sponsored noopener" style="display:block;color:#ffffff !important;background:#4f46e5;padding:14px 18px;border-radius:12px;font-weight:700;text-decoration:none;text-align:center;width:100%;max-width:280px;box-sizing:border-box;margin:0 auto;">Try MeetGeek AI Assistant</a>`;
 
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900">
+    <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900 w-full max-w-full overflow-x-hidden" style={{ maxWidth: "100vw", overflowX: "hidden" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -139,7 +139,7 @@ export default function OtterAiReviewPage() {
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-4 py-10 w-full space-y-10 flex-1">
+      <main className="max-w-4xl mx-auto px-3 sm:px-6 py-8 sm:py-10 w-full max-w-full min-w-0 overflow-x-hidden space-y-8 sm:space-y-10 flex-1 box-border">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-xs text-slate-500">
           <Link href="/" className="hover:underline">Home</Link>
@@ -150,7 +150,7 @@ export default function OtterAiReviewPage() {
         </div>
 
         {/* Hero Card */}
-        <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+        <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-8 shadow-sm space-y-6 w-full max-w-full min-w-0 overflow-hidden box-border">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-6">
             <div className="flex items-start gap-4">
               <div className="w-16 h-16 rounded-2xl bg-indigo-50 border border-indigo-200 flex items-center justify-center shrink-0">
@@ -203,7 +203,7 @@ export default function OtterAiReviewPage() {
         </div>
 
         {/* Section 1: Core Technology Architecture */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+        <section className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-8 shadow-sm space-y-6 w-full max-w-full min-w-0 overflow-hidden box-border">
           <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
             <Cpu className="w-6 h-6 text-indigo-600" />
             <h2 className="text-xl font-bold text-slate-900">How Otter.ai Works: Acoustic Modeling &amp; Diarization</h2>
@@ -237,7 +237,7 @@ export default function OtterAiReviewPage() {
         </section>
 
         {/* Section 2: Real-World Accuracy Analysis */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+        <section className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-8 shadow-sm space-y-6 w-full max-w-full min-w-0 overflow-hidden box-border">
           <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
             <BarChart3 className="w-6 h-6 text-indigo-600" />
             <h2 className="text-xl font-bold text-slate-900">Transcription Fidelity: Realistic Accuracy Expectations</h2>
@@ -246,7 +246,7 @@ export default function OtterAiReviewPage() {
             Commercial marketing pages frequently cite &quot;99% transcription accuracy.&quot; In production environments, however, Word Error Rate (WER) fluctuates significantly depending on acoustic environment, microphone hardware, speaker distance, and regional dialect.
           </p>
 
-          <div className="overflow-x-auto">
+          <div className="w-full max-w-full overflow-x-auto block my-2" style={{ WebkitOverflowScrolling: "touch" }}>
             <table className="w-full text-left text-sm border-collapse min-w-[550px]">
               <thead>
                 <tr className="bg-slate-100 text-slate-700 border-b border-slate-200">
@@ -335,7 +335,7 @@ export default function OtterAiReviewPage() {
         </section>
 
         {/* Section 3: Key Features & Practical Usability */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+        <section className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-8 shadow-sm space-y-6 w-full max-w-full min-w-0 overflow-hidden box-border">
           <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
             <FileText className="w-6 h-6 text-indigo-600" />
             <h2 className="text-xl font-bold text-slate-900">Core Feature Set: What You Actually Get</h2>
@@ -373,7 +373,7 @@ export default function OtterAiReviewPage() {
         </section>
 
         {/* Section 4: 2026 Pricing Tiers Breakdown */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+        <section className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-8 shadow-sm space-y-6 w-full max-w-full min-w-0 overflow-hidden box-border">
           <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
             <Tag className="w-6 h-6 text-indigo-600" />
             <h2 className="text-xl font-bold text-slate-900">Otter.ai 2026 Pricing Tiers &amp; Limitations</h2>
@@ -446,7 +446,7 @@ export default function OtterAiReviewPage() {
         </section>
 
         {/* Section 5: Security, Privacy & Enterprise Compliance */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+        <section className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-8 shadow-sm space-y-6 w-full max-w-full min-w-0 overflow-hidden box-border">
           <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
             <Lock className="w-6 h-6 text-indigo-600" />
             <h2 className="text-xl font-bold text-slate-900">Security Architecture &amp; Data Privacy Verification</h2>
@@ -499,7 +499,7 @@ export default function OtterAiReviewPage() {
         </section>
 
         {/* Section 6: Head-to-Head Comparison Matrix */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+        <section className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-8 shadow-sm space-y-6 w-full max-w-full min-w-0 overflow-hidden box-border">
           <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
             <BarChart3 className="w-6 h-6 text-indigo-600" />
             <h2 className="text-xl font-bold text-slate-900">Otter.ai vs. MeetGeek vs. Fireflies.ai</h2>
@@ -508,7 +508,7 @@ export default function OtterAiReviewPage() {
             The AI meeting assistant space has matured significantly. Depending on whether your organization prioritizes pure text search or deep sales intelligence, here is how Otter compares to leading alternatives:
           </p>
 
-          <div className="overflow-x-auto">
+          <div className="w-full max-w-full overflow-x-auto block my-2" style={{ WebkitOverflowScrolling: "touch" }}>
             <table className="w-full text-left text-sm border-collapse min-w-[620px]">
               <thead>
                 <tr className="bg-slate-100 text-slate-700 border-b border-slate-200">
@@ -554,26 +554,24 @@ export default function OtterAiReviewPage() {
           </div>
 
           {/* Alternative Recommendation Box */}
-          <div className="border border-indigo-200 rounded-xl p-6 bg-gradient-to-r from-indigo-50/70 to-violet-50/50 space-y-4">
-            <div className="flex items-start justify-between gap-4 flex-wrap">
-              <div>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-700 bg-indigo-100 px-2.5 py-0.5 rounded-full">
-                  Top Alternative for Video &amp; Sales Teams
-                </span>
-                <h3 className="text-lg font-bold text-slate-900 mt-2">
-                  MeetGeek: Superior Choice for Full Video Capture &amp; Multi-Language Teams
-                </h3>
-                <p className="text-xs text-slate-600 mt-1 max-w-xl leading-relaxed">
-                  If your organization conducts client sales presentations, customer onboarding, or international calls in languages other than English, MeetGeek provides complete high-definition video archives, automatic timestamped highlights, and native synchronization into your CRM pipeline.
-                </p>
-              </div>
-              <div className="shrink-0 pt-2" dangerouslySetInnerHTML={{ __html: affiliateHtmlMeetGeek }} />
+          <div className="border border-indigo-200 rounded-xl p-4 sm:p-6 bg-gradient-to-r from-indigo-50/70 to-violet-50/50 space-y-4 w-full max-w-full min-w-0 box-border">
+            <div className="space-y-2">
+              <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-indigo-700 bg-indigo-100 px-2.5 py-0.5 rounded-full">
+                Top Alternative for Video &amp; Sales Teams
+              </span>
+              <h3 className="text-base sm:text-lg font-bold text-slate-900 mt-2">
+                MeetGeek: Superior Choice for Full Video Capture &amp; Multi-Language Teams
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                If your organization conducts client sales presentations, customer onboarding, or international calls in languages other than English, MeetGeek provides complete high-definition video archives, automatic timestamped highlights, and native synchronization into your CRM pipeline.
+              </p>
             </div>
+            <div className="pt-2 w-full flex justify-center sm:justify-start" dangerouslySetInnerHTML={{ __html: affiliateHtmlMeetGeek }} />
           </div>
         </section>
 
         {/* Section 7: Frequently Asked Questions */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+        <section className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-8 shadow-sm space-y-6 w-full max-w-full min-w-0 overflow-hidden box-border">
           <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
             <HelpCircle className="w-6 h-6 text-indigo-600" />
             <h2 className="text-xl font-bold text-slate-900">Frequently Asked Questions</h2>
