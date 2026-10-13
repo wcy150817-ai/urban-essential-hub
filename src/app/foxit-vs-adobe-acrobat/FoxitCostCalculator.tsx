@@ -42,7 +42,7 @@ export default function FoxitCostCalculator() {
             <label htmlFor="seatSlider" className="text-sm font-semibold text-slate-200">
               Active Enterprise Seats
             </label>
-            <span className="text-lg font-bold text-amber-400 font-mono">
+            <span id="seatDisplay" className="text-lg font-bold text-amber-400 font-mono">
               {seats} {seats === 1 ? 'Seat' : 'Seats'}
             </span>
           </div>
