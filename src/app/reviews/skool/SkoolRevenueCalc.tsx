@@ -58,7 +58,7 @@ export default function SkoolRevenueCalc() {
   }, [audienceSize, conversionRate, subscriptionPrice, churnRate]);
 
   return (
-    <div className="my-10 p-6 sm:p-8 bg-slate-900 text-white rounded-2xl border border-slate-800 shadow-xl" id="skool-calculator">
+    <div className="my-10 p-4 sm:p-8 bg-slate-900 text-white rounded-2xl border border-slate-800 shadow-xl max-w-full overflow-hidden box-border" id="skool-calculator">
       <div className="border-b border-slate-800 pb-5 mb-6">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-xs font-semibold uppercase tracking-wider mb-2">
           Interactive Financial Simulator

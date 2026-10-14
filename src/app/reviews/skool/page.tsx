@@ -109,7 +109,7 @@ export default function SkoolReviewPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900 pb-16 sm:pb-0">
+    <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900 pb-16 sm:pb-0 w-full overflow-x-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
@@ -124,7 +124,7 @@ export default function SkoolReviewPage() {
       />
 
       {/* Header */}
-      <header className="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-40">
+      <header className="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-40 w-full">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group text-slate-600 hover:text-slate-900 transition">
             <ArrowLeft className="w-4 h-4" />
@@ -140,7 +140,7 @@ export default function SkoolReviewPage() {
       </header>
 
       {/* Breadcrumbs */}
-      <div className="bg-slate-100 border-b border-slate-200 text-xs text-slate-500 py-2.5">
+      <div className="bg-slate-100 border-b border-slate-200 text-xs text-slate-500 py-2.5 w-full">
         <div className="max-w-5xl mx-auto px-4 flex items-center gap-1.5 flex-wrap">
           <Link href="/" className="hover:text-slate-800">Home</Link>
           <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
@@ -151,7 +151,7 @@ export default function SkoolReviewPage() {
       </div>
 
       {/* Main Container */}
-      <main className="max-w-5xl mx-auto px-4 py-8 sm:py-12 flex-1">
+      <main className="max-w-5xl mx-auto px-4 py-8 sm:py-12 flex-1 w-full min-w-0 overflow-x-hidden box-border">
         {/* Title & Meta */}
         <div className="mb-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 border border-orange-200 text-orange-800 text-xs font-bold uppercase tracking-wider mb-4">
@@ -231,7 +231,7 @@ export default function SkoolReviewPage() {
             Skool was engineered specifically to solve both completion drop-off and revenue volatility by replacing static digital video hosting with a <strong>Subscription Community (Micro-MRR) ecosystem</strong>. Instead of demanding $1,000 upfront, creators charge $29 to $99 per month. For the student, the entry barrier is minimal. For the creator, recurring subscription revenue compounds each month:
           </p>
           
-          <div className="overflow-x-auto my-6 border border-slate-200 rounded-xl bg-white">
+          <div className="overflow-x-auto my-6 border border-slate-200 rounded-xl bg-white max-w-full">
             <table className="w-full text-left text-sm border-collapse min-w-[580px]">
               <thead className="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
                 <tr>
@@ -293,7 +293,7 @@ export default function SkoolReviewPage() {
             When choosing where to anchor your digital business, selecting the right software architecture determines your operational overhead for years to come. Here is how Skool compares to the top three industry alternatives:
           </p>
 
-          <div className="overflow-x-auto border border-slate-200 rounded-xl bg-white shadow-sm mb-6">
+          <div className="overflow-x-auto border border-slate-200 rounded-xl bg-white shadow-sm mb-6 max-w-full">
             <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[620px]">
               <thead className="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
                 <tr>
