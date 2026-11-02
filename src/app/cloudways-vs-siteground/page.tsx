@@ -1,19 +1,19 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
-const TITLE = 'Cloudways vs SiteGround (2026): Pricing, Renewal Costs and Architecture Compared';
+const TITLE = 'Cloudways vs SiteGround (2026): Which Is Cheaper After Renewal?';
 const PAGE_URL = 'https://www.urbanessentialhub.com/cloudways-vs-siteground';
 const SITEGROUND_URL = 'https://www.siteground.com/wordpress-hosting.htm';
 
 export const metadata: Metadata = {
   title: TITLE,
   description:
-    'A research-based cloudways vs siteground comparison: 3-year renewal cost table from each vendor pricing page (checked Oct 11, 2026), what you actually rent, and what really drives TTFB. No hands-on testing claimed.',
+    'Cloudways vs SiteGround: SiteGround GrowBig jumps from $4.99 to $29.99/mo at renewal; Cloudways bills a flat monthly server price. 3-year cost math, checked Nov 2, 2026.',
   alternates: { canonical: '/cloudways-vs-siteground' },
   openGraph: {
     title: TITLE,
     description:
-      'Dated pricing snapshot, 3-year renewal math, architecture differences and who should pick which host.',
+      'Which host is cheaper after the intro price ends? Month-12, 24 and 36 cost math, what each plan includes, and who should pick which.',
     url: PAGE_URL,
     type: 'article',
   },
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: 'Is Cloudways cheaper than SiteGround over three years?',
-    a: 'It depends on the plan. On the pricing pages we checked on October 11, 2026, SiteGround StartUp costs $2.99 per month for the first 12 months and renews at $17.99, which works out to $467.64 over 36 months. GrowBig renews at $29.99 and totals $779.64. Cloudways lists an entry 2GB server at $11 in its page body and $14 in its structured data, which is $396 to $504 over 36 months. Cloudways is clearly cheaper than GrowBig and GoGeek on paper, close to a tie with StartUp, and the two products include different things.',
+    q: 'Is Cloudways cheaper than SiteGround when you factor in the actual server costs?',
+    a: 'Over three years, usually yes against SiteGround GrowBig and GoGeek, and roughly a tie against StartUp. SiteGround lists StartUp at $2.99/mo renewing at $17.99, GrowBig at $4.99 renewing at $29.99 and GoGeek at $7.99 renewing at $44.99, each prepaid for 12 months (checked November 2, 2026). That is $467.64, $779.64 and $1,175.64 over 36 months. Cloudways listings show a 1GB DigitalOcean server at about $11/mo (Standard) or $14/mo (Premium), which is $396 to $504 over 36 months, and a 2GB Premium server at about $28/mo, or $1,008. Add email, which SiteGround bundles and Cloudways sells separately. In year one SiteGround is always cheaper.',
   },
   {
     q: 'Does Cloudways raise prices at renewal?',
@@ -50,7 +50,7 @@ export default function CloudwaysVsSiteground() {
     description:
       'Research-based comparison of Cloudways and SiteGround using each vendor pricing page, with a 3-year renewal cost table and an explanation of what drives TTFB.',
     datePublished: '2026-10-11',
-    dateModified: '2026-10-11',
+    dateModified: '2026-11-02',
     mainEntityOfPage: PAGE_URL,
     author: { '@type': 'Organization', name: 'Urban Essential Hub Editorial Team' },
     publisher: { '@type': 'Organization', name: 'Urban Essential Hub' },
@@ -67,7 +67,7 @@ export default function CloudwaysVsSiteground() {
   };
 
   const cwButton = (label: string) =>
-    `<a href="https://pbee.me/M21iA7k3" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#4f46e5;padding:14px 28px;border-radius:12px;font-weight:700;text-decoration:none;text-align:center">${label}</a>`;
+    `<a href="https://bbux.me/XarLClkjd" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#4f46e5;padding:14px 28px;border-radius:12px;font-weight:700;text-decoration:none;text-align:center">${label}</a>`;
 
   const th = 'px-6 py-4 font-semibold text-gray-900';
   const tdLabel = 'px-6 py-4 text-sm font-medium text-gray-700';
@@ -82,12 +82,12 @@ export default function CloudwaysVsSiteground() {
       <div className="w-full max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8 bg-white text-gray-900 font-sans overflow-x-hidden">
         <header className="mb-12 border-b pb-8">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
-            Cloudways vs SiteGround (2026): Pricing, Renewal Costs and Architecture Compared
+            Cloudways vs SiteGround (2026): Which Is Cheaper After Renewal? Real Server Cost Math
           </h1>
           <div className="flex flex-wrap items-center text-gray-600 text-sm mb-6 gap-x-4 gap-y-1">
             <span>By the Urban Essential Hub editorial team</span>
             <span>•</span>
-            <span>Updated October 11, 2026</span>
+            <span>Updated November 2, 2026</span>
             <span>•</span>
             <span>Research-based analysis, no hands-on testing</span>
           </div>
@@ -105,7 +105,7 @@ export default function CloudwaysVsSiteground() {
             Choose <strong>SiteGround</strong> if you want one dashboard that includes email, a free domain on promotion, WordPress tooling and a 30-day refund window, and you run one site or a handful of small ones. Choose <strong>Cloudways</strong> if you want to pick the underlying cloud provider and region, pay by the month with no multi-year prepay cycle, and host many sites on a server whose resources you control and can resize.
           </p>
           <p className={p}>
-            On price, the pattern is simple. SiteGround is cheapest in year one by a wide margin and then renews at roughly six times the intro rate. Cloudways has no intro-then-renew cycle, so its line is flat. Over 36 months the flat line beats SiteGround GrowBig and GoGeek comfortably and roughly ties SiteGround StartUp. The table in the cost section shows every figure.
+            On price, the pattern is simple. SiteGround is cheapest in year one by a wide margin and then renews at roughly six times the intro rate. Cloudways has no intro-then-renew cycle, so its line is flat. Over 36 months a 1GB Cloudways server beats SiteGround GrowBig and GoGeek comfortably and roughly ties SiteGround StartUp; a 2GB Premium Cloudways server costs more than GrowBig. The cost section and the month-by-month break-even table below show every figure.
           </p>
           <div className="bg-indigo-50 border-l-4 border-indigo-500 p-6 rounded-r-lg my-8">
             <h3 className="text-xl font-bold text-indigo-900 mb-2">Our recommendation</h3>
@@ -119,7 +119,7 @@ export default function CloudwaysVsSiteground() {
         <section className="mb-12">
           <h2 className={h2}>At a glance: what the vendor pages say</h2>
           <p className="mb-6 text-lg text-gray-700 leading-relaxed">
-            Every row below comes from the vendor&apos;s own pricing or product page as read on October 11, 2026. These are marketing pages, so treat them as claims about what is offered, not as measured results.
+            Every row below comes from the vendor&apos;s own pricing or product page as read on October 11, 2026, with SiteGround re-checked on November 2, 2026. These are marketing pages, so treat them as claims about what is offered, not as measured results.
           </p>
           <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm mb-4">
             <table className="min-w-full divide-y divide-gray-200 text-left">
@@ -223,7 +223,7 @@ export default function CloudwaysVsSiteground() {
         </section>
 
         <section className="mb-12">
-          <h2 className={h2}>3-year renewal cost, checked October 11, 2026</h2>
+          <h2 className={h2}>3-year renewal cost, checked November 2, 2026</h2>
           <p className="mb-6 text-lg text-gray-700 leading-relaxed">
             SiteGround&apos;s plan cards show an introductory price with a &quot;Renews at&quot; price and say the plans are prepaid for 12 months. Cloudways bills monthly with no introductory term. The table projects 36 months in US dollars, before tax, domains and add-ons, assuming list prices do not change.
           </p>
@@ -265,7 +265,7 @@ export default function CloudwaysVsSiteground() {
                   <td className={td}>$1,175.64</td>
                 </tr>
                 <tr className="bg-indigo-50">
-                  <td className="px-6 py-4 text-sm font-medium text-indigo-900">Cloudways entry server (2GB RAM, 1 vCPU, 50GB), page body price</td>
+                  <td className="px-6 py-4 text-sm font-medium text-indigo-900">Cloudways DigitalOcean Standard 1GB (1 vCPU, 25GB)</td>
                   <td className="px-6 py-4 text-sm text-indigo-900">$11/mo</td>
                   <td className="px-6 py-4 text-sm text-indigo-900">$11/mo (no intro term)</td>
                   <td className="px-6 py-4 text-sm text-indigo-900">$132.00</td>
@@ -273,7 +273,7 @@ export default function CloudwaysVsSiteground() {
                   <td className="px-6 py-4 text-sm text-indigo-900">$396.00</td>
                 </tr>
                 <tr className="bg-indigo-50">
-                  <td className="px-6 py-4 text-sm font-medium text-indigo-900">Cloudways entry server, price in the page&apos;s structured data</td>
+                  <td className="px-6 py-4 text-sm font-medium text-indigo-900">Cloudways DigitalOcean Premium 1GB (1 vCPU, 25GB NVMe)</td>
                   <td className="px-6 py-4 text-sm text-indigo-900">$14/mo</td>
                   <td className="px-6 py-4 text-sm text-indigo-900">$14/mo (no intro term)</td>
                   <td className="px-6 py-4 text-sm text-indigo-900">$168.00</td>
@@ -281,25 +281,34 @@ export default function CloudwaysVsSiteground() {
                   <td className="px-6 py-4 text-sm text-indigo-900">$504.00</td>
                 </tr>
                 <tr className="bg-indigo-50">
-                  <td className="px-6 py-4 text-sm font-medium text-indigo-900">Cloudways Medium (8GB RAM, 4 vCPU, 160GB), $88 body / $84 structured data</td>
-                  <td className="px-6 py-4 text-sm text-indigo-900">$88 or $84/mo</td>
-                  <td className="px-6 py-4 text-sm text-indigo-900">Same (no intro term)</td>
-                  <td className="px-6 py-4 text-sm text-indigo-900">$1,056 or $1,008</td>
-                  <td className="px-6 py-4 text-sm text-indigo-900">$1,056 or $1,008</td>
-                  <td className="px-6 py-4 text-sm text-indigo-900">$3,168 or $3,024</td>
+                  <td className="px-6 py-4 text-sm font-medium text-indigo-900">Cloudways DigitalOcean Premium 2GB (50GB NVMe)</td>
+                  <td className="px-6 py-4 text-sm text-indigo-900">$28/mo</td>
+                  <td className="px-6 py-4 text-sm text-indigo-900">$28/mo (no intro term)</td>
+                  <td className="px-6 py-4 text-sm text-indigo-900">$336.00</td>
+                  <td className="px-6 py-4 text-sm text-indigo-900">$336.00</td>
+                  <td className="px-6 py-4 text-sm text-indigo-900">$1,008.00</td>
+                </tr>
+                <tr className="bg-indigo-50">
+                  <td className="px-6 py-4 text-sm font-medium text-indigo-900">Cloudways DigitalOcean Premium 4GB (80GB NVMe)</td>
+                  <td className="px-6 py-4 text-sm text-indigo-900">$54/mo</td>
+                  <td className="px-6 py-4 text-sm text-indigo-900">$54/mo (no intro term)</td>
+                  <td className="px-6 py-4 text-sm text-indigo-900">$648.00</td>
+                  <td className="px-6 py-4 text-sm text-indigo-900">$648.00</td>
+                  <td className="px-6 py-4 text-sm text-indigo-900">$1,944.00</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p className="text-sm text-gray-500 italic mb-6">
-            Sources: SiteGround WordPress hosting page (StartUp $2.99 renewing at $17.99, GrowBig $4.99 renewing at $29.99, GoGeek $7.99 renewing at $44.99, each &quot;prepaid for 12 months&quot;), and the Cloudways pricing page, both read October 11, 2026. The Cloudways page is populated with JavaScript and its visible text and structured data disagree, which is why two figures are shown. Confirm the exact price for your provider and region in the Cloudways console before you buy.
+            Sources: SiteGround WordPress hosting page, read November 2, 2026 (StartUp $2.99 renewing at $17.99, GrowBig $4.99 renewing at $29.99, GoGeek $7.99 renewing at $44.99, each &quot;Prepaid for 12 months&quot;). The Cloudways pricing page blocks automated reading, so the Cloudways rows come from search listings of that page as of November 2026 (1GB Standard about $11, 1GB Premium about $14, 2GB Premium about $28, 4GB Premium about $54 per month). An earlier version of this table labeled the $11/$14 server as 2GB; listings show it is the 1GB size, and the table has been corrected. Confirm the exact price for your provider and region in the Cloudways console before you buy.
           </p>
           <h3 className="text-2xl font-bold text-gray-900 mb-3">What the numbers say</h3>
           <ul className="list-disc pl-6 mb-4 text-lg text-gray-700 leading-relaxed space-y-2">
             <li>The renewal multiple is large but plan-specific. $17.99 divided by $2.99 is about 6.0 times for StartUp, $29.99 divided by $4.99 is about 6.0 times for GrowBig, and $44.99 divided by $7.99 is about 5.6 times for GoGeek.</li>
-            <li>GrowBig versus the entry Cloudways server over 36 months: $779.64 minus $396 is $383.64 more on SiteGround, or $275.64 more against the $504 figure.</li>
-            <li>StartUp is the exception: $467.64 sits between the two Cloudways figures, $71.64 above the $396 case and $36.36 below the $504 case. On price alone it is roughly a wash.</li>
-            <li>A 2GB Cloudways server and a SiteGround plan are not equivalent products. SiteGround GrowBig lists unlimited sites and 50 GB of storage; the Cloudways entry server lists 50 GB of disk and 2TB of transfer, with limits set by RAM and CPU.</li>
+            <li>GrowBig versus a 1GB Cloudways server over 36 months: $779.64 minus $396 is $383.64 more on SiteGround, or $275.64 more against the $504 Premium figure.</li>
+            <li>GrowBig versus a 2GB Premium Cloudways server: $1,008 minus $779.64 means Cloudways costs $228.36 more over 36 months. Bigger servers are not automatically cheaper than SiteGround.</li>
+            <li>StartUp is close to a tie: $467.64 sits between the two 1GB Cloudways figures, $71.64 above the $396 case and $36.36 below the $504 case.</li>
+            <li>A Cloudways server and a SiteGround plan are not equivalent products. SiteGround GrowBig lists unlimited sites and 50 GB of storage; a 1GB Cloudways server is listed with 25 GB of disk and 1TB of transfer, with limits set by RAM and CPU.</li>
             <li>Year one favors SiteGround strongly: $59.88 for GrowBig versus $132 to $168 for Cloudways. If you plan to leave before the first renewal, the intro price is the relevant one.</li>
           </ul>
           <h3 className="text-2xl font-bold text-gray-900 mb-3">What the table leaves out</h3>
@@ -311,6 +320,50 @@ export default function CloudwaysVsSiteground() {
           </p>
           <div className="my-6">
             <div dangerouslySetInnerHTML={{ __html: cwButton('See Cloudways plans') }} />
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className={h2}>Is Cloudways cheaper than SiteGround once you factor in the real server costs?</h2>
+          <p className={p}>
+            This is the question most people searching this comparison actually ask, so here is the cumulative cost at the three points where SiteGround&apos;s prepaid bills land. SiteGround charges 12 months up front, so its running total jumps at month 1, month 13 and month 25. Cloudways bills monthly, so its total climbs evenly. Figures are list prices in US dollars before tax, domains and add-ons, using the November 2, 2026 SiteGround page and November 2026 Cloudways listings.
+          </p>
+          <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm mb-4">
+            <table className="min-w-full divide-y divide-gray-200 text-left">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th scope="col" className={th}>Plan</th>
+                  <th scope="col" className={th}>Paid by month 12</th>
+                  <th scope="col" className={th}>Paid by month 24</th>
+                  <th scope="col" className={th}>Paid by month 36</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200 bg-white">
+                <tr><td className={tdLabel}>SiteGround StartUp</td><td className={td}>$35.88</td><td className={td}>$251.76</td><td className={td}>$467.64</td></tr>
+                <tr><td className={tdLabel}>SiteGround GrowBig</td><td className={td}>$59.88</td><td className={td}>$419.76</td><td className={td}>$779.64</td></tr>
+                <tr><td className={tdLabel}>SiteGround GoGeek</td><td className={td}>$95.88</td><td className={td}>$635.76</td><td className={td}>$1,175.64</td></tr>
+                <tr className="bg-indigo-50"><td className={tdLabel}>Cloudways 1GB Standard ($11/mo)</td><td className={td}>$132.00</td><td className={td}>$264.00</td><td className={td}>$396.00</td></tr>
+                <tr className="bg-indigo-50"><td className={tdLabel}>Cloudways 1GB Premium ($14/mo)</td><td className={td}>$168.00</td><td className={td}>$336.00</td><td className={td}>$504.00</td></tr>
+                <tr className="bg-indigo-50"><td className={tdLabel}>Cloudways 2GB Premium ($28/mo)</td><td className={td}>$336.00</td><td className={td}>$672.00</td><td className={td}>$1,008.00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">How to read the break-even</h3>
+          <ul className="list-disc pl-6 mb-4 text-lg text-gray-700 leading-relaxed space-y-2">
+            <li><strong>GrowBig vs Cloudways 1GB:</strong> SiteGround is cheaper through month 12 ($59.88 vs $132 to $168). Once the $359.88 renewal is billed at month 13, SiteGround has cost $419.76, more than the $264 to $336 a 1GB Cloudways server costs by month 24. From the first renewal on, Cloudways 1GB is the cheaper line.</li>
+            <li><strong>StartUp vs Cloudways 1GB:</strong> StartUp stays cheaper at month 24 ($251.76 vs $264 to $336) and ends month 36 between the two Cloudways figures. If you host one small site, the price difference over three years is under $72 either way.</li>
+            <li><strong>GrowBig vs Cloudways 2GB Premium:</strong> SiteGround stays cheaper at every checkpoint. If your sites need 2GB of RAM, the flat Cloudways bill is not the bargain the &quot;no renewal hike&quot; headline suggests.</li>
+            <li><strong>Leaving before renewal:</strong> anyone who will migrate within 12 months pays far less on SiteGround. The renewal only matters if you stay.</li>
+          </ul>
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">The extras that change the answer</h3>
+          <p className={p}>
+            The table compares hosting only. Three line items can flip a close result. <strong>Email:</strong> SiteGround lists free email in its plans; Cloudways listed email hosting as a paid add-on from $1 per month when we read its page on October 11, 2026, and many Cloudways users pay for a separate email provider instead. Over 36 months even a small per-mailbox fee adds up when you have several addresses. <strong>Bandwidth and backups:</strong> on that October read, Cloudways listed extra DigitalOcean bandwidth at $0.02 per GB and offsite backup storage at $0.033 per GB, both billed in arrears. A small brochure site will rarely notice; a media-heavy site might. <strong>Renewal term:</strong> SiteGround&apos;s knowledge base, as summarized by search results, lists lower monthly renewal rates for 24-month terms than for 12-month terms; if you plan to stay, ask for the 24-month renewal price before your first term ends.
+          </p>
+          <p className={p}>
+            A practical way to settle it for your own site: write down how many sites you host, how many mailboxes you need and roughly how much RAM your busiest site uses, then add the email and backup costs to the Cloudways column and compare the month-36 totals. For a closer look at Cloudways&apos; own plan types, including its Autonomous plan for traffic spikes, see <Link href="/cloudways-autonomous-vs-flexible-vs-kinsta" className="text-indigo-700 underline font-medium">Cloudways Autonomous vs Flexible vs Kinsta</Link> and the <Link href="/cloudways-true-cost-breakdown" className="text-indigo-700 underline font-medium">Cloudways true cost breakdown</Link>.
+          </p>
+          <div className="my-6">
+            <div dangerouslySetInnerHTML={{ __html: cwButton('Check current Cloudways server prices') }} />
           </div>
         </section>
 
@@ -373,11 +426,11 @@ export default function CloudwaysVsSiteground() {
         <section className="mb-12 border-t pt-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Sources and what we could not verify</h2>
           <ul className="list-disc pl-6 text-sm text-gray-700 space-y-1 mb-6">
-            <li><a href="https://www.cloudways.com/en/pricing.php" target="_blank" rel="nofollow noopener" className="text-indigo-700 underline">Cloudways pricing page, read October 11, 2026</a></li>
-            <li><a href={SITEGROUND_URL} target="_blank" rel="nofollow noopener" className="text-indigo-700 underline">SiteGround WordPress hosting page, read October 11, 2026</a></li>
+            <li><a href="https://www.cloudways.com/en/pricing.php" target="_blank" rel="nofollow noopener" className="text-indigo-700 underline">Cloudways pricing page (read October 11, 2026; November 2026 prices from search listings because the page blocks automated reading)</a></li>
+            <li><a href={SITEGROUND_URL} target="_blank" rel="nofollow noopener" className="text-indigo-700 underline">SiteGround WordPress hosting page, read November 2, 2026</a></li>
           </ul>
           <p className="text-sm text-gray-600 leading-relaxed mb-3">
-            <strong>Not verified:</strong> we did not test either host, so we make no claim about speed, uptime or support quality. The Cloudways pricing page shows $11 in its visible text and $14 in its structured data for the entry server, and $88 versus $84 for the Medium server, so we show both. The SiteGround Google Cloud statement comes from the company&apos;s public descriptions as surfaced by search, not from a page we fetched. We did not verify the 30% faster PHP claim, any promotional discount, or refund terms beyond what the pages state. We found no independent dated TTFB benchmark we could cite, so none is included.
+            <strong>Not verified:</strong> we did not test either host, so we make no claim about speed, uptime or support quality. Cloudways prices in this update come from search listings of its pricing page (the page itself blocked our automated read on November 2, 2026), so confirm them in the Cloudways console. Cloudways add-on prices (email, bandwidth, offsite backups) are from our October 11, 2026 read. SiteGround&apos;s 24-month renewal rates come from a search summary of its knowledge base, not a page we fetched. The SiteGround Google Cloud statement comes from the company&apos;s public descriptions as surfaced by search. We did not verify the 30% faster PHP claim, any promotional discount, or refund terms beyond what the pages state. We found no independent dated TTFB benchmark we could cite, so none is included.
           </p>
           <p className="text-xs text-gray-500">
             Affiliate disclosure: the Cloudways links marked sponsored may earn us a commission. The SiteGround link is a plain, non-affiliate link.
