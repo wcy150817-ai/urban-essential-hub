@@ -3,14 +3,14 @@ import type { Metadata } from 'next';
 import MeetingAssistantCalculator from './MeetingAssistantCalculator';
 
 export const metadata: Metadata = {
-  title: 'Otter.ai vs Fireflies.ai vs Fathom (2026): Pricing Limits, Bot-Free Recording, Audio Privacy & CRM Sync Compared',
+  title: 'Otter vs Fireflies vs Fathom (2026): Free-Plan Limits, Minutes & Price per Seat',
   description:
-    'A 2026 B2B technical evaluation comparing Otter.ai, Fireflies.ai, Fathom, and MeetGeek across monthly minute caps, bot-free audio capture, HIPAA/SSO security, and CRM field synchronization.',
+    'A 2026 B2B technical evaluation comparing Otter.ai, Fireflies.ai, Fathom, and MeetGeek across free-plan limits, monthly minute caps, bot-free audio capture, HIPAA/SSO security, and price per seat.',
   alternates: { canonical: '/otter-vs-fireflies-vs-fathom' },
   openGraph: {
-    title: 'Otter.ai vs Fireflies.ai vs Fathom (2026): Pricing Limits, Bot-Free Recording, Audio Privacy & CRM Sync Compared',
+    title: 'Otter vs Fireflies vs Fathom (2026): Free-Plan Limits, Minutes & Price per Seat',
     description:
-      'Verified 2026 pricing tiers, transcription minute caps, bot vs bot-free recording architectures, and enterprise CRM integration compared.',
+      'Verified 2026 free-plan limits, pricing tiers, transcription minute caps, bot vs bot-free recording architectures, and enterprise CRM integration compared.',
     url: 'https://urbanessentialhub.com/otter-vs-fireflies-vs-fathom',
     type: 'article',
   },
@@ -18,16 +18,24 @@ export const metadata: Metadata = {
 
 const PAGE_URL = 'https://urbanessentialhub.com/otter-vs-fireflies-vs-fathom';
 
+const CTA_TOP_1 = '<a href="https://bbux.me/IarMzZda" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#111111;padding:14px 24px;border-radius:10px;font-weight:700;font-size:0.95rem;text-decoration:none;text-align:center;">Try Fireflies.ai (Unlimited Transcription) &rarr;</a>';
+const CTA_TOP_2 = '<a href="https://bbux.me/u9xzh3Ug" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#4f46e5;padding:14px 24px;border-radius:10px;font-weight:700;font-size:0.95rem;text-decoration:none;text-align:center;">Try MeetGeek AI (100+ Languages &amp; CRM Sync) &rarr;</a>';
+const CTA_TOP_3 = '<a href="https://bbux.me/z9xyaQ0QE" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#0f766e;padding:14px 24px;border-radius:10px;font-weight:700;font-size:0.95rem;text-decoration:none;text-align:center;">Explore Fathom (Free Plan + 90-Day Guarantee) &rarr;</a>';
+
+const CTA_BOT_1 = '<a href="https://bbux.me/IarMzZda" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#111111;padding:15px 28px;border-radius:10px;font-weight:700;font-size:0.98rem;text-decoration:none;text-align:center;">Start Free or Upgrade on Fireflies.ai &rarr;</a>';
+const CTA_BOT_2 = '<a href="https://bbux.me/u9xzh3Ug" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#4f46e5;padding:15px 28px;border-radius:10px;font-weight:700;font-size:0.98rem;text-decoration:none;text-align:center;">Try MeetGeek AI Assistant &rarr;</a>';
+const CTA_BOT_3 = '<a href="https://bbux.me/z9xyaQ0QE" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#0f766e;padding:15px 28px;border-radius:10px;font-weight:700;font-size:0.98rem;text-decoration:none;text-align:center;">Try Fathom AI Notetaker &rarr;</a>';
+
 export default function OtterVsFirefliesVsFathomPage() {
   const articleLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline:
-      'Otter.ai vs Fireflies.ai vs Fathom (2026): Pricing Limits, Bot-Free Recording, Audio Privacy & CRM Sync Compared',
+      'Otter vs Fireflies vs Fathom (2026): Free-Plan Limits, Minutes & Price per Seat',
     description:
       'Technical and financial comparison of Otter.ai, Fireflies.ai, Fathom, and MeetGeek covering transcription minute ceilings, meeting bot behavior, data retention policies, and CRM workflows.',
     datePublished: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-11-03',
     mainEntityOfPage: PAGE_URL,
     author: { '@type': 'Organization', name: 'Urban Essential Hub B2B Technology Research Desk' },
     publisher: { '@type': 'Organization', name: 'Urban Essential Hub' },
@@ -114,7 +122,7 @@ export default function OtterVsFirefliesVsFathomPage() {
             <span className="text-indigo-600">Otter vs Fireflies vs Fathom</span>
           </div>
           <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Otter.ai vs Fireflies.ai vs Fathom (2026): Pricing Limits, Bot-Free Recording, Audio Privacy &amp; CRM Sync Compared
+            Otter vs Fireflies vs Fathom (2026): Free-Plan Limits, Minutes &amp; Price per Seat
           </h1>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl">
             Choosing an AI meeting notetaker in 2026 is no longer just about raw speech-to-text transcription. Revenue operations leaders, engineering managers, and IT security teams must weigh <strong>hard monthly minute caps</strong>, <strong>intrusive meeting bots versus bot-free desktop capture</strong>, <strong>100+ language support</strong>, and <strong>automated Salesforce/HubSpot field updates</strong>. Here is how <strong>Otter.ai</strong>, <strong>Fireflies.ai</strong>, <strong>Fathom</strong>, and <strong>MeetGeek</strong> compare across verified 2026 specifications.
@@ -123,14 +131,31 @@ export default function OtterVsFirefliesVsFathomPage() {
       </header>
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-10 w-full overflow-x-hidden box-border">
-        <div className="bg-slate-100 border-l-4 border-indigo-600 p-4 rounded-r-lg text-xs text-slate-600 mb-8 leading-relaxed">
-          <strong>Editorial &amp; Affiliate Disclosure:</strong> All subscription prices, monthly minute ceilings, storage quotas, and security features cited on this page were verified directly against official vendor pricing documentation (<code>otter.ai/pricing</code>, <code>fireflies.ai/pricing</code>, <code>fathom.video/pricing</code>, and <code>meetgeek.ai/pricing</code>) in October 2026. When you purchase through affiliate links for Fireflies.ai, MeetGeek, or Fathom, Urban Essential Hub may earn a commission at no additional cost to you.
+        <div className="bg-slate-100 border-l-4 border-indigo-600 p-4 rounded-r-lg text-xs text-slate-600 mb-6 leading-relaxed">
+          <strong>Editorial &amp; Affiliate Disclosure:</strong> All subscription prices, monthly minute ceilings, storage quotas, and security features cited on this page were verified directly against official vendor pricing documentation (<code>otter.ai/pricing</code>, <code>fireflies.ai/pricing</code>, <code>fathom.video/pricing</code>, and <code>meetgeek.ai/pricing</code>, re-verified November 2026). When you purchase through affiliate links for Fireflies.ai, MeetGeek, or Fathom, Urban Essential Hub may earn a commission at no additional cost to you.
+        </div>
+
+        <div className="bg-indigo-50/70 border border-indigo-200 rounded-2xl p-5 sm:p-6 mb-8">
+          <div className="text-xs font-extrabold uppercase tracking-wider text-indigo-700 mb-2">
+            2026 Quick Answer: Otter vs. Fireflies vs. Fathom at a Glance
+          </div>
+          <ul className="space-y-2 text-sm text-slate-800 leading-relaxed">
+            <li>
+              <strong>Free-Plan Limits:</strong> <strong>Fathom Free ($0)</strong> offers unlimited recordings, storage, and basic transcriptions (with advanced AI summaries capped at the first 5 calls/month). <strong>Fireflies Free ($0)</strong> offers unlimited transcription with an 800-minute storage pool per seat. <strong>Otter Basic ($0)</strong> is strictly capped at <strong>300 minutes/month</strong> and <strong>30 minutes per call</strong>.
+            </li>
+            <li>
+              <strong>Paid Minute Ceilings:</strong> <strong>Otter Pro ($8.33/mo annual, $16.99/mo monthly)</strong> caps teams at <strong>1,200 minutes/month</strong> (90 mins/call)—forcing any rep who averages over 4.6 hours of weekly calls onto <strong>Otter Business ($19.99/mo annual, $30/mo monthly)</strong> (see our <Link href="/otter-ai-pro-vs-business-pricing-breakdown" className="text-indigo-700 font-semibold underline">Otter Pro vs. Business Minute-Cap Breakdown</Link>). Both <strong>Fireflies Pro ($10/mo annual)</strong> and <strong>Fathom Team ($15/mo annual)</strong> include unlimited monthly transcription minutes.
+            </li>
+            <li>
+              <strong>Language &amp; CRM Winner:</strong> Choose <strong>Fireflies.ai</strong> or <strong>MeetGeek ($17/mo Business annual)</strong> for <strong>100+ language transcription</strong> and mid-tier CRM sync; choose <strong>Fathom</strong> for <strong>bot-free desktop capture</strong> and a 90-day money-back guarantee.
+            </li>
+          </ul>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 my-6">
-          <div dangerouslySetInnerHTML={{ __html: '<a href="https://bbux.me/IarMzZda" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#111111;padding:14px 24px;border-radius:10px;font-weight:700;font-size:0.95rem;text-decoration:none;text-align:center;">Try Fireflies.ai (Unlimited Transcription) &rarr;</a>' }} />
-          <div dangerouslySetInnerHTML={{ __html: '<a href="https://bbux.me/u9xzh3Ug" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#4f46e5;padding:14px 24px;border-radius:10px;font-weight:700;font-size:0.95rem;text-decoration:none;text-align:center;">Try MeetGeek AI (100+ Languages &amp; CRM Sync) &rarr;</a>' }} />
-          <div dangerouslySetInnerHTML={{ __html: '<a href="https://bbux.me/z9xyaQ0QE" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#0f766e;padding:14px 24px;border-radius:10px;font-weight:700;font-size:0.95rem;text-decoration:none;text-align:center;">Explore Fathom (Free Plan + 90-Day Guarantee) &rarr;</a>' }} />
+          <div dangerouslySetInnerHTML={{ __html: CTA_TOP_1 }} />
+          <div dangerouslySetInnerHTML={{ __html: CTA_TOP_2 }} />
+          <div dangerouslySetInnerHTML={{ __html: CTA_TOP_3 }} />
         </div>
 
         <section className="mb-12">
@@ -363,28 +388,40 @@ export default function OtterVsFirefliesVsFathomPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
             <Link
+              href="/otter-ai-pro-vs-business-pricing-breakdown"
+              className="text-indigo-700 hover:text-indigo-900 font-semibold underline"
+            >
+              &rarr; Otter.ai Pro vs Business (2026): 1,200-Minute Cap &amp; Per-Seat Break-Even Calculator
+            </Link>
+            <Link
               href="/reviews/otter-ai"
               className="text-indigo-700 hover:text-indigo-900 font-semibold underline"
             >
               &rarr; Otter.ai Review (2026): Acoustic Diarization, OtterPilot &amp; Full Tier Audit
             </Link>
             <Link
+              href="/foxit-esign-vs-docusign-vs-adobe-sign"
+              className="text-indigo-700 hover:text-indigo-900 font-semibold underline"
+            >
+              &rarr; Foxit eSign vs DocuSign vs Adobe Sign: Envelope Caps &amp; API Overage Calculator
+            </Link>
+            <Link
+              href="/1password-business-vs-bitwarden-enterprise-vs-dashlane"
+              className="text-indigo-700 hover:text-indigo-900 font-semibold underline"
+            >
+              &rarr; 1Password Business vs Bitwarden Enterprise vs Dashlane: SSO &amp; SCIM Audit
+            </Link>
+            <Link
+              href="/better-stack-vs-pagerduty-vs-datadog"
+              className="text-indigo-700 hover:text-indigo-900 font-semibold underline"
+            >
+              &rarr; Better Stack vs PagerDuty vs Datadog On-Call: Incident Pricing Calculator
+            </Link>
+            <Link
               href="/foxit-vs-adobe-acrobat"
               className="text-indigo-700 hover:text-indigo-900 font-semibold underline"
             >
               &rarr; Foxit PDF vs Adobe Acrobat Enterprise: 50-Seat Cost Calculator
-            </Link>
-            <Link
-              href="/1password-vs-lastpass"
-              className="text-indigo-700 hover:text-indigo-900 font-semibold underline"
-            >
-              &rarr; 1Password vs LastPass: Secret Key Architecture &amp; Security Comparison
-            </Link>
-            <Link
-              href="/best-1800-virtual-phone-numbers"
-              className="text-indigo-700 hover:text-indigo-900 font-semibold underline"
-            >
-              &rarr; Best 1-800 Virtual Phone Numbers &amp; Call Routing Systems (2026)
             </Link>
           </div>
         </section>
@@ -433,9 +470,9 @@ export default function OtterVsFirefliesVsFathomPage() {
         </section>
 
         <div className="mt-12 pt-8 border-t border-slate-200 flex flex-wrap justify-center gap-4">
-          <div dangerouslySetInnerHTML={{ __html: '<a href="https://bbux.me/IarMzZda" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#111111;padding:15px 28px;border-radius:10px;font-weight:700;font-size:0.98rem;text-decoration:none;text-align:center;">Start Free or Upgrade on Fireflies.ai &rarr;</a>' }} />
-          <div dangerouslySetInnerHTML={{ __html: '<a href="https://bbux.me/u9xzh3Ug" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#4f46e5;padding:15px 28px;border-radius:10px;font-weight:700;font-size:0.98rem;text-decoration:none;text-align:center;">Try MeetGeek AI Assistant &rarr;</a>' }} />
-          <div dangerouslySetInnerHTML={{ __html: '<a href="https://bbux.me/z9xyaQ0QE" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#0f766e;padding:15px 28px;border-radius:10px;font-weight:700;font-size:0.98rem;text-decoration:none;text-align:center;">Try Fathom AI Notetaker &rarr;</a>' }} />
+          <div dangerouslySetInnerHTML={{ __html: CTA_BOT_1 }} />
+          <div dangerouslySetInnerHTML={{ __html: CTA_BOT_2 }} />
+          <div dangerouslySetInnerHTML={{ __html: CTA_BOT_3 }} />
         </div>
       </main>
 
