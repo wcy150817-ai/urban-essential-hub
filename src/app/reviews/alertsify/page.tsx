@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description:
     "Technical review and developer setup guide for Alertsify on Whop. Explore automated options execution, TradingView webhook payloads, broker API security, and latency benchmarks.",
   alternates: {
-    canonical: "https://urbanessentialhub.com/reviews/alertsify",
+    canonical: "https://www.urbanessentialhub.com/reviews/alertsify",
   },
   keywords: [
     "alertsify review",

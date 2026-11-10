@@ -19,7 +19,7 @@ import {
   Plane,
 } from "lucide-react";
 
-const PAGE_URL = "https://urbanessentialhub.com/reviews/1password";
+const PAGE_URL = "https://www.urbanessentialhub.com/reviews/1password";
 const TITLE = "1Password Review (2026): Features, Security Design, Pricing and Drawbacks";
 const DESCRIPTION =
   "A research-based 1Password review: features, Secret Key security design, current pricing, platform support, who it fits and its real drawbacks.";

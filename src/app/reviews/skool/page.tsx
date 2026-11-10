@@ -35,12 +35,12 @@ export const metadata: Metadata = {
     title: 'Is Skool Worth It in 2026? Community Pricing, Feature Analysis & Creator Revenue Calculator',
     description:
       'Verified platform pricing, unit economics modeling, gamification mechanics, and creator subscription economics.',
-    url: 'https://urbanessentialhub.com/reviews/skool',
+    url: 'https://www.urbanessentialhub.com/reviews/skool',
     type: 'article',
   },
 };
 
-const PAGE_URL = 'https://urbanessentialhub.com/reviews/skool';
+const PAGE_URL = 'https://www.urbanessentialhub.com/reviews/skool';
 
 export default function SkoolReviewPage() {
   const articleLd = {

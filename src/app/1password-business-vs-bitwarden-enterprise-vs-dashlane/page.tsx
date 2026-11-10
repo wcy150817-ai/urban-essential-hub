@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "1Password Business vs Bitwarden Enterprise vs Dashlane: SSO/SCIM Provisioning, Okta Integration & Per-Seat TCO Calculator (2026)",
     description:
       "Enterprise security and IT procurement audit of 1Password Business, Bitwarden Enterprise, and Dashlane across Unlock with SSO, SCIM bridge architecture, and 3-year TCO.",
-    url: "https://urbanessentialhub.com/1password-business-vs-bitwarden-enterprise-vs-dashlane",
+    url: "https://www.urbanessentialhub.com/1password-business-vs-bitwarden-enterprise-vs-dashlane",
     type: "article",
   },
 };
@@ -35,16 +35,16 @@ const jsonLd = {
       "author": {
         "@type": "Organization",
         "name": "Urban Essential Hub SaaS Research Desk",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "publisher": {
         "@type": "Organization",
         "name": "Urban Essential Hub",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://urbanessentialhub.com/1password-business-vs-bitwarden-enterprise-vs-dashlane",
+        "@id": "https://www.urbanessentialhub.com/1password-business-vs-bitwarden-enterprise-vs-dashlane",
       },
     },
     {

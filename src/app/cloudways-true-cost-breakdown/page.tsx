@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "How much does Cloudways WordPress hosting really cost per month with no surprises? Full 2026 PAYG pricing math across DigitalOcean Standard/Premium, Vultr High Frequency, and AWS EC2, plus off-site backups ($0.033/GB), Cloudflare Enterprise ($4.99/domain), Rackspace Email ($1.50/mailbox), and SafeUpdates ($3/app).",
   alternates: {
-    canonical: "https://urbanessentialhub.com/cloudways-true-cost-breakdown",
+    canonical: "https://www.urbanessentialhub.com/cloudways-true-cost-breakdown",
   },
   keywords: [
     "how much does cloudways wordpress hosting really cost per month with no surprises",
@@ -53,15 +53,15 @@ export default function CloudwaysTrueCostBreakdownPage() {
                 author: {
                   "@type": "Organization",
                   name: "UrbanEssentialHub Cloud Infrastructure & SaaS Research Desk",
-                  url: "https://urbanessentialhub.com",
+                  url: "https://www.urbanessentialhub.com",
                 },
                 publisher: {
                   "@type": "Organization",
                   name: "UrbanEssentialHub",
-                  url: "https://urbanessentialhub.com",
+                  url: "https://www.urbanessentialhub.com",
                 },
                 mainEntityOfPage:
-                  "https://urbanessentialhub.com/cloudways-true-cost-breakdown",
+                  "https://www.urbanessentialhub.com/cloudways-true-cost-breakdown",
                 description:
                   "Line-item 2026 cost analysis of Cloudways managed cloud hosting across DigitalOcean, Vultr, and AWS, detailing hourly pay-as-you-go caps, off-site backup storage ($0.033/GB), Cloudflare Enterprise ($4.99/domain), Rackspace Email ($1.50/mailbox), and SafeUpdates ($3/app).",
               },

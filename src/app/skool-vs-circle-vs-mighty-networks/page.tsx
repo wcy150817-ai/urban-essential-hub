@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   description:
     "Compare Skool (Hobby $9/mo at 10% vs Pro $99/mo at 2.9% + $0.30), Circle.so (Professional $89/mo + 2% platform fee + Stripe), and Mighty Networks (Courses/Scale + 1%–2% fee). Interactive creator take-home calculator included.",
   alternates: {
-    canonical: "https://urbanessentialhub.com/skool-vs-circle-vs-mighty-networks",
+    canonical: "https://www.urbanessentialhub.com/skool-vs-circle-vs-mighty-networks",
   },
   openGraph: {
     title:
       "Skool vs Circle vs Mighty Networks: Community Platform Transaction Fees & Feature Matrix (2026)",
     description:
       "Independent audit of community platform transaction fees, Stripe payment processing stacks, gamification mechanics, and white-label mobile app options.",
-    url: "https://urbanessentialhub.com/skool-vs-circle-vs-mighty-networks",
+    url: "https://www.urbanessentialhub.com/skool-vs-circle-vs-mighty-networks",
     type: "article",
   },
 };
@@ -35,16 +35,16 @@ const jsonLd = {
       "author": {
         "@type": "Organization",
         "name": "Urban Essential Hub SaaS Research Desk",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "publisher": {
         "@type": "Organization",
         "name": "Urban Essential Hub",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://urbanessentialhub.com/skool-vs-circle-vs-mighty-networks",
+        "@id": "https://www.urbanessentialhub.com/skool-vs-circle-vs-mighty-networks",
       },
     },
     {

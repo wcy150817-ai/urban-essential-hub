@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description:
     "Side-by-side 2026 audit of 800.com, Grasshopper, and Nextiva for small business toll-free numbers. Compare pooled minutes vs extension tiers vs per-seat UCaaS pricing, 10DLC/TFV SMS compliance, and IVR call routing.",
   alternates: {
-    canonical: "https://urbanessentialhub.com/800-vs-grasshopper-vs-nextiva",
+    canonical: "https://www.urbanessentialhub.com/800-vs-grasshopper-vs-nextiva",
   },
   keywords: [
     "800.com vs grasshopper vs nextiva",
@@ -55,15 +55,15 @@ export default function EightHundredVsGrasshopperVsNextivaPage() {
                 author: {
                   "@type": "Organization",
                   name: "UrbanEssentialHub Telecom & SaaS Desk",
-                  url: "https://urbanessentialhub.com",
+                  url: "https://www.urbanessentialhub.com",
                 },
                 publisher: {
                   "@type": "Organization",
                   name: "UrbanEssentialHub",
-                  url: "https://urbanessentialhub.com",
+                  url: "https://www.urbanessentialhub.com",
                 },
                 mainEntityOfPage:
-                  "https://urbanessentialhub.com/800-vs-grasshopper-vs-nextiva",
+                  "https://www.urbanessentialhub.com/800-vs-grasshopper-vs-nextiva",
                 description:
                   "Technical and financial comparison of 800.com, Grasshopper, and Nextiva covering toll-free number inventory, pooled vs per-seat billing models, IVR call trees, and 2026 Toll-Free Verification (TFV) SMS rules.",
               },

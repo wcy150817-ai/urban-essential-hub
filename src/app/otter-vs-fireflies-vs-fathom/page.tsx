@@ -11,12 +11,12 @@ export const metadata: Metadata = {
     title: 'Otter vs Fireflies vs Fathom (2026): Free-Plan Limits, Minutes & Price per Seat',
     description:
       'Verified 2026 free-plan limits, pricing tiers, transcription minute caps, bot vs bot-free recording architectures, and enterprise CRM integration compared.',
-    url: 'https://urbanessentialhub.com/otter-vs-fireflies-vs-fathom',
+    url: 'https://www.urbanessentialhub.com/otter-vs-fireflies-vs-fathom',
     type: 'article',
   },
 };
 
-const PAGE_URL = 'https://urbanessentialhub.com/otter-vs-fireflies-vs-fathom';
+const PAGE_URL = 'https://www.urbanessentialhub.com/otter-vs-fireflies-vs-fathom';
 
 const CTA_TOP_1 = '<a href="https://bbux.me/IarMzZda" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#111111;padding:14px 24px;border-radius:10px;font-weight:700;font-size:0.95rem;text-decoration:none;text-align:center;">Try Fireflies.ai (Unlimited Transcription) &rarr;</a>';
 const CTA_TOP_2 = '<a href="https://bbux.me/u9xzh3Ug" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#4f46e5;padding:14px 24px;border-radius:10px;font-weight:700;font-size:0.95rem;text-decoration:none;text-align:center;">Try MeetGeek AI (100+ Languages &amp; CRM Sync) &rarr;</a>';

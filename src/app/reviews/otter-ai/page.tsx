@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   description:
     "An in-depth 2026 architectural review of Otter.ai: transcription accuracy, OtterPilot meeting automation, pricing tiers, enterprise security, and MeetGeek comparisons.",
   alternates: {
-    canonical: "https://urbanessentialhub.com/reviews/otter-ai",
+    canonical: "https://www.urbanessentialhub.com/reviews/otter-ai",
   },
 };
 
@@ -70,7 +70,7 @@ export default function OtterAiReviewPage() {
                 author: {
                   "@type": "Organization",
                   name: "UrbanEssentialHub",
-                  url: "https://urbanessentialhub.com",
+                  url: "https://www.urbanessentialhub.com",
                 },
               },
               {

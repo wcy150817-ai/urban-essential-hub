@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "800 vs 888 vs 877 vs 866 Toll-Free Prefixes: FCC RespOrg Portability Rules, Vanity Number Availability & Per-Minute Cost Calculator (2026)",
     description:
       "Complete 2026 telecom guide to North American Numbering Plan toll-free prefixes, RespOrg ownership rights, direct-response vanity recall, and per-minute VoIP pricing.",
-    url: "https://urbanessentialhub.com/800-vs-888-vs-877-toll-free-prefixes",
+    url: "https://www.urbanessentialhub.com/800-vs-888-vs-877-toll-free-prefixes",
     type: "article",
   },
 };
@@ -35,16 +35,16 @@ const jsonLd = {
       "author": {
         "@type": "Organization",
         "name": "Urban Essential Hub SaaS Research Desk",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "publisher": {
         "@type": "Organization",
         "name": "Urban Essential Hub",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://urbanessentialhub.com/800-vs-888-vs-877-toll-free-prefixes",
+        "@id": "https://www.urbanessentialhub.com/800-vs-888-vs-877-toll-free-prefixes",
       },
     },
     {

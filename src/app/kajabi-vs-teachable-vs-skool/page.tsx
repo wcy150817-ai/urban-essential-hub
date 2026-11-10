@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Kajabi vs Teachable vs Skool: Course Hosting Bandwidth, Funnel Builders & 3-Year Creator Net Margin Calculator (2026)",
     description:
       "36-month creator net profit audit comparing Kajabi all-in-one marketing funnels, Teachable Merchant-of-Record checkout, Skool gamified cohorts, and self-hosted WordPress LMS.",
-    url: "https://urbanessentialhub.com/kajabi-vs-teachable-vs-skool",
+    url: "https://www.urbanessentialhub.com/kajabi-vs-teachable-vs-skool",
     type: "article",
   },
 };
@@ -35,16 +35,16 @@ const jsonLd = {
       "author": {
         "@type": "Organization",
         "name": "Urban Essential Hub SaaS Research Desk",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "publisher": {
         "@type": "Organization",
         "name": "Urban Essential Hub",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://urbanessentialhub.com/kajabi-vs-teachable-vs-skool",
+        "@id": "https://www.urbanessentialhub.com/kajabi-vs-teachable-vs-skool",
       },
     },
     {

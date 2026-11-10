@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Foxit eSign vs DocuSign vs Adobe Acrobat Sign: HIPAA/SOC2 Compliance, Envelope Limits & Per-User API Pricing Compared (2026)",
     description:
       "Audit how DocuSign's 100-envelope/seat/year limit compares to Foxit eSign (250 envelopes/yr + HIPAA BAA) and Adobe Acrobat Pro/Sign bundled PDF + e-signature plans.",
-    url: "https://urbanessentialhub.com/foxit-esign-vs-docusign-vs-adobe-sign",
+    url: "https://www.urbanessentialhub.com/foxit-esign-vs-docusign-vs-adobe-sign",
     type: "article",
   },
 };
@@ -35,16 +35,16 @@ const jsonLd = {
       "author": {
         "@type": "Organization",
         "name": "Urban Essential Hub SaaS Research Desk",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "publisher": {
         "@type": "Organization",
         "name": "Urban Essential Hub",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://urbanessentialhub.com/foxit-esign-vs-docusign-vs-adobe-sign",
+        "@id": "https://www.urbanessentialhub.com/foxit-esign-vs-docusign-vs-adobe-sign",
       },
     },
     {

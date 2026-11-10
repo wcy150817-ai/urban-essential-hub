@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Uptime Monitoring & Incident Alerting Costs: Better Stack vs PagerDuty vs Datadog Compared (2026)",
     description:
       "Detailed engineering TCO breakdown of Better Stack responder & ClickHouse telemetry pricing vs PagerDuty per-seat add-ons and Datadog per-10k synthetic check billing.",
-    url: "https://urbanessentialhub.com/better-stack-vs-pagerduty-vs-datadog",
+    url: "https://www.urbanessentialhub.com/better-stack-vs-pagerduty-vs-datadog",
     type: "article",
   },
 };
@@ -35,16 +35,16 @@ const jsonLd = {
       "author": {
         "@type": "Organization",
         "name": "Urban Essential Hub SaaS Research Desk",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "publisher": {
         "@type": "Organization",
         "name": "Urban Essential Hub",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://urbanessentialhub.com/better-stack-vs-pagerduty-vs-datadog",
+        "@id": "https://www.urbanessentialhub.com/better-stack-vs-pagerduty-vs-datadog",
       },
     },
     {

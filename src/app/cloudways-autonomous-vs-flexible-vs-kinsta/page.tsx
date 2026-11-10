@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Cloudways Autonomous vs Cloudways Flexible vs Kinsta: Kubernetes Auto-Scaling, Cloudflare Enterprise & High-Traffic WordPress Cost Calculator (2026)",
     description:
       "Architectural and financial audit of Google Kubernetes Engine (GKE) auto-scaling pods vs dedicated DigitalOcean/Vultr cloud VMs and Kinsta LXD containers.",
-    url: "https://urbanessentialhub.com/cloudways-autonomous-vs-flexible-vs-kinsta",
+    url: "https://www.urbanessentialhub.com/cloudways-autonomous-vs-flexible-vs-kinsta",
     type: "article",
   },
 };
@@ -35,16 +35,16 @@ const jsonLd = {
       "author": {
         "@type": "Organization",
         "name": "Urban Essential Hub SaaS Research Desk",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "publisher": {
         "@type": "Organization",
         "name": "Urban Essential Hub",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://urbanessentialhub.com/cloudways-autonomous-vs-flexible-vs-kinsta",
+        "@id": "https://www.urbanessentialhub.com/cloudways-autonomous-vs-flexible-vs-kinsta",
       },
     },
     {

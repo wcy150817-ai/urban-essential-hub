@@ -11,12 +11,12 @@ export const metadata: Metadata = {
     title: 'Foxit PDF vs Adobe Acrobat Enterprise (2026): 50-Seat Cost Calculator & Feature Comparison',
     description:
       'Verified licensing comparison, 50-seat cost savings modeling, endpoint resource footprints, and enterprise IT compliance analysis.',
-    url: 'https://urbanessentialhub.com/foxit-vs-adobe-acrobat',
+    url: 'https://www.urbanessentialhub.com/foxit-vs-adobe-acrobat',
     type: 'article',
   },
 };
 
-const PAGE_URL = 'https://urbanessentialhub.com/foxit-vs-adobe-acrobat';
+const PAGE_URL = 'https://www.urbanessentialhub.com/foxit-vs-adobe-acrobat';
 
 export default function FoxitVsAdobePage() {
   const articleLd = {

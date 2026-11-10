@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Otter.ai Pro vs Business Pricing Breakdown: Monthly Minute Caps, Seat Billing & Per-Hour Transcription Cost Calculator (2026)",
     description:
       "Calculate exactly when your team hits Otter Pro's 20-hour monthly minute wall or 90-minute conversation cutoff, and compare effective per-hour costs against MeetGeek and Fireflies.",
-    url: "https://urbanessentialhub.com/otter-ai-pro-vs-business-pricing-breakdown",
+    url: "https://www.urbanessentialhub.com/otter-ai-pro-vs-business-pricing-breakdown",
     type: "article",
   },
 };
@@ -35,16 +35,16 @@ const jsonLd = {
       "author": {
         "@type": "Organization",
         "name": "Urban Essential Hub SaaS Research Desk",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "publisher": {
         "@type": "Organization",
         "name": "Urban Essential Hub",
-        "url": "https://urbanessentialhub.com",
+        "url": "https://www.urbanessentialhub.com",
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://urbanessentialhub.com/otter-ai-pro-vs-business-pricing-breakdown",
+        "@id": "https://www.urbanessentialhub.com/otter-ai-pro-vs-business-pricing-breakdown",
       },
     },
     {

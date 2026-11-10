@@ -11,12 +11,12 @@ export const metadata: Metadata = {
     title: 'Foxit PDF vs PDF Expert vs Adobe Acrobat: Small Business License Cost & Document Redaction Compared (2026)',
     description:
       'Small business 3-year TCO calculator, permanent redaction content-stream sanitization audit, Bates numbering comparison, and macOS vs Windows licensing matrix.',
-    url: 'https://urbanessentialhub.com/foxit-vs-pdf-expert-vs-adobe-acrobat',
+    url: 'https://www.urbanessentialhub.com/foxit-vs-pdf-expert-vs-adobe-acrobat',
     type: 'article',
   },
 };
 
-const PAGE_URL = 'https://urbanessentialhub.com/foxit-vs-pdf-expert-vs-adobe-acrobat';
+const PAGE_URL = 'https://www.urbanessentialhub.com/foxit-vs-pdf-expert-vs-adobe-acrobat';
 
 export default function FoxitVsPdfExpertVsAdobePage() {
   const articleLd = {
