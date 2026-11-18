@@ -11,25 +11,14 @@ const geistMono = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.urbanessentialhub.com"),
-  alternates: {
-    canonical: "/",
-  },
-  title: "Urban Essential Hub - Best Business Tools, Software Reviews & Verified Deals (2026)",
+  title: "Urban Essential Hub — B2B Software TCO Calculators & Spec Comparisons (2026)",
   description:
-    "Honest software reviews, side-by-side comparisons, and exclusive promo codes on cloud hosting, business phone systems, security SaaS, and AI productivity tools.",
-  keywords: [
-    "best business software 2026",
-    "cloudways review",
-    "800.com promo code",
-    "1password vs bitwarden",
-    "saas deals and discounts",
-    "curated business tools",
-  ],
+    "Specification-based B2B software comparisons, total cost of ownership (TCO) calculators, and pricing breakdowns across cloud hosting, virtual phone systems, password managers, PDF suites, and AI meeting tools.",
   authors: [{ name: "UrbanEssentialHub Editorial Team" }],
   openGraph: {
-    title: "Urban Essential Hub - Curated Software Reviews & Verified Deals",
+    title: "Urban Essential Hub — B2B Software TCO Calculators & Spec Comparisons",
     description:
-      "Save money and choose the right tech stack with vetted software reviews, comparisons, and verified discounts.",
+      "Compare cloud hosting, toll-free business phone plans, enterprise security, and PDF licensing costs with transparent arithmetic and interactive calculators.",
     url: "https://www.urbanessentialhub.com",
     siteName: "Urban Essential Hub",
     type: "website",
@@ -39,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Urban Essential Hub (2026)",
     description:
-      "Vetted business tools, expert reviews, and exclusive promo codes.",
+      "B2B software TCO calculators, pricing breakdowns, and specification comparisons.",
   },
 };
 
@@ -60,12 +49,7 @@ export default function RootLayout({
               name: "Urban Essential Hub",
               url: "https://www.urbanessentialhub.com",
               description:
-                "Independent reviews, comparisons, and verified promo discounts on top business software and cloud services.",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: "https://www.urbanessentialhub.com/?s={search_term_string}",
-                "query-input": "required name=search_term_string",
-              },
+                "Specification-based B2B software comparisons, pricing breakdowns, and total cost of ownership calculators.",
             }),
           }}
         />

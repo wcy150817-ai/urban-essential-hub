@@ -45,10 +45,11 @@ export default function StickySkylitBar() {
         <a
           href="https://whop.com/heatseeker?a=wcyb5"
           target="_blank"
-          rel="noopener noreferrer nofollow"
-          className="cta-glow inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-xs sm:text-sm shadow-md shadow-cyan-500/30 transition shrink-0 cursor-pointer hover:scale-105"
+          rel="sponsored noopener"
+          style={{ backgroundColor: "#0891b2", color: "#ffffff" }}
+          className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition shrink-0"
         >
-          <span>Get Access to Skylit</span>
+          <span>View Skylit Plans on Whop</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </a>
       </div>

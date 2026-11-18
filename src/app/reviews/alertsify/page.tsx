@@ -130,10 +130,6 @@ export default function AlertsifyReviewPage() {
               Home
             </Link>
             <ChevronRight className="w-3.5 h-3.5 flex-shrink-0 text-slate-400" />
-            <Link href="/reviews" className="hover:text-blue-600 transition-colors whitespace-nowrap">
-              Reviews
-            </Link>
-            <ChevronRight className="w-3.5 h-3.5 flex-shrink-0 text-slate-400" />
             <span className="text-slate-900 font-medium truncate">Alertsify Setup Guide</span>
           </nav>
         </div>

@@ -1,697 +1,296 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
-import {
-  Server,
-  PhoneCall,
-  Lock,
-  Sparkles,
-  ExternalLink,
-  Tag,
-  Star,
-  CheckCircle2,
-  ShieldCheck,
-  ChevronRight,
-  Search,
-  ArrowRight,
-  FileText,
-  BadgePercent,
-  Clock,
-  ThumbsUp,
-  Zap,
-  Award,
-  TrendingUp,
-  Users,
-  Globe,
-  Flame,
-  Activity,
-} from "lucide-react";
+import type { Metadata } from "next";
+import { ShieldCheck, Calculator } from "lucide-react";
 
-type CategoryFilter = "all" | "hosting" | "telecom" | "security" | "ai" | "productivity" | "community" | "trading";
+const PAGE_URL = "https://www.urbanessentialhub.com";
+const TITLE = "Urban Essential Hub — B2B Software TCO Calculators & Pricing Comparisons (2026)";
+const DESCRIPTION =
+  "Transparent B2B software total cost of ownership (TCO) calculators and specification comparisons for cloud hosting, 1-800 virtual phone systems, PDF suites, password managers, and AI meeting tools.";
 
-interface DealItem {
-  id: string;
-  name: string;
-  category: CategoryFilter;
-  categoryLabel: string;
-  icon: React.ReactNode;
-  accentColor: string;
-  ctaBg: string;
-  ctaHover: string;
-  ctaShadow: string;
-  rating: number;
-  reviewsCount: number;
-  badge: string;
-  tagline: string;
-  highlightDeal: string;
-  savingsLabel: string;
-  couponCode?: string;
-  pricing: string;
-  features: string[];
-  affiliateUrl: string;
-  reviewUrl?: string;
-}
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
+    type: "website",
+  },
+};
 
-const DEALS: DealItem[] = [
+const faqs = [
   {
-    id: "cloudways",
-    name: "Cloudways",
-    category: "hosting",
-    categoryLabel: "Managed Cloud Hosting",
-    icon: <Server className="w-7 h-7 text-blue-600" />,
-    accentColor: "deal-card-hosting",
-    ctaBg: "bg-blue-600",
-    ctaHover: "hover:bg-blue-700",
-    ctaShadow: "shadow-blue-500/25",
-    rating: 4.9,
-    reviewsCount: 1420,
-    badge: "Editor's Choice",
-    tagline: "High-performance managed cloud hosting on DigitalOcean, Vultr, and AWS — no Linux CLI needed. Includes free migration, staging, and Cloudflare Enterprise CDN.",
-    highlightDeal: "Exclusive: 30% Off for 3 Months + Free Site Migration",
-    savingsLabel: "SAVE 30%",
-    pricing: "From $11/mo",
-    features: [
-      "1-Click WordPress & PHP staging environments",
-      "Free SSL certificate & Cloudflare Enterprise CDN",
-      "Automated hourly & daily off-site backups",
-      "24/7/365 expert live chat support",
-    ],
-    affiliateUrl: "https://pbee.me/M21iA7k3",
-    reviewUrl: "/reviews/cloudways",
+    q: "How does Urban Essential Hub calculate B2B software total cost of ownership (TCO)?",
+    a: "Rather than quoting introductory year-one promo banners, every calculator on Urban Essential Hub models multi-year contract math across four cost drivers: standard renewal seat or server rates after month twelve, mandatory tier upgrades triggered by usage caps (such as monthly transcription minutes, eSign envelopes, or toll-free call pools), infrastructure add-ons (such as CDN, off-site backups, or SSO/SCIM directory sync), and perpetual versus subscription break-even horizons.",
   },
   {
-    id: "800-com",
-    name: "800.com",
-    category: "telecom",
-    categoryLabel: "Toll-Free Business Phone",
-    icon: <PhoneCall className="w-7 h-7 text-emerald-600" />,
-    accentColor: "deal-card-telecom",
-    ctaBg: "bg-emerald-600",
-    ctaHover: "hover:bg-emerald-700",
-    ctaShadow: "shadow-emerald-500/25",
-    rating: 4.8,
-    reviewsCount: 890,
-    badge: "Best for E-Commerce",
-    tagline: "Get a dedicated 1-800, 888, or local US business phone number with smart call forwarding to any mobile worldwide, SMS, and virtual receptionist.",
-    highlightDeal: "Save Up to 50% on Annual Plans — Use Code JK50",
-    savingsLabel: "SAVE 50%",
-    couponCode: "JK50",
-    pricing: "From $23/mo",
-    features: [
-      "Instant 1-800 vanity number search & activation",
-      "Smart call forwarding to your mobile or team",
-      "Two-way SMS text messaging from business number",
-      "Ideal for Shopify, Stripe verification & global credibility",
-    ],
-    affiliateUrl: "https://pbee.me/E21fjvxT",
-    reviewUrl: "/deals/800-com",
+    q: "Do you publish user star ratings or claim in-house lab benchmarks?",
+    a: "No. All guides on Urban Essential Hub rely strictly on publicly documented vendor specifications, regulatory rules (such as FCC RespOrg portability and FTC billing standards), November 2026 pricing summaries, and verifiable arithmetic formulas. We do not display synthetic aggregate star ratings or unverified lab benchmark claims.",
   },
   {
-    id: "1password",
-    name: "1Password",
-    category: "security",
-    categoryLabel: "Password & Secrets Manager",
-    icon: <Lock className="w-7 h-7 text-indigo-600" />,
-    accentColor: "deal-card-security",
-    ctaBg: "bg-indigo-600",
-    ctaHover: "hover:bg-indigo-700",
-    ctaShadow: "shadow-indigo-500/25",
-    rating: 4.9,
-    reviewsCount: 3100,
-    badge: "Industry Standard",
-    tagline: "Protect your team and personal digital identity with end-to-end encrypted password and passkey storage, Watchtower vulnerability scanning, and Travel Mode.",
-    highlightDeal: "50% Off Individual Plan — Use Code HONEY23",
-    savingsLabel: "SAVE 50%",
-    couponCode: "HONEY23",
-    pricing: "From $2.99/mo",
-    features: [
-      "Watchtower vulnerability scanner for compromised credentials",
-      "Travel Mode hides sensitive vaults at border crossings",
-      "Seamless autofill across iOS, Android, Mac & Windows",
-      "Passkey ready with biometric login support",
-    ],
-    affiliateUrl: "https://pbee.me/D21ign86C",
-    reviewUrl: "/reviews/1password",
+    q: "Why do headline SaaS prices often double or triple in year two?",
+    a: "Across shared WordPress hosting, virtual phone lines, and team collaboration software, vendors frequently subsidize customer acquisition with 50% to 75% first-term discounts—or advertise base per-seat prices that exclude essential business controls like SAML SSO, permanent PDF redaction, or pooled toll-free minutes. Modeling a 24-to-60-month horizon exposes those hidden step-ups before you migrate production data.",
   },
   {
-    id: "otter-ai",
-    name: "Otter.ai",
-    category: "ai",
-    categoryLabel: "AI Meeting Transcription",
-    icon: <Sparkles className="w-7 h-7 text-violet-600" />,
-    accentColor: "deal-card-ai",
-    ctaBg: "bg-violet-600",
-    ctaHover: "hover:bg-violet-700",
-    ctaShadow: "shadow-violet-500/25",
-    rating: 4.8,
-    reviewsCount: 2450,
-    badge: "Top AI Note-Taker",
-    tagline: "Automated real-time meeting transcription, AI-generated summary notes, and action items for Zoom, Google Meet & Teams — so you never miss a detail.",
-    highlightDeal: "Free Forever Tier • Save 20% on Annual Pro & Business Plans",
-    savingsLabel: "SAVE 20%",
-    pricing: "Free tier available",
-    features: [
-      "Live transcription with speaker identification",
-      "Automated AI meeting summaries emailed after call",
-      "Instant Q&A with Otter Chat during meetings",
-      "Integrates with Google Calendar, Zoom, and Slack",
-    ],
-    affiliateUrl: "https://go.ultrainfluence.com/u1-z139Cs7gZ",
-    reviewUrl: "/reviews/otter-ai",
-  },
-  {
-    id: "foxit",
-    name: "Foxit PDF Editor",
-    category: "productivity",
-    categoryLabel: "PDF & Document Suite",
-    icon: <FileText className="w-7 h-7 text-amber-600" />,
-    accentColor: "deal-card-productivity",
-    ctaBg: "bg-amber-600",
-    ctaHover: "hover:bg-amber-700",
-    ctaShadow: "shadow-amber-500/25",
-    rating: 4.8,
-    reviewsCount: 1850,
-    badge: "#1 Adobe Alternative",
-    tagline: "Full-featured PDF editing, form filling, OCR scanning, and legal e-Signatures — without the outrageous Adobe Acrobat subscription tax.",
-    highlightDeal: "Up to 20% Off Lifetime License & Cloud Subscriptions",
-    savingsLabel: "SAVE 20%",
-    pricing: "From $6.99/mo",
-    features: [
-      "Edit text, images, and formatting directly inside PDFs",
-      "Legally binding e-Signatures and form creation",
-      "Advanced OCR to turn scanned papers into editable docs",
-      "Lightweight, 3x faster startup than Adobe Acrobat",
-    ],
-    affiliateUrl: "https://pbee.me/R21i8dEeC",
-    reviewUrl: "/reviews/foxit",
-  },
-  {
-    id: "skool",
-    name: "Skool",
-    category: "community",
-    categoryLabel: "Community & Course Platform",
-    icon: <Users className="w-7 h-7 text-orange-600" />,
-    accentColor: "deal-card-community",
-    ctaBg: "bg-orange-600",
-    ctaHover: "hover:bg-orange-700",
-    ctaShadow: "shadow-orange-500/25",
-    rating: 4.9,
-    reviewsCount: 3840,
-    badge: "Top Platform for Educators",
-    tagline: "Turn your knowledge, courses, and coaching into a predictable $10k/month recurring subscription business. Zero tier-price penalties as your student community scales.",
-    highlightDeal: "14-Day Free Creator Trial • Keep 100% of Student Revenue",
-    savingsLabel: "14-DAY TRIAL",
-    pricing: "From $99/mo",
-    features: [
-      "Direct Stripe subscription billing with 0% platform cuts",
-      "Gamified Level 1-9 system that keeps student retention above 8 months",
-      "Unlimited courses, videos, and modules inside the Classroom",
-      "Flat $99/mo whether you have 20 students or 2,000 members",
-    ],
-    affiliateUrl: "https://www.skool.com/signup?ref=dfdaa1968c7442149993730d69fa0487",
-    reviewUrl: "/reviews/skool",
-  },
-  {
-    id: "toolsuite",
-    name: "ToolSuite",
-    category: "ai",
-    categoryLabel: "E-Commerce & AI Tool Suite",
-    icon: <Sparkles className="w-7 h-7 text-indigo-600" />,
-    accentColor: "deal-card-security",
-    ctaBg: "bg-indigo-600",
-    ctaHover: "hover:bg-indigo-700",
-    ctaShadow: "shadow-indigo-500/25",
-    rating: 4.9,
-    reviewsCount: 10420,
-    badge: "#1 Ecom & AI Bundle",
-    tagline: "Access over 50 premium e-commerce and AI tools in a single private dashboard. Includes Kalodata, Pipiads, ChatGPT Plus, and Canva Pro.",
-    highlightDeal: "50+ Tools for $29.95/mo — Save $500+/Month",
-    savingsLabel: "SAVE 94%",
-    pricing: "From $29.95/mo",
-    features: [
-      "Kalodata, FastMoss & Shoplus for TikTok Shop intelligence",
-      "Pipiads, WinningHunter & AdSpy for viral product discovery",
-      "ChatGPT Plus (GPT-4o), Claude 3.5 & Canva Pro included",
-      "Zero shared passwords — instant 1-click extension access",
-    ],
-    affiliateUrl: "https://whop.com/toolsuite?a=wcyb5",
-    reviewUrl: "/reviews/toolsuite",
-  },
-  {
-    id: "alertsify",
-    name: "Alertsify",
-    category: "trading",
-    categoryLabel: "Automated Trade Execution",
-    icon: <Zap className="w-7 h-7 text-emerald-600" />,
-    accentColor: "deal-card-telecom",
-    ctaBg: "bg-emerald-600",
-    ctaHover: "hover:bg-emerald-700",
-    ctaShadow: "shadow-emerald-500/25",
-    rating: 4.85,
-    reviewsCount: 1280,
-    badge: "Zero Slippage Execution",
-    tagline: "Eliminate options trade slippage. Automatically execute verified trader signals directly in your own Charles Schwab, Webull, or E*TRADE account.",
-    highlightDeal: "7-Day Free Trial • Non-Custodial Broker API",
-    savingsLabel: "FREE TRIAL",
-    pricing: "From $0 (Lite $99/mo)",
-    features: [
-      "Sub-second automated execution directly in personal brokerage",
-      "Audited P&L tracking without Photoshop fakes",
-      "Works seamlessly with Charles Schwab, Webull, E*TRADE",
-      "Automated stop-loss and take-profit bracket protection",
-    ],
-    affiliateUrl: "https://whop.com/alertsify/alertsify-free?a=wcyb5",
-    reviewUrl: "/reviews/alertsify",
-  },
-  {
-    id: "skylit",
-    name: "Skylit (HeatSeeker)",
-    category: "trading",
-    categoryLabel: "Options Market Intelligence",
-    icon: <Activity className="w-7 h-7 text-cyan-600" />,
-    accentColor: "deal-card-trading",
-    ctaBg: "bg-cyan-600",
-    ctaHover: "hover:bg-cyan-700",
-    ctaShadow: "shadow-cyan-500/25",
-    rating: 4.95,
-    reviewsCount: 860,
-    badge: "Institutional Flow & GEX",
-    tagline: "Hyperintelligent market surveillance for options daytraders. Real-time Gamma Exposure (GEX), 15-second Heatseeker flow maps, and Trinity Mode.",
-    highlightDeal: "Live 15-Sec Flow Maps • Trinity Mode Cockpit",
-    savingsLabel: "TOP TERMINAL",
-    pricing: "From $99.99/mo",
-    features: [
-      "Real-time Gamma Exposure (GEX) & dealer flip levels",
-      "Trinity Mode: Synchronized daytrader command center",
-      "Automated 15-second Heatseeker flow maps on Discord",
-      "Full coverage of 5,000+ individual ticker options flow",
-    ],
-    affiliateUrl: "https://whop.com/heatseeker?a=wcyb5",
-    reviewUrl: "/reviews/skylit",
+    q: "How is Urban Essential Hub funded?",
+    a: "Urban Essential Hub is reader-supported. Some comparison and specification guides contain clearly marked sponsored affiliate links. If you subscribe or purchase software through those partner links, we may earn a referral commission at no additional cost to you. Affiliate availability never alters the mathematical formulas in our calculators.",
   },
 ];
 
-const STATS = [
-  { number: "12,400+", label: "Users Helped", icon: <Users className="w-5 h-5" /> },
-  { number: "6", label: "Tools Vetted", icon: <Award className="w-5 h-5" /> },
-  { number: "$2.4M+", label: "Reader Savings", icon: <TrendingUp className="w-5 h-5" /> },
-  { number: "47", label: "Countries", icon: <Globe className="w-5 h-5" /> },
-];
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      name: TITLE,
+      description: DESCRIPTION,
+      url: PAGE_URL,
+      publisher: { "@type": "Organization", name: "Urban Essential Hub" },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ],
+};
 
-export default function Home() {
-  const [activeCategory, setActiveCategory] = useState<CategoryFilter>("all");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-
-  const filteredDeals = DEALS.filter((deal) => {
-    const matchesCategory = activeCategory === "all" || deal.category === activeCategory;
-    const matchesSearch =
-      deal.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      deal.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      deal.categoryLabel.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  const handleCopyCode = (code: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(code);
-    setTimeout(() => setCopiedCode(null), 2500);
-  };
-
+export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900">
-      {/* Top Urgency Banner */}
-      <div className="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white text-xs py-2.5 px-4 text-center font-medium flex items-center justify-center gap-2">
-        <Flame className="w-4 h-4 text-orange-400 animate-pulse" />
-        <span>
-          <strong className="text-amber-300">September 2026 Verified Deals</strong> — All coupons tested & confirmed working this week
-        </span>
-        <Flame className="w-4 h-4 text-orange-400 animate-pulse" />
-      </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      {/* Header */}
       <header className="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-105 transition-transform">
+          <Link href="/" className="flex items-center gap-2.5">
+            <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <div className="flex flex-col">
-              <div className="flex items-center">
-                <span className="font-extrabold text-lg text-slate-900 tracking-tight">UrbanEssential</span>
-                <span className="text-blue-600 font-extrabold text-lg">Hub</span>
-              </div>
-              <span className="text-[10px] text-slate-400 uppercase tracking-[0.2em] -mt-0.5 font-semibold">
-                Curated Software & Deals
-              </span>
-            </div>
-          </Link>
-
-          <nav className="hidden md:flex items-center gap-1">
-            {[
-              { id: "all" as CategoryFilter, label: "All Deals" },
-              { id: "hosting" as CategoryFilter, label: "Cloud" },
-              { id: "telecom" as CategoryFilter, label: "Telecom" },
-              { id: "security" as CategoryFilter, label: "Security" },
-              { id: "ai" as CategoryFilter, label: "AI" },
-              { id: "productivity" as CategoryFilter, label: "PDF" },
-              { id: "community" as CategoryFilter, label: "Community" },
-            ].map((nav) => (
-              <button
-                key={nav.id}
-                onClick={() => setActiveCategory(nav.id)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                  activeCategory === nav.id
-                    ? "bg-blue-600 text-white shadow-md shadow-blue-200"
-                    : "text-slate-600 hover:bg-slate-100"
-                }`}
-              >
-                {nav.label}
-              </button>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
-              <CheckCircle2 className="w-3.5 h-3.5" /> 100% Tested
+            <span className="font-extrabold text-lg text-slate-900 tracking-tight">
+              UrbanEssential<span className="text-blue-600">Hub</span>
             </span>
-          </div>
+          </Link>
+          <nav className="hidden md:flex items-center gap-5 text-xs font-semibold text-slate-600">
+            <Link href="/cloudways-vs-siteground" className="hover:text-blue-600">Cloud Hosting</Link>
+            <Link href="/best-1800-virtual-phone-numbers" className="hover:text-blue-600">1-800 Numbers</Link>
+            <Link href="/foxit-vs-adobe-acrobat" className="hover:text-blue-600">PDF Suites</Link>
+            <Link href="/1password-business-vs-bitwarden-enterprise-vs-dashlane" className="hover:text-blue-600">Security</Link>
+            <Link href="/otter-vs-fireflies-vs-fathom" className="hover:text-blue-600">AI Meetings</Link>
+          </nav>
         </div>
       </header>
 
-      {/* Hero Section — Animated Gradient + Pattern */}
-      <section className="hero-gradient hero-pattern border-b border-slate-200 py-16 md:py-20 relative overflow-hidden">
-        {/* Decorative blobs */}
-        <div className="absolute -top-24 -left-24 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-16 -right-16 w-64 h-64 bg-violet-200/30 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="max-w-4xl mx-auto px-4 text-center space-y-6 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-white/80 text-blue-700 border border-blue-200 shadow-sm backdrop-blur">
-            <Clock className="w-3.5 h-3.5" /> Updated for September 2026
+      <section className="bg-white border-b border-slate-200 py-14 sm:py-16">
+        <div className="max-w-4xl mx-auto px-4 text-center space-y-5">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200">
+            <Calculator className="w-3.5 h-3.5" /> Specification-Based B2B Software Calculators (Updated Nov 2026)
           </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
-            Stop Overpaying for{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
-              Business Software
-            </span>
+          <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+            Calculate Real B2B Software TCO Before You Subscribe
           </h1>
-
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            We independently test, benchmark, and verify deals on the best cloud hosting, telecom, security, and AI tools.
-            <strong className="text-slate-800"> Every coupon is manually checked weekly.</strong>
+            Introductory software pricing routinely hides year-two renewal jumps, per-seat multipliers, toll-free minute overages, and e-signature envelope caps. Explore our specification audits and interactive total-cost calculators across 27 business software guides.
           </p>
-
-          {/* Stats Row */}
-          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 pt-2">
-            {STATS.map((stat, i) => (
-              <div key={i} className="flex items-center gap-2 text-slate-600">
-                <div className="w-8 h-8 rounded-lg bg-white/80 border border-slate-200 flex items-center justify-center text-blue-600 shadow-sm">
-                  {stat.icon}
-                </div>
-                <div className="text-left">
-                  <div className="text-sm font-black stat-number">{stat.number}</div>
-                  <div className="text-[10px] text-slate-500 font-medium">{stat.label}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Search Bar */}
-          <div className="pt-2 max-w-xl mx-auto">
-            <div className="relative">
-              <Search className="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-              <input
-                type="text"
-                placeholder="Search: Cloudways, 800.com, 1Password, VPN..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3.5 bg-white border border-slate-300 rounded-2xl text-sm shadow-lg shadow-slate-200/50 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500 transition"
-              />
-            </div>
-          </div>
-
-          {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
-            {[
-              { id: "all", label: "🔥 All Software", count: DEALS.length },
-              { id: "hosting", label: "☁️ Cloud & Hosting" },
-              { id: "telecom", label: "📞 Business Phone" },
-              { id: "security", label: "🔒 Security" },
-              { id: "ai", label: "🤖 AI Tools" },
-              { id: "productivity", label: "📄 Productivity" },
-              { id: "community", label: "👥 Community & Courses" },
-              { id: "trading", label: "📈 Trading & Markets" },
-            ].map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id as CategoryFilter)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                  activeCategory === cat.id
-                    ? "bg-slate-900 text-white shadow-lg shadow-slate-900/20 scale-105"
-                    : "bg-white/80 text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-white hover:shadow-sm"
-                }`}
-              >
-                {cat.label}
-                {"count" in cat && <span className="ml-1.5 text-[10px] opacity-70">({(cat as { count: number }).count})</span>}
-              </button>
-            ))}
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-950 max-w-2xl mx-auto text-left leading-relaxed">
+            <strong>Editorial &amp; Affiliate Disclosure:</strong> Every guide on UrbanEssentialHub relies on published vendor documentation, regulatory rules, and transparent arithmetic formulas—never fabricated lab benchmarks or synthetic star ratings. Software pricing changes frequently; confirm live terms on each vendor&apos;s checkout page. When you purchase through sponsored partner links, we may earn a referral commission at no extra cost to you.
           </div>
         </div>
       </section>
 
-      {/* Main Content Area: Deals List */}
-      <main className="max-w-6xl mx-auto px-4 py-10 sm:py-14 w-full space-y-8 flex-1">
-        <div className="flex items-center justify-between">
-          <div>
-            <h2 className="text-xl sm:text-2xl font-black text-slate-900">
-              {activeCategory === "all" ? "🏆 Top Curated Deals" : `Category: ${activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}`}
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
-              Showing {filteredDeals.length} hand-picked and verified software solutions
+      <main className="max-w-6xl mx-auto px-4 py-12 w-full space-y-12 flex-1 leading-relaxed">
+        {/* Static server-rendered B2B software cluster directory & TCO methodology */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 shadow-sm space-y-3">
+            <h2 className="text-xl font-black text-slate-900">1. Managed Cloud Hosting &amp; DevOps Monitoring</h2>
+            <p className="text-sm text-slate-600">
+              Model promotional versus renewal WordPress hosting curves, DigitalOcean Premium NVMe versus Vultr High Frequency compute tiers, Kubernetes auto-scaling, and incident alerting seat math.
             </p>
-          </div>
-          <div className="text-xs text-slate-400 flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-full border border-slate-200">
-            <ThumbsUp className="w-3.5 h-3.5 text-emerald-500" />
-            <span className="font-semibold">Tested & Vetted</span>
-          </div>
+            <ul className="divide-y divide-slate-100 text-sm font-semibold text-slate-800 pt-1">
+              <li className="py-2.5"><Link href="/cloudways-vs-siteground" className="hover:text-blue-600">Cloudways vs SiteGround (2026): Promo Trap vs 3-Year Renewal Break-Even Calculator &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/cloudways-autonomous-vs-flexible-vs-kinsta" className="hover:text-blue-600">Cloudways Autonomous vs Flexible vs Kinsta: Auto-Scaling &amp; Bandwidth Math &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/cloudways-true-cost-breakdown" className="hover:text-blue-600">Cloudways True Cost Breakdown: Bandwidth, Backups &amp; Cloudflare Enterprise Add-On &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/reviews/cloudways" className="hover:text-blue-600">Cloudways Architecture &amp; Pricing Review (2026): DigitalOcean vs Vultr HF Specs &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/better-stack-vs-pagerduty-vs-datadog" className="hover:text-blue-600">Better Stack vs PagerDuty vs Datadog: On-Call Incident &amp; Log Retention TCO &rarr;</Link></li>
+            </ul>
+          </section>
+
+          <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 shadow-sm space-y-3">
+            <h2 className="text-xl font-black text-slate-900">2. 1-800 Toll-Free &amp; Business Virtual Phone Systems</h2>
+            <p className="text-sm text-slate-600">
+              Compare pooled-minute toll-free virtual number routing against per-user UCaaS seat licenses, instant multi-number provisioning, and FCC RespOrg portability rules across 800, 888, 877, and 866 prefixes.
+            </p>
+            <ul className="divide-y divide-slate-100 text-sm font-semibold text-slate-800 pt-1">
+              <li className="py-2.5"><Link href="/best-1800-virtual-phone-numbers" className="hover:text-blue-600">Best 1-800 Virtual Phone Numbers &amp; Enterprise Temp Number Services (2026) &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/deals/800-com" className="hover:text-blue-600">800.com Review &amp; Value Calculator: Pooled Minute Overage &amp; Porting Math &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/800-vs-grasshopper-vs-nextiva" className="hover:text-blue-600">800.com vs Grasshopper vs Nextiva: Multi-Seat &amp; Extension Pricing Matrix &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/800-vs-888-vs-877-toll-free-prefixes" className="hover:text-blue-600">800 vs 888 vs 877 vs 866 Toll-Free Prefixes: NANP Availability &amp; Portability &rarr;</Link></li>
+            </ul>
+          </section>
+
+          <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 shadow-sm space-y-3">
+            <h2 className="text-xl font-black text-slate-900">3. PDF Editing, e-Signatures &amp; Perpetual Creative Suites</h2>
+            <p className="text-sm text-slate-600">
+              Audit multi-year licensing savings between annual SaaS subscriptions and one-time perpetual desktop licenses across PDF redaction, OCR, legally binding e-signatures, and creative tools.
+            </p>
+            <ul className="divide-y divide-slate-100 text-sm font-semibold text-slate-800 pt-1">
+              <li className="py-2.5"><Link href="/foxit-vs-adobe-acrobat" className="hover:text-blue-600">Foxit PDF Editor vs Adobe Acrobat Enterprise: Perpetual vs Subscription TCO &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/foxit-vs-pdf-expert-vs-adobe-acrobat" className="hover:text-blue-600">Foxit vs PDF Expert vs Adobe Acrobat: macOS &amp; Cross-Platform Matrix &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/foxit-esign-vs-docusign-vs-adobe-sign" className="hover:text-blue-600">Foxit eSign vs DocuSign vs Adobe Sign: Envelope Quotas &amp; API Tier Math &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/reviews/foxit" className="hover:text-blue-600">Foxit PDF Editor &amp; Editor+ Review (2026): Seat Licensing &amp; Break-Even Math &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/adobe-alternatives" className="hover:text-blue-600">Best Non-Subscription Adobe Alternatives (2026): Free Affinity &amp; 5-Year TCO &rarr;</Link></li>
+            </ul>
+          </section>
+
+          <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 shadow-sm space-y-3">
+            <h2 className="text-xl font-black text-slate-900">4. Enterprise Password Managers &amp; Vault Security</h2>
+            <p className="text-sm text-slate-600">
+              Evaluate zero-knowledge encryption models, 128-bit Secret Key architecture, SAML SSO / SCIM directory provisioning surcharges, passkey support, and per-employee vault costs.
+            </p>
+            <ul className="divide-y divide-slate-100 text-sm font-semibold text-slate-800 pt-1">
+              <li className="py-2.5"><Link href="/1password-business-vs-bitwarden-enterprise-vs-dashlane" className="hover:text-blue-600">1Password Business vs Bitwarden Enterprise vs Dashlane: SSO &amp; Seat TCO &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/1password-vs-lastpass" className="hover:text-blue-600">1Password vs LastPass: Zero-Knowledge Vault Design &amp; Security Architecture &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/bitwarden-vs-1password-vs-nordpass" className="hover:text-blue-600">Bitwarden vs 1Password vs NordPass: Open-Source vs Secret Key Comparison &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/reviews/1password" className="hover:text-blue-600">1Password Review (2026): Secret Key Cryptography, Passkeys &amp; Plan Structure &rarr;</Link></li>
+            </ul>
+          </section>
+
+          <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 shadow-sm space-y-3">
+            <h2 className="text-xl font-black text-slate-900">5. AI Meeting Transcription &amp; Creator Community Platforms</h2>
+            <p className="text-sm text-slate-600">
+              Calculate monthly transcription minute ceilings, per-meeting duration cutoffs, and gross merchandise value (GMV) transaction-fee break-even points for course and membership operators.
+            </p>
+            <ul className="divide-y divide-slate-100 text-sm font-semibold text-slate-800 pt-1">
+              <li className="py-2.5"><Link href="/otter-vs-fireflies-vs-fathom" className="hover:text-blue-600">Otter.ai vs Fireflies.ai vs Fathom: Free-Plan Caps &amp; Team Transcription TCO &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/otter-ai-pro-vs-business-pricing-breakdown" className="hover:text-blue-600">Otter.ai Pro vs Business Pricing Breakdown: Minute Caps &amp; Seat Math &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/reviews/otter-ai" className="hover:text-blue-600">Otter.ai Review (2026): Automated Meeting Notes, Limits &amp; Alternatives &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/kajabi-vs-teachable-vs-skool" className="hover:text-blue-600">Kajabi vs Teachable vs Skool: Transaction Fees &amp; Course Margin Calculator &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/skool-vs-circle-vs-mighty-networks" className="hover:text-blue-600">Skool vs Circle vs Mighty Networks: Community Platform Cost Comparison &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/reviews/skool" className="hover:text-blue-600">Skool Platform Review (2026): Hobby ($9/mo) vs Pro ($99/mo) Break-Even Math &rarr;</Link></li>
+            </ul>
+          </section>
+
+          <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-7 shadow-sm space-y-3">
+            <h2 className="text-xl font-black text-slate-900">6. Specialized Webhook, Analytics &amp; Bundle Architecture Briefs</h2>
+            <p className="text-sm text-slate-600">
+              Technical specification audits covering non-custodial TradingView webhook routing, options dealer Gamma Exposure (GEX) subscription drag, and shared-session browser bundle risks.
+            </p>
+            <ul className="divide-y divide-slate-100 text-sm font-semibold text-slate-800 pt-1">
+              <li className="py-2.5"><Link href="/reviews/alertsify" className="hover:text-blue-600">Alertsify Setup Guide: TradingView Webhooks &amp; Non-Custodial Broker API Routing &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/reviews/skylit" className="hover:text-blue-600">Skylit (Heatseeker) Review (2026): GEX Maps, Trinity Mode &amp; Capital Drag Math &rarr;</Link></li>
+              <li className="py-2.5"><Link href="/reviews/toolsuite" className="hover:text-blue-600">ToolSuite Review (2026): Shared-Session Architecture, Pricing &amp; SaaS ToS Risks &rarr;</Link></li>
+            </ul>
+          </section>
         </div>
 
-        {/* Deal Cards */}
-        <div className="space-y-6">
-          {filteredDeals.map((deal, index) => (
-            <div
-              key={deal.id}
-              className={`relative bg-white rounded-2xl border border-slate-200/80 p-6 md:p-8 shadow-sm hover:shadow-xl transition-all duration-300 space-y-5 group ${deal.accentColor} animate-fade-up`}
-              style={{ animationDelay: `${index * 80}ms` }}
-            >
-              {/* Savings Ribbon */}
-              <div className="savings-ribbon">{deal.savingsLabel}</div>
-
-              {/* Card Top Row */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-5">
-                <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-sm">
-                    {deal.icon}
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h3 className="text-xl sm:text-2xl font-black text-slate-900">{deal.name}</h3>
-                      <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
-                        {deal.categoryLabel}
-                      </span>
-                      <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200 flex items-center gap-1">
-                        <Award className="w-3 h-3" /> {deal.badge}
-                      </span>
-                    </div>
-
-                    <div className="flex items-center gap-2 pt-1.5 text-xs text-slate-500">
-                      <div className="flex items-center gap-0.5 text-amber-500">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`w-3.5 h-3.5 ${i < Math.floor(deal.rating) ? "fill-amber-400 text-amber-400" : "fill-slate-200 text-slate-200"}`} />
-                        ))}
-                      </div>
-                      <span className="font-black text-slate-800">{deal.rating}</span>
-                      <span className="text-slate-300">|</span>
-                      <span>{deal.reviewsCount.toLocaleString()} reviews</span>
-                      <span className="text-slate-300">|</span>
-                      <span className="font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded-md">{deal.pricing}</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Primary CTA Button */}
-                <div className="flex flex-col sm:items-end gap-2 shrink-0">
-                  <a
-                    href={deal.affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    className={`cta-glow inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl ${deal.ctaBg} ${deal.ctaHover} text-white font-bold text-sm shadow-lg ${deal.ctaShadow} transition-all cursor-pointer hover:scale-105`}
-                  >
-                    <Zap className="w-4 h-4" />
-                    <span>Claim Deal & Visit</span>
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-
-                  {deal.reviewUrl && (
-                    <Link
-                      href={deal.reviewUrl}
-                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-slate-100 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 text-sm text-slate-700 hover:text-blue-700 font-bold transition group/link"
-                    >
-                      <span>📖 Read In-Depth Review</span>
-                      <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" />
-                    </Link>
-                  )}
-                </div>
-              </div>
-
-              {/* Tagline & Deal Highlights Box */}
-              <div className="space-y-3">
-                <p className="text-sm text-slate-600 leading-relaxed">{deal.tagline}</p>
-
-                {/* Promotional Deal Banner */}
-                <div className="bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border border-amber-200/80 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
-                  <div className="flex items-center gap-2 text-amber-950 font-bold">
-                    <Tag className="w-4 h-4 text-amber-600 shrink-0" />
-                    <span className="text-sm">{deal.highlightDeal}</span>
-                  </div>
-
-                  {deal.couponCode && (
-                    <div className="flex items-center gap-2 shrink-0">
-                      <span className="text-slate-500">Coupon:</span>
-                      <button
-                        type="button"
-                        onClick={() => handleCopyCode(deal.couponCode!)}
-                        className="px-3 py-1.5 rounded-lg bg-white border-2 border-dashed border-amber-400 font-mono font-black text-amber-900 hover:bg-amber-100 transition cursor-pointer text-sm tracking-wider"
-                      >
-                        {copiedCode === deal.couponCode ? "✅ Copied!" : deal.couponCode}
-                      </button>
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Feature Checklist */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100 text-xs text-slate-700">
-                {deal.features.map((feat, i) => (
-                  <div key={i} className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-50 transition">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                    <span className="font-medium">{feat}</span>
-                  </div>
-                ))}
-              </div>
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-4">
+          <h2 className="text-2xl font-black text-slate-900">
+            Our 4-Factor B2B Software Total Cost of Ownership (TCO) Methodology
+          </h2>
+          <p className="text-sm sm:text-base text-slate-700">
+            Most software comparison blogs rank products by copying first-year promotional prices off a vendor&apos;s pricing table without modeling what happens in month thirteen or when a five-person team scales to twenty seats. Every calculator and specification guide on Urban Essential Hub evaluates software purchasing decisions across four verifiable arithmetic dimensions:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-700">
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+              <h3 className="font-bold text-slate-900">1. Promo vs Renewal Curve</h3>
+              <p>
+                Shared web hosts and telecom providers routinely advertise $2.99 to $4.99 introductory monthly rates that reset to $17.99 to $29.99 upon renewal. We compute 24-month and 36-month cumulative cash outlay so you see exact crossover months against flat pay-as-you-go cloud alternatives.
+              </p>
             </div>
-          ))}
-        </div>
-
-        {/* Trust Section — Redesigned */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-8 sm:p-10 space-y-6">
-          <div className="text-center space-y-2">
-            <span className="text-xs font-bold text-blue-600 uppercase tracking-widest">Why Trust Us</span>
-            <h3 className="text-2xl sm:text-3xl font-black text-slate-900">
-              How We Evaluate & Test Software
-            </h3>
-            <p className="text-sm text-slate-500 max-w-xl mx-auto">
-              Our mission: cut through marketing fluff to find tools that genuinely save your business time and money.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 pt-2">
-            <div className="trust-card p-5 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 space-y-2 text-center">
-              <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mx-auto text-blue-600">
-                <ShieldCheck className="w-6 h-6" />
-              </div>
-              <span className="font-black text-sm text-slate-900 block">Real Hands-On Testing</span>
-              <p className="text-xs text-slate-500 leading-relaxed">We create active paid accounts and simulate real customer workflows before recommending.</p>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+              <h3 className="font-bold text-slate-900">2. Metering &amp; Quota Cliffs</h3>
+              <p>
+                Per-seat SaaS plans frequently impose secondary usage ceilings—such as 1,200 monthly AI transcription minutes, 150 annual eSign envelopes, or 1,000 pooled toll-free voice minutes. Crossing a single threshold often forces an entire organization onto a double-priced enterprise tier.
+              </p>
             </div>
-            <div className="trust-card p-5 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl border border-emerald-100 space-y-2 text-center">
-              <div className="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mx-auto text-emerald-600">
-                <CheckCircle2 className="w-6 h-6" />
-              </div>
-              <span className="font-black text-sm text-slate-900 block">Weekly Verified Coupons</span>
-              <p className="text-xs text-slate-500 leading-relaxed">Expired discounts are pruned weekly so you never waste time at checkout.</p>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+              <h3 className="font-bold text-slate-900">3. Unbundled Infrastructure Add-Ons</h3>
+              <p>
+                A $14/month cloud VM still needs transactional email, off-site backup retention, and edge CDN caching; an $8/seat password vault may still charge extra for SAML single sign-on or SCIM automated offboarding. Our calculators add every required production component back into the monthly bill.
+              </p>
             </div>
-            <div className="trust-card p-5 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-100 space-y-2 text-center">
-              <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center mx-auto text-amber-600">
-                <BadgePercent className="w-6 h-6" />
-              </div>
-              <span className="font-black text-sm text-slate-900 block">FTC Transparency</span>
-              <p className="text-xs text-slate-500 leading-relaxed">Reader-supported via affiliate commissions at no extra cost to you. Full disclosure always.</p>
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+              <h3 className="font-bold text-slate-900">4. Perpetual vs Subscription Break-Even</h3>
+              <p>
+                In categories where mature desktop workflows change slowly—such as PDF redaction, photo retouching, vector illustration, and timeline video editing—one-time perpetual or free core licenses routinely pay back against annual SaaS rentals within 14 to 20 months.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* FAQ Section for SEO */}
-        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6">
-          <div className="space-y-1">
-            <span className="text-xs font-bold text-blue-600 uppercase tracking-widest">FAQ</span>
-            <h3 className="text-xl sm:text-2xl font-black text-slate-900">Software Buying & Deals FAQ</h3>
-          </div>
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-4">
+          <h2 className="text-2xl font-black text-slate-900">
+            5-Minute Pre-Purchase SaaS Procurement Audit Checklist
+          </h2>
+          <p className="text-sm sm:text-base text-slate-700">
+            Before entering a corporate card on any annual software contract, run through five operational checks that prevent surprise renewal invoices and vendor lock-in across small and mid-sized teams:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2.5 text-sm text-slate-700">
+            <li>
+              <strong>Check Early Cancellation Penalties on &quot;Annual, Paid Monthly&quot; Contracts:</strong> Several major creative and document vendors advertise low monthly prices that are legally binding twelve-month commitments. Canceling after the initial two-week window can trigger a lump-sum fee equal to 50% of your remaining annual balance.
+            </li>
+            <li>
+              <strong>Verify Data Export &amp; Number Portability Rules Before Migrating:</strong> Confirm that toll-free numbers can port out cleanly under FCC RespOrg rules without hold fees, password vaults export unencrypted or standard CSV/JSON archives for admins, and cloud hosts allow full `.tar.gz` file and SQL database downloads at any time.
+            </li>
+            <li>
+              <strong>Separate Admin Seats from Read-Only Viewers:</strong> Collaboration, AI transcription, and e-signature platforms often let external guests, clients, or read-only reviewers view shared workspaces at zero cost—avoiding unnecessary paid seat licenses for occasional stakeholders.
+            </li>
+            <li>
+              <strong>Audit SAML Single Sign-On (SSO) &amp; SCIM Provisioning Tiers:</strong> Many B2B SaaS products gate Okta, Microsoft Entra ID, or Google Workspace SSO behind their highest enterprise tier. Check whether SSO is included in the standard business plan or billed as an enterprise add-on.
+            </li>
+            <li>
+              <strong>Set a Calendar Reminder 14 Days Before Auto-Renewal:</strong> Most annual B2B subscriptions require cancellation notice prior to the renewal timestamp; logging the renewal date alongside your contract ledger preserves negotiating leverage every year and prevents unintended multi-seat billing renewals on departed staff accounts.
+            </li>
+          </ol>
+        </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm text-slate-600">
-            <div className="space-y-2 p-4 rounded-xl bg-slate-50/50 border border-slate-100">
-              <h4 className="font-black text-slate-900 text-sm sm:text-base">
-                Why does a business need a 1-800 toll-free number?
-              </h4>
-              <p className="leading-relaxed">
-                A US 1-800 or 888 number instantly builds credibility with North American buyers. Payment processors like Stripe and PayPal check for verifiable support contacts. <strong>800.com</strong> lets you forward calls to any mobile globally.
-              </p>
-            </div>
-
-            <div className="space-y-2 p-4 rounded-xl bg-slate-50/50 border border-slate-100">
-              <h4 className="font-black text-slate-900 text-sm sm:text-base">
-                Why choose managed cloud hosting over shared cPanel?
-              </h4>
-              <p className="leading-relaxed">
-                Shared hosting bundles thousands of sites on one server. Cloudways provides dedicated cloud instances with isolated resources, built-in caching, and automated staging — no command-line needed.
-              </p>
-            </div>
-
-            <div className="space-y-2 p-4 rounded-xl bg-slate-50/50 border border-slate-100">
-              <h4 className="font-black text-slate-900 text-sm sm:text-base">
-                Are password managers safe against data breaches?
-              </h4>
-              <p className="leading-relaxed">
-                1Password uses dual-key zero-knowledge encryption (master password + 128-bit Secret Key). Even if servers are compromised, your vault cannot be decrypted without the Secret Key stored only on your device.
-              </p>
-            </div>
-
-            <div className="space-y-2 p-4 rounded-xl bg-slate-50/50 border border-slate-100">
-              <h4 className="font-black text-slate-900 text-sm sm:text-base">
-                How do I redeem promo codes on this site?
-              </h4>
-              <p className="leading-relaxed">
-                Click any <strong>Claim Deal</strong> button to activate the promotional tracking link. For offers with a coupon code (like Cloudways), copy and paste it at checkout.
-              </p>
-            </div>
-          </div>
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-4">
+          <h2 className="text-2xl font-black text-slate-900">Frequently Asked Questions</h2>
+          <details className="border border-slate-200 rounded-xl p-4">
+            <summary className="font-bold text-sm sm:text-base cursor-pointer text-slate-900">
+              How does Urban Essential Hub calculate B2B software total cost of ownership (TCO)?
+            </summary>
+            <p className="mt-2 text-sm text-slate-700">
+              Rather than quoting introductory year-one promo banners, every calculator on Urban Essential Hub models multi-year contract math across four cost drivers: standard renewal seat or server rates after month twelve, mandatory tier upgrades triggered by usage caps (such as monthly transcription minutes, eSign envelopes, or toll-free call pools), infrastructure add-ons (such as CDN, off-site backups, or SSO/SCIM directory sync), and perpetual versus subscription break-even horizons.
+            </p>
+          </details>
+          <details className="border border-slate-200 rounded-xl p-4">
+            <summary className="font-bold text-sm sm:text-base cursor-pointer text-slate-900">
+              Do you publish user star ratings or claim in-house lab benchmarks?
+            </summary>
+            <p className="mt-2 text-sm text-slate-700">
+              No. All guides on Urban Essential Hub rely strictly on publicly documented vendor specifications, regulatory rules (such as FCC RespOrg portability and FTC billing standards), November 2026 pricing summaries, and verifiable arithmetic formulas. We do not display synthetic aggregate star ratings or unverified lab benchmark claims.
+            </p>
+          </details>
+          <details className="border border-slate-200 rounded-xl p-4">
+            <summary className="font-bold text-sm sm:text-base cursor-pointer text-slate-900">
+              Why do headline SaaS prices often double or triple in year two?
+            </summary>
+            <p className="mt-2 text-sm text-slate-700">
+              Across shared WordPress hosting, virtual phone lines, and team collaboration software, vendors frequently subsidize customer acquisition with 50% to 75% first-term discounts—or advertise base per-seat prices that exclude essential business controls like SAML SSO, permanent PDF redaction, or pooled toll-free minutes. Modeling a 24-to-60-month horizon exposes those hidden step-ups before you migrate production data.
+            </p>
+          </details>
+          <details className="border border-slate-200 rounded-xl p-4">
+            <summary className="font-bold text-sm sm:text-base cursor-pointer text-slate-900">
+              How is Urban Essential Hub funded?
+            </summary>
+            <p className="mt-2 text-sm text-slate-700">
+              Urban Essential Hub is reader-supported. Some comparison and specification guides contain clearly marked sponsored affiliate links. If you subscribe or purchase software through those partner links, we may earn a referral commission at no additional cost to you. Affiliate availability never alters the mathematical formulas in our calculators.
+            </p>
+          </details>
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-slate-200 bg-white py-10 text-xs text-slate-500">
-        <div className="max-w-6xl mx-auto px-4 space-y-4">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-100 pb-6">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white shadow-md">
-                <ShieldCheck className="w-4 h-4" />
-              </div>
-              <span className="font-black text-slate-900 text-sm">UrbanEssentialHub.com</span>
-            </div>
-            <p className="text-[11px] text-slate-400 text-center sm:text-right">
-              © 2026 Urban Essential Hub. All rights reserved.
-            </p>
-          </div>
-
-          <div className="space-y-2 text-[11px] text-slate-400 leading-relaxed">
-            <p>
-              <strong>FTC Affiliate Disclosure:</strong> Urban Essential Hub is an independent review and deal discovery publication. Some links on this website are affiliate links. If you click through and make a purchase, we may receive a referral commission at no additional cost to you. We only recommend software and services that meet our strict operational standards.
-            </p>
-            <p>
-              Trademarks, product names, logos, and brands mentioned are the property of their respective owners.
-            </p>
-          </div>
+        <div className="max-w-6xl mx-auto px-4 space-y-3 text-center">
+          <p>
+            <strong>FTC Affiliate Disclosure:</strong> Urban Essential Hub is reader-supported. When you purchase through sponsored links on our site, we may earn a referral commission at no additional cost to you.
+          </p>
+          <p>&copy; 2026 Urban Essential Hub. All rights reserved.</p>
         </div>
       </footer>
     </div>

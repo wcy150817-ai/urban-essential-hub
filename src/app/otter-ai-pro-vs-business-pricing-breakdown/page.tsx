@@ -451,7 +451,7 @@ export default function OtterAiProVsBusinessPricingPage() {
                 href="/reviews/otter-ai"
                 className="text-indigo-600 font-semibold underline"
               >
-                Otter.ai Hands-On Feature Review
+                Otter.ai Feature &amp; Pricing Review
               </Link>{" "}
               for mobile recording tips.
             </li>

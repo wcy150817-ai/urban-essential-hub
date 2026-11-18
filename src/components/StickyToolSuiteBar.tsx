@@ -31,13 +31,13 @@ export default function StickyToolSuiteBar() {
           </div>
           <div>
             <div className="text-xs sm:text-sm font-black text-slate-900 flex items-center gap-1.5">
-              <span>ToolSuite: 50+ Ecom & AI Tools</span>
-              <span className="hidden sm:inline-block px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold">
-                Save $500+/Mo
+              <span>ToolSuite Shared-Access Bundle</span>
+              <span className="hidden sm:inline-block px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-800 text-[10px] font-bold">
+                ~$29.95/mo on Whop
               </span>
             </div>
             <div className="text-[11px] text-slate-500 hidden sm:block">
-              Kalodata &bull; Pipiads &bull; ChatGPT Plus &bull; Canva Pro &bull; AdSpy tools
+              Ecom Ad-Spy &bull; AI Research &bull; Review Shared-Session Trade-Offs First
             </div>
           </div>
         </div>
@@ -45,10 +45,11 @@ export default function StickyToolSuiteBar() {
         <a
           href="https://whop.com/toolsuite?a=wcyb5"
           target="_blank"
-          rel="noopener noreferrer nofollow"
-          className="cta-glow inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm shadow-md shadow-indigo-500/30 transition shrink-0 cursor-pointer hover:scale-105"
+          rel="sponsored noopener"
+          style={{ backgroundColor: "#4f46e5", color: "#ffffff" }}
+          className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm shadow-md transition shrink-0"
         >
-          <span>Get Instant Access ($29.95)</span>
+          <span>Check ToolSuite on Whop</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </a>
       </div>

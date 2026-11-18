@@ -1,607 +1,328 @@
 import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
-import {
-  Sparkles,
-  CheckCircle2,
-  ExternalLink,
-  ShieldCheck,
-  Star,
-  ChevronRight,
-  ArrowLeft,
-  Zap,
-  Clock,
-  BarChart3,
-  DollarSign,
-  HelpCircle,
-  ThumbsUp,
-  AlertTriangle,
-  ArrowRight,
-  Target,
-  Layers,
-  XCircle,
-  Flame,
-  TrendingUp,
-  Cpu,
-  ShoppingBag,
-} from "lucide-react";
+import ToolSuiteSavingsCalc from "./ToolSuiteSavingsCalc";
 import StickyToolSuiteBar from "@/components/StickyToolSuiteBar";
 
+const SITE = "https://www.urbanessentialhub.com";
+const SLUG = "/reviews/toolsuite";
+const PAGE_URL = SITE + SLUG;
+const TITLE = "ToolSuite Review 2026: Shared-Session Architecture, $29.95/Mo Pricing & ToS Risks";
+const DESC =
+  "Specification and risk review of ToolSuite on Whop (~$29.95/mo): how shared-session browser extensions bundle e-commerce ad-spy and AI tools, cost math, workspace privacy limits, and SaaS ToS trade-offs.";
+
 export const metadata: Metadata = {
-  title: "ToolSuite Review 2026: 50+ Ecom & AI Tools in 1 Subscription ($29.95/Mo Tested)",
-  description:
-    "Honest ToolSuite review on Whop: Access Kalodata, Pipiads, ChatGPT Plus, Canva Pro, and 50+ e-commerce & AI tools for $29.95/month. Pricing, tools list, how it works, and alternatives.",
-  keywords: [
-    "toolsuite review",
-    "toolsuite whop review",
-    "toolsuite pricing 2026",
-    "kalodata cheap alternative",
-    "pipiads group buy discount",
-    "all in one ecommerce tools subscription",
-    "cheap ai tools bundle",
-    "canva pro group buy discount",
-    "is toolsuite on whop legit",
-    "toolsuite vs individual subscriptions",
+  title: TITLE,
+  description: DESC,
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: TITLE,
+    description: DESC,
+    url: PAGE_URL,
+    type: "article",
+  },
+};
+
+const faqs = [
+  {
+    q: "What is ToolSuite on Whop and how much does it cost?",
+    a: "ToolSuite is a shared-access ('group buy') software bundle sold through the Whop marketplace, commonly listed around $29.95 to $29.99 per month (with occasional one-time pass listings reported near $499, subject to storefront changes). It markets consolidated dashboard access to dozens of e-commerce product-research, ad-spy, design, and AI tools that would otherwise cost several hundred dollars per month individually.",
+  },
+  {
+    q: "How does ToolSuite grant access without handing out account passwords?",
+    a: "According to published ToolSuite documentation and community descriptions, subscribers install a dedicated private browser or custom session-injection browser extension after purchasing on Whop. Clicking a tool tile inside the dashboard injects an authenticated master-account session rather than exposing raw email-and-password credentials.",
+  },
+  {
+    q: "Is it safe to upload client designs, private prompts, or proprietary store data into ToolSuite?",
+    a: "No. Because group-buy collectives route multiple subscribers into pooled master accounts, chat histories, uploaded images, brand templates, or saved product lists inside shared workspaces can be visible to—or overwritten by—other collective members. Only use shared-session tools for public, read-only market research, and maintain private individual accounts for confidential or client-facing work.",
+  },
+  {
+    q: "What are the main reliability and Terms of Service risks of SaaS group-buy bundles?",
+    a: "Shared-session bundles carry three structural trade-offs: peak-hour usage caps on AI models when many members query the same master seat simultaneously, temporary downtime while administrators refresh expired session cookies, and upstream SaaS Terms of Service restrictions against commercial seat pooling—which means specific tools in the catalog can be rotated or removed at any time.",
+  },
+  {
+    q: "Why should I avoid lifetime passes on shared-access SaaS collectives?",
+    a: "Because third-party group-buy bundles depend on upstream SaaS platforms not blocking session-sharing extensions, catalog availability over multi-year horizons cannot be guaranteed. Paying month-to-month (~$29.95/mo) caps your maximum downside to a single billing cycle if a specific ad-spy tool goes offline.",
+  },
+  {
+    q: "Did UrbanEssentialHub run a hands-on test or verify Whop user star ratings for ToolSuite?",
+    a: "No. An earlier version of this page used 'Tested' in the title and displayed unverified aggregate star ratings and subscriber counts, all of which have been removed. This analysis examines ToolSuite's publicly documented shared-session mechanics, November 2026 reported pricing, and the operational privacy and ToS boundaries every buyer should weigh before subscribing.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      headline: TITLE,
+      description: DESC,
+      mainEntityOfPage: PAGE_URL,
+      datePublished: "2026-09-28",
+      dateModified: "2026-11-18",
+      author: { "@type": "Organization", name: "Urban Essential Hub Editorial Team" },
+      publisher: { "@type": "Organization", name: "Urban Essential Hub" },
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "ToolSuite",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Chromium Private Browser / Web Dashboard",
+      url: PAGE_URL,
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
   ],
 };
 
-export default function ToolSuiteReviewPage() {
-  const affiliateUrl = "https://whop.com/toolsuite?a=wcyb5";
+const ctaWhop =
+  '<a href="https://whop.com/toolsuite?a=wcyb5" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#4f46e5;padding:13px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-size:14px;">Inspect Current ToolSuite Catalog &amp; Monthly Terms on Whop &rarr;</a>';
 
+const ctaCanva =
+  '<a href="https://bbux.me/ParM8la3Z" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#0f172a;padding:13px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-size:14px;">Get a Private Official Canva Pro Seat (~$15/mo) &rarr;</a>';
+
+const cta1Password =
+  '<a href="https://bbux.me/P9xAzh5at" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#0284c7;padding:13px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-size:14px;">Share Official Team SaaS Logins Safely in 1Password &rarr;</a>';
+
+export default function ToolSuiteReviewPage() {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-slate-50 text-slate-900 pb-16 sm:pb-0">
-      {/* Schema.org Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@type": "SoftwareApplication",
-                name: "ToolSuite",
-                applicationCategory: "BusinessApplication",
-                operatingSystem: "Web Browser (Chrome, Brave, Edge)",
-                offers: {
-                  "@type": "Offer",
-                  price: "29.95",
-                  priceCurrency: "USD",
-                  priceValidUntil: "2026-12-31",
-                  availability: "https://schema.org/InStock",
-                  url: affiliateUrl,
-                },
-                aggregateRating: {
-                  "@type": "AggregateRating",
-                  ratingValue: "4.9",
-                  reviewCount: "10420",
-                  bestRating: "5",
-                  worstRating: "1",
-                },
-              },
-              {
-                "@type": "Review",
-                itemReviewed: {
-                  "@type": "SoftwareApplication",
-                  name: "ToolSuite",
-                },
-                author: {
-                  "@type": "Organization",
-                  name: "Urban Essential Hub Research Team",
-                },
-                reviewRating: {
-                  "@type": "Rating",
-                  ratingValue: "4.9",
-                  bestRating: "5",
-                },
-                reviewBody:
-                  "Comprehensive review of ToolSuite on Whop. Bundles Kalodata, Pipiads, Canva Pro, ChatGPT Plus and 50+ ecom & AI tools for $29.95/mo, saving over $5,000/year for online entrepreneurs.",
-              },
-              {
-                "@type": "FAQPage",
-                mainEntity: [
-                  {
-                    "@type": "Question",
-                    name: "What is ToolSuite on Whop?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "ToolSuite is an all-in-one digital subscription service hosted on Whop that provides access to over 50 premium e-commerce, AI, and marketing tools (including Kalodata, Pipiads, Canva Pro, and ChatGPT Plus) for a single flat monthly fee of $29.95.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "How does ToolSuite work without sharing passwords?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "ToolSuite operates via a secure private browser environment and a lightweight extension. Once subscribed through Whop, you click into any tool from your ToolSuite dashboard and the extension securely injects authenticated sessions directly, so you never need to handle individual passwords or worry about account locks.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Is ToolSuite legit and reliable?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Yes. ToolSuite is one of Whop's top-rated software products with over 10,000 active subscribers, a 4.9/5 satisfaction rating, and over $500,000 in tracked affiliate community payouts. It features high uptime and automated cookie session refreshes.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "How much money does ToolSuite save you?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Subscribing to Kalodata ($99/mo), Pipiads ($77/mo), ChatGPT Plus ($20/mo), Canva Pro ($13/mo), and other ad-spy tools individually costs upwards of $450 to $600 per month. ToolSuite costs $29.95/month, saving users over $5,000 annually.",
-                    },
-                  },
-                ],
-              },
-            ],
-          }),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      {/* Breadcrumb Header */}
-      <div className="bg-white border-b border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-600 hover:text-indigo-600 transition"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              <span>Back to Directory</span>
-            </Link>
-            <div className="flex items-center gap-1 text-xs text-slate-500">
-              <Link href="/" className="hover:text-slate-800">
-                Home
-              </Link>
-              <ChevronRight className="w-3 h-3" />
-              <Link href="/reviews/toolsuite" className="text-indigo-600 font-medium">
-                ToolSuite Review
-              </Link>
-            </div>
-          </div>
+      <header className="border-b border-slate-200 bg-white/95 backdrop-blur sticky top-0 z-40">
+        <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+          <Link href="/" className="text-sm font-semibold text-slate-600 hover:text-indigo-700">
+            &larr; All B2B Software Calculators
+          </Link>
+          <Link href="/" className="font-extrabold text-base text-slate-900 tracking-tight">
+            UrbanEssential<span className="text-blue-600">Hub</span>
+          </Link>
         </div>
-      </div>
+      </header>
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 flex-1">
-        {/* Editorial Disclosure */}
-        <div className="mb-6 p-3 bg-amber-50/70 border border-amber-200/80 rounded-xl text-xs text-amber-900/90 flex items-start gap-2.5">
-          <ShieldCheck className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-          <div>
-            <strong>Independent Editorial Review:</strong> We thoroughly test every platform we review.
-            When you purchase through our links, we may receive an affiliate commission via Whop at no additional cost to you.
+      <main className="max-w-4xl mx-auto px-4 py-10 w-full space-y-10 flex-1 leading-relaxed">
+        {/* Specification & risk audit of ToolSuite shared-session SaaS bundle */}
+        <nav className="flex items-center gap-2 text-xs text-slate-500">
+          <Link href="/" className="hover:underline">Home</Link>
+          <span>/</span>
+          <span className="text-slate-800 font-medium">ToolSuite Shared-Access Architecture &amp; Risks</span>
+        </nav>
+
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
+          <div className="inline-block text-xs font-bold px-3 py-1 rounded-full bg-indigo-50 text-indigo-800 border border-indigo-200">
+            Shared-Session Bundle &amp; ToS Risk Audit &bull; Updated November 2026
           </div>
-        </div>
-
-        {/* Hero Section */}
-        <header className="mb-10 text-center sm:text-left">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-bold mb-4">
-            <Flame className="w-3.5 h-3.5 text-indigo-600" />
-            <span>#1 Best-Selling E-Commerce & AI Bundle on Whop</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
-            ToolSuite Review 2026: Access 50+ Ecom & AI Tools for $29.95/Month
+          <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+            ToolSuite Review 2026: Shared-Session Browser Architecture, $29.95/Mo Pricing &amp; SaaS ToS Risks
           </h1>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-6">
-            Are you burning $400 to $600 every month on separate subscriptions for Kalodata, Pipiads, Canva Pro, and AI tools?
-            Here is an in-depth breakdown of how ToolSuite consolidates 50+ premium tools into a single browser dashboard, how it works, and whether it is worth your money.
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-950 leading-relaxed">
+            <strong>Editorial &amp; Affiliate Disclosure:</strong> This guide is an architectural and cost-versus-risk analysis based on publicly reported ToolSuite and Whop documentation as of November 2026—not a hands-on product endorsement. Earlier &quot;Tested&quot; title wording and undocumented aggregate star ratings have been removed. Shared-access (&quot;group buy&quot;) collectives carry important privacy, uptime, and upstream Terms of Service limitations detailed below. Partner links on this page may earn us a referral commission at no extra cost to you.
+          </div>
+          <p className="text-base text-slate-700">
+            Solo dropshippers, TikTok Shop affiliates, and early-stage media buyers face an expensive research dilemma: testing a single product angle with standalone subscriptions to TikTok Shop analytics (such as Kalodata), video ad-spy libraries (such as Pipiads), SEO suites, design tools, and multiple frontier AI models can easily exceed $300 to $500 per month before spending a dollar on inventory or ad traffic.
           </p>
-
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-xs sm:text-sm text-slate-500 border-b border-slate-200 pb-6">
-            <span className="flex items-center gap-1 font-semibold text-slate-700">
-              <Sparkles className="w-4 h-4 text-indigo-600" /> Research By: Urban Essential Hub
-            </span>
-            <span className="hidden sm:inline">&bull;</span>
-            <span className="flex items-center gap-1">
-              <Clock className="w-4 h-4" /> 7 min read
-            </span>
-            <span className="hidden sm:inline">&bull;</span>
-            <span className="flex items-center gap-1 text-emerald-600 font-bold">
-              <CheckCircle2 className="w-4 h-4" /> Updated for September 2026
-            </span>
+          <p className="text-base text-slate-700">
+            <strong>ToolSuite</strong> on the Whop marketplace addresses that upfront overhead by operating as a <strong>shared-access (&quot;group buy&quot;) software collective</strong>, commonly priced around <strong>$29.95 to $29.99 per month</strong>. However, paying 90% less than retail SaaS pricing comes with fundamental technical, privacy, and compliance trade-offs that every operator must understand before connecting a browser extension or uploading a single file.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <span dangerouslySetInnerHTML={{ __html: ctaWhop }} />
+            <span dangerouslySetInnerHTML={{ __html: ctaCanva }} />
           </div>
-        </header>
+        </section>
 
-        {/* Quick Decision Box / Executive Summary */}
-        <div className="p-6 bg-gradient-to-br from-indigo-50/70 to-blue-50/50 border-2 border-indigo-200/80 rounded-2xl mb-12 shadow-sm">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4 pb-4 border-b border-indigo-100">
-            <div>
-              <div className="flex items-center gap-1 text-amber-500 mb-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                ))}
-                <span className="text-xs font-bold text-slate-700 ml-1.5">4.9 / 5.0 (10,400+ Active Members)</span>
-              </div>
-              <h3 className="text-lg font-black text-slate-900">ToolSuite: The Ultimate Ecom & Creator Toolkit</h3>
-            </div>
-            <div className="text-left sm:text-right">
-              <div className="text-2xl font-black text-indigo-600">$29.95<span className="text-xs font-normal text-slate-500">/mo</span></div>
-              <div className="text-[11px] text-emerald-600 font-bold">Replaces $500+/mo in individual tools</div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-700 mb-6">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span><strong>TikTok Shop Research:</strong> Kalodata, FastMoss, Shoplus</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span><strong>Ad Spy Tools:</strong> Pipiads, WinningHunter, Dropispy</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span><strong>AI & Creative:</strong> ChatGPT Plus, Canva Pro, Midjourney tools</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span><strong>Zero Credential Hassle:</strong> Secure 1-click extension access</span>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center gap-3">
-            <a
-              href={affiliateUrl}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              className="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-black text-sm shadow-md shadow-indigo-500/25 transition cursor-pointer hover:scale-[1.01]"
-            >
-              <span>Get ToolSuite Instant Access on Whop</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <span className="text-xs text-slate-500">Instant activation &bull; Cancel anytime with 1-click on Whop</span>
-          </div>
-        </div>
-
-        {/* Section 1: The SaaS Cost Crisis */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-black text-slate-900 tracking-tight mb-4 flex items-center gap-2">
-            <DollarSign className="w-6 h-6 text-indigo-600" />
-            The $500/Month Problem: The Solo Entrepreneur SaaS Trap
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-4">
+          <h2 className="text-2xl font-black text-slate-900">
+            Interactive SaaS Research Cost &amp; Workspace Privacy Fit Calculator
           </h2>
-          <p className="text-slate-700 leading-relaxed mb-4">
-            If you run a TikTok Shop, dropshipping store, digital product brand, or affiliate site in 2026, software is your biggest fixed overhead. To stay competitive, you normally need:
+          <p className="text-sm text-slate-600">
+            Compare your current monthly research software spend against a ~$29.95/mo group-buy pass—and check whether your data sensitivity disqualifies shared workspaces.
           </p>
+          <ToolSuiteSavingsCalc />
+        </section>
 
-          {/* Pricing Comparison Table */}
-          <div className="overflow-x-auto rounded-xl border border-slate-200 mb-6 shadow-sm">
-            <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="bg-slate-100/90 text-slate-800 font-bold border-b border-slate-200">
-                <tr>
-                  <th className="p-3.5">Tool Category</th>
-                  <th className="p-3.5">Leading Individual Software</th>
-                  <th className="p-3.5 text-right">Individual Monthly Cost</th>
-                  <th className="p-3.5 text-right text-indigo-700 bg-indigo-50/50">Included in ToolSuite</th>
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
+          <h2 className="text-2xl font-black text-slate-900">
+            1. How Shared-Session (&quot;Group Buy&quot;) Browser Architecture Actually Works
+          </h2>
+          <p className="text-sm sm:text-base text-slate-700">
+            In the early days of SaaS group-buys, sellers simply emailed shared usernames and passwords to dozens of buyers—triggering immediate two-factor authentication lockouts, password resets, and IP bans from software vendors. Modern Whop-hosted collectives like ToolSuite avoid raw password distribution through a <strong>session-injection proxy or isolated Chromium profile</strong>:
+          </p>
+          <ol className="list-decimal pl-6 space-y-2 text-sm text-slate-700">
+            <li><strong>Whop Entitlement Check:</strong> After subscribing on Whop (~$29.95/mo), your Discord or Whop user ID unlocks access to the ToolSuite member portal.</li>
+            <li><strong>Private Browser or Extension Layer:</strong> Users launch a dedicated isolated browser build or install a custom extension that communicates with ToolSuite&apos;s session servers.</li>
+            <li><strong>Cookie &amp; Token Injection:</strong> Clicking a tool tile (for example, an ad-spy library or AI assistant) injects active session tokens from a pooled master account so the upstream app loads already signed in, while hiding the underlying account password and billing page.</li>
+          </ol>
+        </section>
+
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
+          <h2 className="text-2xl font-black text-slate-900">
+            2. Reported Standalone SaaS Rates vs ToolSuite Bundle Math (Nov 2026)
+          </h2>
+          <p className="text-sm sm:text-base text-slate-700">
+            Public ToolSuite listings advertise over 50 bundled utilities spanning TikTok Shop product discovery, paid-social ad spying, AI text/voice generation, and graphic design. Below is an illustrative comparison of commonly cited individual retail subscriptions versus a single shared-access pass:
+          </p>
+          <div className="overflow-x-auto">
+            <table className="min-w-[620px] w-full text-xs sm:text-sm border border-slate-200 rounded-xl overflow-hidden">
+              <thead>
+                <tr className="bg-slate-100 text-left font-bold text-slate-800">
+                  <th className="p-3 border-b border-slate-200">Workflow Category</th>
+                  <th className="p-3 border-b border-slate-200">Example Standalone Tool</th>
+                  <th className="p-3 border-b border-slate-200">Typical Retail List Rate</th>
+                  <th className="p-3 border-b border-slate-200">Private Seat vs Shared Pool</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-200 bg-white">
+              <tbody className="divide-y divide-slate-200 text-slate-700">
                 <tr>
-                  <td className="p-3.5 font-semibold text-slate-900">TikTok Shop Spy</td>
-                  <td className="p-3.5 text-slate-600">Kalodata (Standard Plan)</td>
-                  <td className="p-3.5 text-right text-rose-600 font-medium">$99.00/mo</td>
-                  <td className="p-3.5 text-right text-emerald-600 font-bold bg-indigo-50/30">Yes ($0 extra)</td>
+                  <td className="p-3 font-semibold">TikTok Shop Analytics</td>
+                  <td className="p-3">Kalodata (Starter/Standard tiers)</td>
+                  <td className="p-3">~$45–$99/mo</td>
+                  <td className="p-3">Read-only product research fits shared pool</td>
                 </tr>
                 <tr>
-                  <td className="p-3.5 font-semibold text-slate-900">TikTok Video Ad Spy</td>
-                  <td className="p-3.5 text-slate-600">Pipiads (VIP Plan)</td>
-                  <td className="p-3.5 text-right text-rose-600 font-medium">$77.00/mo</td>
-                  <td className="p-3.5 text-right text-emerald-600 font-bold bg-indigo-50/30">Yes ($0 extra)</td>
+                  <td className="p-3 font-semibold">TikTok &amp; Social Ad Spy</td>
+                  <td className="p-3">Pipiads (Starter/VIP tiers)</td>
+                  <td className="p-3">~$77–$155/mo</td>
+                  <td className="p-3">Public ad creative browsing fits shared pool</td>
                 </tr>
                 <tr>
-                  <td className="p-3.5 font-semibold text-slate-900">AI Copy & Models</td>
-                  <td className="p-3.5 text-slate-600">ChatGPT Plus (GPT-4o)</td>
-                  <td className="p-3.5 text-right text-rose-600 font-medium">$20.00/mo</td>
-                  <td className="p-3.5 text-right text-emerald-600 font-bold bg-indigo-50/30">Yes ($0 extra)</td>
+                  <td className="p-3 font-semibold">Frontier AI Assistants</td>
+                  <td className="p-3">ChatGPT Plus / Claude Pro</td>
+                  <td className="p-3">$20/mo each</td>
+                  <td className="p-3 text-amber-800 font-medium">Shared history &amp; peak message caps apply</td>
                 </tr>
                 <tr>
-                  <td className="p-3.5 font-semibold text-slate-900">Graphic Design</td>
-                  <td className="p-3.5 text-slate-600">Canva Pro (Team Seat)</td>
-                  <td className="p-3.5 text-right text-rose-600 font-medium">$13.00/mo</td>
-                  <td className="p-3.5 text-right text-emerald-600 font-bold bg-indigo-50/30">Yes ($0 extra)</td>
+                  <td className="p-3 font-semibold">Graphic Design &amp; Brand Kits</td>
+                  <td className="p-3">Canva Pro (Single User)</td>
+                  <td className="p-3">$15/mo ($144/yr)</td>
+                  <td className="p-3 text-rose-700 font-medium">Private seat recommended for brand assets</td>
                 </tr>
-                <tr>
-                  <td className="p-3.5 font-semibold text-slate-900">Dropship Product Hunter</td>
-                  <td className="p-3.5 text-slate-600">WinningHunter / Dropispy</td>
-                  <td className="p-3.5 text-right text-rose-600 font-medium">$49.00/mo</td>
-                  <td className="p-3.5 text-right text-emerald-600 font-bold bg-indigo-50/30">Yes ($0 extra)</td>
-                </tr>
-                <tr>
-                  <td className="p-3.5 font-semibold text-slate-900">SEO & Market Intel</td>
-                  <td className="p-3.5 text-slate-600">SpyFu / Competitor Research</td>
-                  <td className="p-3.5 text-right text-rose-600 font-medium">$39.00/mo</td>
-                  <td className="p-3.5 text-right text-emerald-600 font-bold bg-indigo-50/30">Yes ($0 extra)</td>
-                </tr>
-                <tr className="bg-slate-50 font-bold">
-                  <td className="p-3.5 text-slate-900" colSpan={2}>
-                    Total Separate Subscriptions
-                  </td>
-                  <td className="p-3.5 text-right text-rose-600 text-sm sm:text-base line-through">
-                    $297.00 - $550.00/mo
-                  </td>
-                  <td className="p-3.5 text-right text-indigo-700 bg-indigo-100/70 text-sm sm:text-base font-black">
-                    $29.95/mo Flat
-                  </td>
+                <tr className="bg-indigo-50/40">
+                  <td className="p-3 font-bold">ToolSuite Monthly Pass</td>
+                  <td className="p-3">Pooled catalog via Whop</td>
+                  <td className="p-3 font-bold text-indigo-800">~$29.95–$29.99/mo</td>
+                  <td className="p-3">Shared-session browser access; catalog varies</td>
                 </tr>
               </tbody>
             </table>
           </div>
-
-          <p className="text-slate-700 leading-relaxed">
-            By switching to ToolSuite, an e-commerce entrepreneur saves roughly <strong>$3,200 to $5,600 per year</strong> in recurring software overhead, freeing up vital cash flow for ad spend and product testing.
+          <p className="text-xs text-slate-500">
+            Source note: Retail SaaS figures reflect publicly reported November 2026 pricing summaries; exact included tools inside ToolSuite fluctuate over time as upstream vendors update anti-sharing defenses. Confirm the active tool roster on Whop prior to subscribing.
           </p>
         </section>
 
-        {/* Section 2: How ToolSuite Works */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-black text-slate-900 tracking-tight mb-4 flex items-center gap-2">
-            <Cpu className="w-6 h-6 text-indigo-600" />
-            How ToolSuite Works Under the Hood
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-4">
+          <h2 className="text-2xl font-black text-slate-900">
+            3. Four Non-Negotiable Risks Every Buyer Must Weigh First
           </h2>
-          <p className="text-slate-700 leading-relaxed mb-6">
-            Unlike sketchy Telegram group buys that hand you stolen passwords that get locked every 3 hours, ToolSuite uses a professional infrastructure:
+          <p className="text-sm sm:text-base text-slate-700">
+            Before installing any group-buy browser extension or canceling mission-critical vendor accounts, evaluate four operational boundaries:
           </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="p-5 bg-white border border-slate-200 rounded-xl shadow-xs">
-              <div className="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 font-black flex items-center justify-center mb-3">
-                1
-              </div>
-              <h3 className="font-bold text-slate-900 mb-1.5">Join via Whop</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Subscribe through the verified Whop store using Apple Pay, Google Pay, or Credit Card. Your pass activates in under 10 seconds.
-              </p>
-            </div>
-            <div className="p-5 bg-white border border-slate-200 rounded-xl shadow-xs">
-              <div className="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 font-black flex items-center justify-center mb-3">
-                2
-              </div>
-              <h3 className="font-bold text-slate-900 mb-1.5">Install the Extension</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Add ToolSuite’s lightweight Chrome extension. It creates an isolated browsing session that connects to ToolSuite’s authenticated enterprise licenses.
-              </p>
-            </div>
-            <div className="p-5 bg-white border border-slate-200 rounded-xl shadow-xs">
-              <div className="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 font-black flex items-center justify-center mb-3">
-                3
-              </div>
-              <h3 className="font-bold text-slate-900 mb-1.5">1-Click Launch</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Click any tool—Kalodata, Pipiads, Canva Pro—and it opens logged in. No shared passwords, no CAPTCHA hell, no account verification codes.
-              </p>
-            </div>
+          <ul className="list-disc pl-6 space-y-2.5 text-sm text-slate-700">
+            <li><strong>1. Zero Workspace Confidentiality:</strong> In a pooled account, saved projects, uploaded product mockups, custom GPT prompts, and export histories may be visible to other subscribers sharing the same master seat. Never input customer PII, API keys, unreleased brand logos, or agency client deliverables.</li>
+            <li><strong>2. Browser Extension Isolation Hygiene:</strong> Any extension capable of injecting session cookies holds broad browser permissions. If you test a group-buy tool, run it strictly inside a dedicated, empty secondary OS user profile or separate browser installation—never inside the primary Chrome profile holding your banking, Stripe, Shopify admin, or password vault sessions.</li>
+            <li><strong>3. Peak-Hour Rate Throttling &amp; Cookie Resets:</strong> Community discussions around group-buy collectives consistently note that high-demand AI models (such as Claude Pro or ChatGPT Plus) can hit hourly message quotas during US/EU peak hours, and ad-spy sessions occasionally go offline for maintenance until support rotates fresh seats.</li>
+            <li><strong>4. Upstream SaaS Terms of Service (ToS):</strong> Virtually all commercial software vendors license individual seats to a single named user or organization. Group-buy access operates outside official vendor reseller programs, which is why established agencies with recurring revenue should graduate to compliant team seats managed through zero-knowledge vaults like <Link href="/1password-business-vs-bitwarden-enterprise-vs-dashlane" className="text-indigo-700 underline font-semibold">1Password Business or Bitwarden Enterprise</Link>.</li>
+          </ul>
+          <div className="flex flex-wrap gap-3 pt-2">
+            <span dangerouslySetInnerHTML={{ __html: ctaWhop }} />
+            <span dangerouslySetInnerHTML={{ __html: cta1Password }} />
           </div>
         </section>
 
-        {/* Section 3: Full Tool Directory */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-black text-slate-900 tracking-tight mb-4 flex items-center gap-2">
-            <Layers className="w-6 h-6 text-indigo-600" />
-            What Tools Are Included in ToolSuite?
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-4">
+          <h2 className="text-2xl font-black text-slate-900">
+            4. Who Should Use ToolSuite — And When Direct Subscriptions Win
           </h2>
-          <p className="text-slate-700 leading-relaxed mb-6">
-            ToolSuite actively maintains access to over 50 tools across 4 core operational pillars:
-          </p>
-
-          <div className="space-y-4">
-            <div className="p-5 bg-white border border-slate-200 rounded-xl">
-              <h3 className="font-bold text-slate-900 flex items-center gap-2 text-base mb-2">
-                <ShoppingBag className="w-5 h-5 text-indigo-600" />
-                1. TikTok Shop & E-Commerce Product Research
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 mb-3">
-                Crucial for finding trending viral products before competitors catch on.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["Kalodata", "Pipiads", "WinningHunter", "FastMoss", "Dropispy", "ShopHunter", "Ecomhunt"].map((tool) => (
-                  <span key={tool} className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold border border-slate-200">
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="p-5 bg-white border border-slate-200 rounded-xl">
-              <h3 className="font-bold text-slate-900 flex items-center gap-2 text-base mb-2">
-                <Cpu className="w-5 h-5 text-indigo-600" />
-                2. AI Models, Copywriting & Media Generation
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 mb-3">
-                Powering video ad scripts, marketing copy, and visual asset production.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["ChatGPT Plus (GPT-4o)", "Claude 3.5 Sonnet access", "Canva Pro", "Midjourney prompts", "Copy.ai", "Quillbot Premium", "CapCut Pro workflows"].map((tool) => (
-                  <span key={tool} className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold border border-slate-200">
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="p-5 bg-white border border-slate-200 rounded-xl">
-              <h3 className="font-bold text-slate-900 flex items-center gap-2 text-base mb-2">
-                <BarChart3 className="w-5 h-5 text-indigo-600" />
-                3. Ad Intelligence & Competitor Tracking
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 mb-3">
-                See what winning Facebook, TikTok, and Google Ads your rivals are spending thousands on daily.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["AdSpy", "BigSpy", "SpyFu", "SimilarWeb Pro intel", "Foreplay.co ad library"].map((tool) => (
-                  <span key={tool} className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-semibold border border-slate-200">
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 4: Honest Pros & Cons */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-black text-slate-900 tracking-tight mb-4">
-            Honest Pros & Cons: Is ToolSuite Right for You?
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="p-5 bg-emerald-50/70 border border-emerald-200 rounded-xl">
-              <div className="flex items-center gap-2 text-emerald-800 font-bold text-base mb-3">
-                <ThumbsUp className="w-5 h-5 text-emerald-600" />
-                The Advantages (Pros)
-              </div>
-              <ul className="space-y-2.5 text-xs sm:text-sm text-emerald-950">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span><strong>Massive Cost Savings:</strong> Saves over $5,000/year compared to buying each platform individually.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span><strong>Active Maintenance:</strong> ToolSuite’s team continuously updates session tokens if a tool provider modifies security.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span><strong>Whop Guarantee:</strong> Hosted on Whop, meaning simple 1-click billing management, no hidden charges.</span>
-                </li>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 text-sm">
+            <div className="p-5 rounded-xl bg-emerald-50/60 border border-emerald-200 space-y-2">
+              <h3 className="font-bold text-emerald-950 text-base">Pragmatic Use Cases</h3>
+              <ul className="list-disc pl-5 space-y-1.5 text-slate-700">
+                <li>Bootstrapped solo sellers running short 30-day product-discovery sprints across public TikTok Shop and social ad libraries before committing to $100+/mo standalone spy tools.</li>
+                <li>Creators who keep all proprietary editing and brand storage in private local apps (see our <Link href="/adobe-alternatives" className="text-emerald-800 underline font-semibold">Non-Subscription Adobe &amp; Free Affinity Guide</Link>) and only use ToolSuite for anonymous market research.</li>
               </ul>
             </div>
-
-            <div className="p-5 bg-rose-50/70 border border-rose-200 rounded-xl">
-              <div className="flex items-center gap-2 text-rose-800 font-bold text-base mb-3">
-                <AlertTriangle className="w-5 h-5 text-rose-600" />
-                The Trade-offs (Cons)
-              </div>
-              <ul className="space-y-2.5 text-xs sm:text-sm text-rose-950">
-                <li className="flex items-start gap-2">
-                  <XCircle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
-                  <span><strong>Desktop Only:</strong> Requires a Chromium browser (Chrome, Brave, Edge). Cannot easily be run from a mobile iPhone/Android app.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <XCircle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
-                  <span><strong>Shared History:</strong> On certain design tools, you should download your assets immediately and not rely on cloud project storage.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <XCircle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
-                  <span><strong>Occasional Maintenance:</strong> If a tool like Kalodata updates its API, it might take 1-2 hours for the session to refresh.</span>
-                </li>
+            <div className="p-5 rounded-xl bg-rose-50/60 border border-rose-200 space-y-2">
+              <h3 className="font-bold text-rose-950 text-base">Skip Group-Buys Immediately If</h3>
+              <ul className="list-disc pl-5 space-y-1.5 text-slate-700">
+                <li>You run a client agency, legal/financial consultancy, or established brand bound by NDAs and data-processing agreements.</li>
+                <li>Your daily production pipeline stalls if a shared seat hits a rate limit at 2:00 PM on a campaign launch day.</li>
+                <li>You are considering a $499 &quot;lifetime&quot; group-buy pass—stick strictly to cancellable monthly billing if you use shared collectives at all.</li>
               </ul>
             </div>
           </div>
-        </section>
-
-        {/* Section 5: Pricing Options on Whop */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-black text-slate-900 tracking-tight mb-4 flex items-center gap-2">
-            <DollarSign className="w-6 h-6 text-indigo-600" />
-            ToolSuite Pricing Plans on Whop
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="p-6 bg-white border border-slate-200 rounded-2xl flex flex-col justify-between">
-              <div>
-                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Monthly Plan</div>
-                <div className="text-3xl font-black text-slate-900 mb-2">$29.95<span className="text-xs font-normal text-slate-500">/mo</span></div>
-                <p className="text-xs text-slate-600 mb-4">
-                  Best for testing the waters. Flexible month-to-month access with instant cancelation.
-                </p>
-              </div>
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold text-center transition"
-              >
-                Choose Monthly
-              </a>
-            </div>
-
-            <div className="p-6 bg-indigo-50/50 border-2 border-indigo-400 rounded-2xl flex flex-col justify-between relative shadow-md">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-indigo-600 text-white text-[10px] font-black tracking-wider uppercase">
-                Best Value (Save 50%)
-              </div>
-              <div>
-                <div className="text-xs font-bold text-indigo-700 uppercase tracking-wider mb-1">Annual Pass</div>
-                <div className="text-3xl font-black text-indigo-900 mb-2">$179.95<span className="text-xs font-normal text-slate-500">/yr</span></div>
-                <p className="text-xs text-slate-600 mb-4">
-                  Equivalent to just <strong>$14.99/mo</strong>. Access all 50+ tools with priority server proxies.
-                </p>
-              </div>
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-black text-center shadow-md shadow-indigo-500/20 transition"
-              >
-                Get Annual Pass
-              </a>
-            </div>
-
-            <div className="p-6 bg-white border border-slate-200 rounded-2xl flex flex-col justify-between">
-              <div>
-                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Lifetime Pass</div>
-                <div className="text-3xl font-black text-slate-900 mb-2">$349.95<span className="text-xs font-normal text-slate-500"> one-time</span></div>
-                <p className="text-xs text-slate-600 mb-4">
-                  Pay once, keep access permanently. Includes all future tools added to ToolSuite.
-                </p>
-              </div>
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold text-center transition"
-              >
-                Get Lifetime
-              </a>
-            </div>
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-xs text-slate-600">
+            <strong>Verification Scope Note:</strong> We did not install ToolSuite&apos;s browser binary or audit live uptime percentages across its 50+ advertised tools. Tool availability and pricing (~$29.95/mo) are based on November 2026 public Whop storefront summaries and can change without notice.
           </div>
         </section>
 
-        {/* Section 6: FAQ */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-black text-slate-900 tracking-tight mb-4 flex items-center gap-2">
-            <HelpCircle className="w-6 h-6 text-indigo-600" />
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-3">
-            <div className="p-4 bg-white border border-slate-200 rounded-xl">
-              <h3 className="font-bold text-slate-900 text-sm mb-1.5">How do I access the tools after paying?</h3>
-              <p className="text-xs sm:text-sm text-slate-600">
-                Immediately after your transaction completes on Whop, you are redirected to your Whop Customer Hub. From there, you follow a 1-minute setup to add the browser extension and your dashboard will unlock all 50+ tool portals instantly.
-              </p>
-            </div>
-            <div className="p-4 bg-white border border-slate-200 rounded-xl">
-              <h3 className="font-bold text-slate-900 text-sm mb-1.5">Will my personal data or searches be leaked to other users?</h3>
-              <p className="text-xs sm:text-sm text-slate-600">
-                No. ToolSuite runs isolated session tabs so other subscribers cannot view your search filters on Kalodata or Pipiads. For Canva and AI writing tools, we always recommend downloading your finished creative files to your local drive.
-              </p>
-            </div>
-            <div className="p-4 bg-white border border-slate-200 rounded-xl">
-              <h3 className="font-bold text-slate-900 text-sm mb-1.5">Can I cancel my subscription at any time?</h3>
-              <p className="text-xs sm:text-sm text-slate-600">
-                Yes. Because ToolSuite is powered by Whop, you do not need to email customer support or jump through hoops. You simply go to Whop.com &gt; My Purchases &gt; Cancel Subscription with a single click.
-              </p>
-            </div>
-          </div>
+        <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-4">
+          <h2 className="text-2xl font-black text-slate-900">Frequently Asked Questions</h2>
+          <details className="border border-slate-200 rounded-xl p-4">
+            <summary className="font-bold text-sm sm:text-base cursor-pointer text-slate-900">
+              What is ToolSuite on Whop and how much does it cost?
+            </summary>
+            <p className="mt-2 text-sm text-slate-700">
+              ToolSuite is a shared-access (&apos;group buy&apos;) software bundle sold through the Whop marketplace, commonly listed around $29.95 to $29.99 per month (with occasional one-time pass listings reported near $499, subject to storefront changes). It markets consolidated dashboard access to dozens of e-commerce product-research, ad-spy, design, and AI tools that would otherwise cost several hundred dollars per month individually.
+            </p>
+          </details>
+          <details className="border border-slate-200 rounded-xl p-4">
+            <summary className="font-bold text-sm sm:text-base cursor-pointer text-slate-900">
+              How does ToolSuite grant access without handing out account passwords?
+            </summary>
+            <p className="mt-2 text-sm text-slate-700">
+              According to published ToolSuite documentation and community descriptions, subscribers install a dedicated private browser or custom session-injection browser extension after purchasing on Whop. Clicking a tool tile inside the dashboard injects an authenticated master-account session rather than exposing raw email-and-password credentials.
+            </p>
+          </details>
+          <details className="border border-slate-200 rounded-xl p-4">
+            <summary className="font-bold text-sm sm:text-base cursor-pointer text-slate-900">
+              Is it safe to upload client designs, private prompts, or proprietary store data into ToolSuite?
+            </summary>
+            <p className="mt-2 text-sm text-slate-700">
+              No. Because group-buy collectives route multiple subscribers into pooled master accounts, chat histories, uploaded images, brand templates, or saved product lists inside shared workspaces can be visible to—or overwritten by—other collective members. Only use shared-session tools for public, read-only market research, and maintain private individual accounts for confidential or client-facing work.
+            </p>
+          </details>
+          <details className="border border-slate-200 rounded-xl p-4">
+            <summary className="font-bold text-sm sm:text-base cursor-pointer text-slate-900">
+              What are the main reliability and Terms of Service risks of SaaS group-buy bundles?
+            </summary>
+            <p className="mt-2 text-sm text-slate-700">
+              Shared-session bundles carry three structural trade-offs: peak-hour usage caps on AI models when many members query the same master seat simultaneously, temporary downtime while administrators refresh expired session cookies, and upstream SaaS Terms of Service restrictions against commercial seat pooling—which means specific tools in the catalog can be rotated or removed at any time.
+            </p>
+          </details>
+          <details className="border border-slate-200 rounded-xl p-4">
+            <summary className="font-bold text-sm sm:text-base cursor-pointer text-slate-900">
+              Why should I avoid lifetime passes on shared-access SaaS collectives?
+            </summary>
+            <p className="mt-2 text-sm text-slate-700">
+              Because third-party group-buy bundles depend on upstream SaaS platforms not blocking session-sharing extensions, catalog availability over multi-year horizons cannot be guaranteed. Paying month-to-month (~$29.95/mo) caps your maximum downside to a single billing cycle if a specific ad-spy tool goes offline.
+            </p>
+          </details>
+          <details className="border border-slate-200 rounded-xl p-4">
+            <summary className="font-bold text-sm sm:text-base cursor-pointer text-slate-900">
+              Did UrbanEssentialHub run a hands-on test or verify Whop user star ratings for ToolSuite?
+            </summary>
+            <p className="mt-2 text-sm text-slate-700">
+              No. An earlier version of this page used &apos;Tested&apos; in the title and displayed unverified aggregate star ratings and subscriber counts, all of which have been removed. This analysis examines ToolSuite&apos;s publicly documented shared-session mechanics, November 2026 reported pricing, and the operational privacy and ToS boundaries every buyer should weigh before subscribing.
+            </p>
+          </details>
         </section>
 
-        {/* Final CTA Box */}
-        <div className="p-8 bg-gradient-to-r from-indigo-900 via-slate-900 to-indigo-950 text-white rounded-3xl text-center shadow-xl">
-          <h2 className="text-2xl sm:text-3xl font-black mb-3">
-            Stop Overpaying for 10 Different Subscriptions
-          </h2>
-          <p className="text-slate-300 text-sm max-w-xl mx-auto mb-6">
-            Get access to Kalodata, Pipiads, Canva Pro, ChatGPT Plus, and 50+ e-commerce tools for just $29.95/month today.
-          </p>
-          <a
-            href={affiliateUrl}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-black text-base shadow-lg shadow-indigo-500/30 transition hover:scale-105"
-          >
-            <span>Unlock ToolSuite on Whop ($29.95/mo)</span>
-            <ExternalLink className="w-5 h-5" />
-          </a>
-        </div>
+        <section className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 space-y-4">
+          <h2 className="text-xl font-black">Compare Compliant Team Security &amp; Zero-Subscription Software</h2>
+          <ul className="space-y-2 text-sm text-slate-300">
+            <li>&rarr; <Link href="/adobe-alternatives" className="text-indigo-300 underline">Best Non-Subscription Adobe Alternatives (2026): Free Affinity &amp; Perpetual DaVinci Math</Link></li>
+            <li>&rarr; <Link href="/1password-business-vs-bitwarden-enterprise-vs-dashlane" className="text-indigo-300 underline">1Password Business vs Bitwarden Enterprise vs Dashlane: Compliant Team Credential Sharing</Link></li>
+            <li>&rarr; <Link href="/kajabi-vs-teachable-vs-skool" className="text-indigo-300 underline">Kajabi vs Teachable vs Skool: Creator Platform Fees &amp; Margin Calculator</Link></li>
+          </ul>
+        </section>
       </main>
 
-      {/* Floating CTA Sticky Bar */}
       <StickyToolSuiteBar />
     </div>
   );

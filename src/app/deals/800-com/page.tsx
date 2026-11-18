@@ -101,7 +101,7 @@ export default function EightHundredReviewPage() {
         <div className="flex items-center gap-2 text-xs text-slate-500">
           <Link href="/" className="hover:underline">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <Link href="/deals" className="hover:underline">Deals</Link>
+          <Link href="/best-1800-virtual-phone-numbers" className="hover:underline">1-800 Phone Numbers</Link>
           <ChevronRight className="w-3.5 h-3.5" />
           <span className="text-slate-800 font-medium">800.com Review</span>
         </div>
