@@ -84,7 +84,7 @@ const jsonLd = {
 
 export default function CancelSubscriptionsGuidePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans">
+    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans overflow-x-hidden">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <header className="border-b border-slate-800 bg-slate-950 text-white sticky top-0 z-40">
@@ -94,13 +94,13 @@ export default function CancelSubscriptionsGuidePage() {
           </Link>
           <nav className="flex items-center gap-4 text-slate-300 font-semibold">
             <Link href="/" className="hover:text-cyan-300">&larr; All Guides</Link>
-            <Link href="/adobe-alternatives" className="hover:text-cyan-300">Buy-Once Software</Link>
-            <Link href="/reviews/1password" className="hover:text-cyan-300">Vault Security</Link>
+            <Link href="/adobe-alternatives" className="hidden sm:inline hover:text-cyan-300">Buy-Once Software</Link>
+            <Link href="/reviews/1password" className="hidden sm:inline hover:text-cyan-300">Vault Security</Link>
           </nav>
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-4 py-10 sm:py-12 space-y-8 leading-relaxed">
+      <main className="w-full min-w-0 max-w-4xl mx-auto px-4 py-10 sm:py-12 space-y-8 leading-relaxed">
         {/* Everyday Subscription Audit Guide — verified sources in /tmp/cancel-subscriptions-sources.md */}
         <div className="space-y-4">
           <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-cyan-100 text-cyan-900 border border-cyan-300">
@@ -259,11 +259,11 @@ export default function CancelSubscriptionsGuidePage() {
           </ol>
 
           <div
-            className="flex flex-wrap gap-4 justify-center my-8 p-6 rounded-2xl bg-slate-900 border border-slate-800"
+            className="flex flex-wrap gap-4 justify-center my-8 p-5 sm:p-6 rounded-2xl bg-slate-900 border border-slate-800"
             dangerouslySetInnerHTML={{
               __html:
-                '<a href="https://bbux.me/P9xAzh5at" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#0284c7;padding:14px 24px;border-radius:10px;font-weight:700;text-decoration:none;">Try 1Password Vault to Track Logins &amp; Renewals &rarr;</a>' +
-                '<a href="https://bbux.me/Q9xBX2aE" target="_blank" rel="sponsored noopener" style="display:inline-block;color:#ffffff !important;background:#4f46e5;padding:14px 24px;border-radius:10px;font-weight:700;text-decoration:none;">Secure Public Wi-Fi Audits with NordVPN &rarr;</a>',
+                '<a href="https://bbux.me/P9xAzh5at" target="_blank" rel="sponsored noopener" style="display:inline-block;max-width:100%;box-sizing:border-box;text-align:center;color:#ffffff !important;background:#0284c7;padding:14px 20px;border-radius:10px;font-weight:700;text-decoration:none;">Try 1Password Vault to Track Logins &amp; Renewals &rarr;</a>' +
+                '<a href="https://bbux.me/Q9xBX2aE" target="_blank" rel="sponsored noopener" style="display:inline-block;max-width:100%;box-sizing:border-box;text-align:center;color:#ffffff !important;background:#4f46e5;padding:14px 20px;border-radius:10px;font-weight:700;text-decoration:none;">Secure Public Wi-Fi Audits with NordVPN &rarr;</a>',
             }}
           />
         </section>
