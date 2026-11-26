@@ -4,6 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.urbanessentialhub.com";
   const routes = [
     { path: "", priority: 1.0 },
+    { path: "/cancel-unused-subscriptions-audit-guide", priority: 0.9 },
     { path: "/cloudways-vs-siteground", priority: 0.9 },
     { path: "/cloudways-true-cost-breakdown", priority: 0.9 },
     { path: "/cloudways-autonomous-vs-flexible-vs-kinsta", priority: 0.9 },
@@ -35,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map((r) => ({
     url: `${baseUrl}${r.path}`,
-    lastModified: "2026-11-18",
+    lastModified: "2026-11-26",
     changeFrequency: "weekly",
     priority: r.priority,
   }));
